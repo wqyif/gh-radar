@@ -6,6 +6,7 @@ from datetime import date, timedelta
 from pathlib import Path
 
 import config
+import web_export
 from radar import enrich, fetch, mock_data, render, score, store
 
 
@@ -124,6 +125,12 @@ def main():
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(text, encoding="utf-8")
     print(f"已写入 {out}")
+
+    if not args.mock:
+        try:
+            web_export.main()
+        except Exception as exc:
+            print(f"      前端数据导出失败：{exc}")
     return 0
 
 

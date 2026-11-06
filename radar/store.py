@@ -25,6 +25,11 @@ CREATE TABLE IF NOT EXISTS repo_meta (
     updated TEXT,
     payload TEXT
 );
+CREATE TABLE IF NOT EXISTS repos (
+    repo    TEXT PRIMARY KEY,
+    day     TEXT,
+    payload TEXT
+);
 """
 
 
@@ -53,7 +58,16 @@ def record(conn, repos, day):
         "INSERT OR REPLACE INTO snapshots(repo, day, stars, forks, open_issues) VALUES (?,?,?,?,?)",
         [(r["full_name"], day, r["stars"], r["forks"], r["open_issues"]) for r in repos],
     )
+    conn.executemany(
+        "INSERT OR REPLACE INTO repos(repo, day, payload) VALUES (?,?,?)",
+        [(r["full_name"], day, json.dumps(r, ensure_ascii=False)) for r in repos],
+    )
     conn.commit()
+
+
+def load_repo(conn, repo):
+    row = conn.execute("SELECT payload FROM repos WHERE repo = ?", (repo,)).fetchone()
+    return json.loads(row[0]) if row else None
 
 
 def star_delta(conn, repo, since):

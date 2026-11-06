@@ -49,7 +49,7 @@ jobs:
           mkdir -p data reports
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data reports
+          git add data reports web
           if git diff --staged --quiet; then
             echo "没有变化"
             exit 0

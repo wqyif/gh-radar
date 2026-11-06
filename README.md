@@ -50,6 +50,17 @@ python main.py --bucket 0        # 只跑「最近三天」这一桶
 互斥分桶：一个项目只会出现在一段里。门槛随窗口放大，避免长窗口被海量低星项目淹没。
 改 `config.py` 的 `BUCKETS` 就能调整。
 
+## 前端
+
+`web/` 是一个不需要构建的静态页面：时间轴选段、主题筛选、卡片流。
+
+```bash
+python web_export.py           # 从 SQLite 导出 web/data.json 和 data.js
+```
+
+直接双击 `web/index.html` 就能看（数据以 JS 内联，file:// 下也能用），
+或 `python -m http.server 8000 -d web`。`python main.py` 跑完会自动刷新这份数据。
+
 ## 自动运行
 
 `.github/workflows/radar.yml` 每天 06:37 抓一次存进 SQLite 并 commit 回仓库，

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gh-radar · GitHub 好玩项目</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="./">gh-radar</a>
+  <span class="stamp" id="stamp"></span>
+</header>
+
+<main>
+  <section class="intro">
+    <h1>过去 90 天，<br>GitHub 上值得看一眼的东西。</h1>
+    <p class="lede">按创建时间分四段，每段挑几个。不是热榜，是筛过一遍的。</p>
+  </section>
+
+  <nav class="rail" id="rail" aria-label="时间范围"></nav>
+
+  <div class="themes" id="themes" role="group" aria-label="主题筛选"></div>
+
+  <section class="grid" id="list" aria-live="polite"></section>
+  <p class="empty" id="empty" hidden>这一组里暂时没有项目。</p>
+</main>
+
+<footer>
+  <span>数据来自 GitHub Search API，由本地 DeepSeek 打分</span>
+  <span id="count"></span>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

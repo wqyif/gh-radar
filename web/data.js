@@ -1,0 +1,927 @@
+window.RADAR = {
+ "generated": "2026-11-07",
+ "buckets": [
+  {
+   "key": "d3",
+   "title": "最近三天",
+   "min_age": 0,
+   "max_age": 3,
+   "count": 8
+  },
+  {
+   "key": "w1",
+   "title": "这周内",
+   "min_age": 4,
+   "max_age": 7,
+   "count": 8
+  },
+  {
+   "key": "m1",
+   "title": "这个月",
+   "min_age": 8,
+   "max_age": 30,
+   "count": 8
+  },
+  {
+   "key": "m3",
+   "title": "近三个月",
+   "min_age": 31,
+   "max_age": 90,
+   "count": 8
+  }
+ ],
+ "themes": {
+  "play": "游戏与玩物",
+  "tool": "开发工具",
+  "learn": "学习教程",
+  "visual": "可视化创意",
+  "ai_app": "AI 应用",
+  "runtime": "模型与运行时",
+  "infra": "基础设施"
+ },
+ "items": [
+  {
+   "repo": "eternity4719/HowToLiveBetter",
+   "url": "https://github.com/eternity4719/HowToLiveBetter",
+   "what": "一本772条建议的中文生活指南电子书，每条标注成本、收益、证据等级与期刊或官方出处，附在线检索页与自查问卷。",
+   "why": "仓库以HTML静态页和Markdown为主，无需安装即可在浏览器打开，适合当教学素材讲数据结构和检索。",
+   "theme": "learn",
+   "theme_title": "学习教程",
+   "bucket": "m3",
+   "category": "teaching",
+   "total": 0.705,
+   "stars": 74009,
+   "created_at": "2026-09-07",
+   "language": "HTML",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "unknown"
+   },
+   "concepts": [],
+   "assignment": "用Python读取仓库中的Markdown条目，统计各证据等级（A/B/C）的条数并画成柱状图。",
+   "hype": [],
+   "picked": true
+  },
+  {
+   "repo": "livliv-dev/player",
+   "url": "https://github.com/livliv-dev/player",
+   "what": "浏览器端 2.5D 虚拟形象播放器，支持口型同步与摄像头面部追踪，内置 21 个角色，兼容 VRM 与 PNGTuber。",
+   "why": "纯前端 WebGL2 实现，约 30KB，无需显卡算力，适合当作课堂演示素材，让学生直观看到代码驱动角色。",
+   "theme": "visual",
+   "theme_title": "可视化创意",
+   "bucket": "d3",
+   "category": "teaching",
+   "total": 0.674,
+   "stars": 887,
+   "created_at": "2026-11-04",
+   "language": "TypeScript",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "source"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [],
+   "picked": true
+  },
+  {
+   "repo": "NandhaKishorM/laya",
+   "url": "https://github.com/NandhaKishorM/laya",
+   "what": "多语言非自回归决策引擎，单次前向传播对任意文本做类型化选择、打分和是/否判断，带路由选择检查点。",
+   "why": "主打33毫秒单次前向和100+语言，但README混入vega等未解释内容，信息可信度存疑。",
+   "theme": "ai_app",
+   "theme_title": "AI 应用",
+   "bucket": "m3",
+   "category": "save",
+   "total": 0.628,
+   "stars": 35100,
+   "created_at": "2026-09-18",
+   "language": "Python",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": 8,
+    "install": "pip"
+   },
+   "concepts": [
+    "函数",
+    "字典",
+    "类",
+    "异常处理"
+   ],
+   "assignment": "用 laya 对一组中英文句子做是/否判断，打印分数并统计准确率。",
+   "hype": [
+    "3.5万星但创建仅一个多月，fork比例疑似偏低",
+    "README 混入 vegaml 等无关段落，营销话术明显"
+   ],
+   "picked": true
+  },
+  {
+   "repo": "anywhere-labs/dsh-desktop",
+   "url": "https://github.com/anywhere-labs/dsh-desktop",
+   "what": "基于 DeepSeek Harness 的开源桌面客户端，把本地 Web UI、Host 服务和插件系统打包成 Windows/macOS/Linux 原生应用。",
+   "why": "3.5 万星但创建仅三个月，插件生态刚起步，适合现在了解桌面端 AI 客户端的插件化架构。",
+   "theme": "ai_app",
+   "theme_title": "AI 应用",
+   "bucket": "m3",
+   "category": "save",
+   "total": 0.612,
+   "stars": 35148,
+   "created_at": "2026-08-13",
+   "language": "TypeScript",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建三个月即 3.5 万星，README 含赞助商推广与下载引导",
+    "README 明确声明与深度求索无隶属关系，Contributors 来自 fork 继承"
+   ],
+   "picked": true
+  },
+  {
+   "repo": "wheresryan22/anatomy",
+   "url": "https://github.com/wheresryan22/anatomy",
+   "what": "一个 Claude/Codex 等 agent 的技能包，把抽象概念画成可交互的等距 SVG 机械图，局部用 WebGL 着色器做特效。",
+   "why": "agent skill 生态刚起步，这类把概念变成可操作物体的可视化思路，适合当教学演示素材。",
+   "theme": "visual",
+   "theme_title": "可视化创意",
+   "bucket": "m1",
+   "category": "save",
+   "total": 0.585,
+   "stars": 25466,
+   "created_at": "2026-10-08",
+   "language": "JavaScript",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "source"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建到最近更新仅 10 天却已有 2.5 万 star，增长异常",
+    "README 通篇营销式排版与徽章堆砌"
+   ],
+   "picked": true
+  },
+  {
+   "repo": "Gathin23/cleanyourtv",
+   "url": "https://github.com/Gathin23/cleanyourtv",
+   "what": "通过 Wi-Fi 用 ADB 卸载 Android TV 和 Google TV 的预装广告应用，并换成仿 Apple TV 的简洁桌面。",
+   "why": "近期在 GitHub 趋势榜走红，媒体大量报道，但本质是 ADB 脚本集合，与本地大模型无关。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "m1",
+   "category": "save",
+   "total": 0.573,
+   "stars": 53131,
+   "created_at": "2026-10-17",
+   "language": "Python",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "source"
+   },
+   "concepts": [
+    "子进程",
+    "命令行参数",
+    "字符串处理",
+    "文件读写"
+   ],
+   "assignment": "用 subprocess 封装一条 adb 命令，读取设备列表并打印成表格。",
+   "hype": [
+    "创建到更新仅三周即 5.3 万星，增速异常",
+    "README 通篇媒体背书与营销话术",
+    "topics 含 vibe-coding、claude-code 等蹭热点标签"
+   ],
+   "picked": true
+  },
+  {
+   "repo": "caru-ini/stack-diagram",
+   "url": "https://github.com/caru-ini/stack-diagram",
+   "what": "一个 Agent 技能：用一句话描述技术栈，自动生成带官方 Logo 的系统架构图。",
+   "why": "近期 Agent Skills 生态热度上升，1924 星且两天内更新，适合了解 Claude Code 技能形态。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "w1",
+   "category": "save",
+   "total": 0.535,
+   "stars": 1925,
+   "created_at": "2026-11-01",
+   "language": "TypeScript",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "unknown"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [],
+   "picked": true
+  },
+  {
+   "repo": "WoYun520/pixel-gif-sticker-pack",
+   "url": "https://github.com/WoYun520/pixel-gif-sticker-pack",
+   "what": "基于 Codex 技能的角色参考图转 GIF 表情包生成与校验工具，附带 242 张示例和品牌短片案例。",
+   "why": "仓库创建于 2026-11-05，次日即更新，属于刚出现的新项目，示例丰富，适合作为 AI 生成素材的入门演示。",
+   "theme": "visual",
+   "theme_title": "可视化创意",
+   "bucket": "d3",
+   "category": "save",
+   "total": 0.522,
+   "stars": 545,
+   "created_at": "2026-11-05",
+   "language": "Python",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "unknown"
+   },
+   "concepts": [
+    "文件读写",
+    "路径处理",
+    "循环",
+    "函数"
+   ],
+   "assignment": "用 Python 批量读取 examples 目录下的 GIF，统计每个分类的文件数量并输出成表格。",
+   "hype": [],
+   "picked": true
+  },
+  {
+   "repo": "KKKKhazix/agent-autoloop",
+   "url": "https://github.com/KKKKhazix/agent-autoloop",
+   "what": "把 Claude Code、Codex 等命令行 Agent 接入事件驱动调度内核，按规则自动接活，遇到需要决定的事才推送卡片询问。",
+   "why": "3593 星但创建仅 3 天、更新 3 天，热度异常集中，需警惕刷星；功能本身对个人开发者有参考价值。",
+   "theme": "ai_app",
+   "theme_title": "AI 应用",
+   "bucket": "w1",
+   "category": "save",
+   "total": 0.505,
+   "stars": 3598,
+   "created_at": "2026-11-03",
+   "language": "TypeScript",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建 3 天即 3593 星，增速异常",
+    "README 通篇营销式短句与对比话术"
+   ],
+   "picked": true
+  },
+  {
+   "repo": "Verlintas/NOIR",
+   "url": "https://github.com/Verlintas/NOIR",
+   "what": "用 adb 扫描安卓应用的权限、上报域名与数据流向，给出风险评分和可回滚的处置命令，可选 jadx 反编译深挖。",
+   "why": "隐私审计话题热，Kotlin 跨平台 CLI 自带便携包，但和 Python 教学、本地模型都无关。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "w1",
+   "category": "save",
+   "total": 0.501,
+   "stars": 2724,
+   "created_at": "2026-10-31",
+   "language": "Kotlin",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [],
+   "picked": true
+  },
+  {
+   "repo": "AtomIllusionistDwell/watson-username-footprint-finder",
+   "url": "https://github.com/AtomIllusionistDwell/watson-username-footprint-finder",
+   "what": "Electron+React 桌面应用，输入昵称/邮箱/手机号，批量查询 3100+ 公开站点并生成可读报告。",
+   "why": "OSINT 人肉搜索工具，隐私风险高，且与 Python 教学无关，不建议引入课堂。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "d3",
+   "category": "skip",
+   "total": 0.437,
+   "stars": 436,
+   "created_at": "2026-11-05",
+   "language": "TypeScript",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "README 通篇营销话术，强调免费/无需账号/一键 PDF",
+    "创建与更新时间同为 2026-11-05，疑似新仓库集中推广",
+    "下载链接指向自有域名而非仅 GitHub Release"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "deepseek-ai/deepseek-harness",
+   "url": "https://github.com/deepseek-ai/deepseek-harness",
+   "what": "DeepSeek 开源的 agent harness，基于 Cordis 的「一切皆插件」架构，提供 Web UI 与插件生态。",
+   "why": "开发者预览期，接口频繁破坏性变更；TypeScript 技术栈，与你的 Python 教学路线不搭。",
+   "theme": "ai_app",
+   "theme_title": "AI 应用",
+   "bucket": "m3",
+   "category": "skip",
+   "total": 0.408,
+   "stars": 274719,
+   "created_at": "2026-08-13",
+   "language": "TypeScript",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "unknown"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "star 数异常偏高（27 万+），与创建时间短、开发者预览阶段不匹配，疑似刷星"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "mromidev/claude-animated-shorts",
+   "url": "https://github.com/mromidev/claude-animated-shorts",
+   "what": "Claude 技能包，用 three.js + Remotion 在本地渲染 55-70 秒竖屏 2D 角色 3D 场景动画短片，含模板与风格参考。",
+   "why": "1977 星但创建与更新同日，疑似发布即爆；依赖 Remotion 与 1.3GB 素材，非即装即玩。",
+   "theme": "visual",
+   "theme_title": "可视化创意",
+   "bucket": "w1",
+   "category": "save",
+   "total": 0.403,
+   "stars": 1977,
+   "created_at": "2026-11-01",
+   "language": "TypeScript",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "source"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建与最近更新同为 2026-11-01，单日近两千星",
+    "README 通篇 viral/免费技能营销话术"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "dragonwolfshovel/youtube-uploader",
+   "url": "https://github.com/dragonwolfshovel/youtube-uploader",
+   "what": "基于 YouTube Data API v3 的批量视频上传 CLI/GUI 工具，支持缩略图、元数据编辑与定时发布。",
+   "why": "仓库创建与更新同日，README 含可疑下载按钮，需警惕；功能本身与本地模型无关。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "d3",
+   "category": "skip",
+   "total": 0.399,
+   "stars": 429,
+   "created_at": "2026-11-05",
+   "language": "Python",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "source"
+   },
+   "concepts": [
+    "OAuth2 认证",
+    "命令行参数解析",
+    "配置文件读取",
+    "文件上传与分块"
+   ],
+   "assignment": "",
+   "hype": [
+    "README 内嵌非官方下载按钮指向 telegra.ph 短链",
+    "创建与更新时间完全相同，疑似刷星或一次性发布"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "storytold/photocraft",
+   "url": "https://github.com/storytold/photocraft",
+   "what": "用纯 Rust 从零编写的开源图像编辑器，支持图层、蒙版、调整层、文字、矢量、笔刷和真实 PSD 文件。",
+   "why": "77401 星、早期 alpha、跨平台原生应用，但 Rust 源码编译对零基础新生门槛过高。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "m3",
+   "category": "skip",
+   "total": 0.398,
+   "stars": 77403,
+   "created_at": "2026-09-30",
+   "language": "Rust",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "source"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "77401 星与早期 alpha 状态、创建仅一个多月不匹配，疑似刷星或数据异常"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "heydamir/unslop",
+   "url": "https://github.com/heydamir/unslop",
+   "what": "一个 Claude Code/Codex 技能包，按审计、定方向、分轮次修改的流程，把 AI 味浓的网页 UI 改成有设计感的界面。",
+   "why": "AI 生成前端泛滥，界面同质化严重，这个技能把设计审查流程写成可复用的提示词资产，近期热度高。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "m1",
+   "category": "skip",
+   "total": 0.394,
+   "stars": 10543,
+   "created_at": "2026-10-29",
+   "language": "JavaScript",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "source"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建到最近更新仅 3 天即破万星，增长异常",
+    "无 topics，README 含个人品牌与付费服务导流"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "storytold/craft-anything",
+   "url": "https://github.com/storytold/craft-anything",
+   "what": "纯 Rust 开源引擎，用检查工具分析网站、应用或游戏，再由 AI 编码代理仿造出可运行的新版本并自动比对。",
+   "why": "早期 alpha 阶段，一周内 star 破万，但需要强模型和大量算力，本地 8G 显存笔记本难以承担。",
+   "theme": "ai_app",
+   "theme_title": "AI 应用",
+   "bucket": "w1",
+   "category": "skip",
+   "total": 0.383,
+   "stars": 17276,
+   "created_at": "2026-10-31",
+   "language": "Rust",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建到更新仅 6 天即 1.7 万 star，增速异常",
+    "README 通篇品牌营销与 Discord 社区话术"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "Ebony-Vinyl/dsh-our-free-model",
+   "url": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
+   "what": "dsh 编辑器插件，挂载后免登录免 Key 调用 DeepSeek、Kimi 等上游免费模型，附带用量看板和 OpenAI 兼容转发端口。",
+   "why": "星数异常暴涨且依赖特定编辑器与上游免费网关，稳定性存疑，不适合作为教学主线。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "m3",
+   "category": "skip",
+   "total": 0.368,
+   "stars": 63702,
+   "created_at": "2026-09-24",
+   "language": "JavaScript",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "unknown"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "6.3 万星但创建仅一个多月，星数增长与项目体量不匹配",
+    "README 通篇营销话术，强调免费不限量",
+    "依赖上游免费网关，可用性不可控",
+    "含 QQ 群引流与 star 授权解锁渠道"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "Niko1221/Strata",
+   "url": "https://github.com/Niko1221/Strata",
+   "what": "C++ 写的本地推理引擎，一键装 Windows/Linux，在 localhost 提供 OpenAI/Anthropic 兼容 API，支持图像输入。",
+   "why": "40926 星但创建仅一个多月，模型名 Qwen3.8-Flash-Next 与 DeepSeekV4.1 均不存在，疑为虚构或刷星项目。",
+   "theme": "runtime",
+   "theme_title": "模型与运行时",
+   "bucket": "m3",
+   "category": "skip",
+   "total": 0.368,
+   "stars": 40931,
+   "created_at": "2026-09-24",
+   "language": "C++",
+   "runnable": {
+    "windows": true,
+    "gpu_required": true,
+    "vram_gb": 8,
+    "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建一个多月即 4 万星",
+    "模型名称疑似虚构（Qwen3.8-Flash-Next、DeepSeekV4.1-Flash-1017）",
+    "README 通篇赞助与下载徽章营销话术",
+    "无 topics 标签"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "yetone/magpie",
+   "url": "https://github.com/yetone/magpie",
+   "what": "macOS 菜单栏应用加本地网关，把 Claude Code、Codex 等编码 agent 的模型配置集中管理，可切换 Kimi、DeepSeek 等供应商。",
+   "why": "编码 agent 各自维护模型配置很麻烦，这个项目用本地网关统一管理，还能在额度耗尽时自动切换账号。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "m3",
+   "category": "skip",
+   "total": 0.342,
+   "stars": 31157,
+   "created_at": "2026-09-23",
+   "language": "Go",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建到最近更新仅约六周即 3.1 万星，增速异常",
+    "README 含大量赞助商链接与推广话术",
+    "核心功能依赖付费订阅与 API key，非本地可玩"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "pengchujin/aerial-tv",
+   "url": "https://github.com/pengchujin/aerial-tv",
+   "what": "面向国产电视的开源 Android TV 桌面，仿 tvOS 风格，无广告，可开机自动接管，用 Kotlin 编写。",
+   "why": "近期热度高，但它是 Android 电视桌面，与 Python 教学和 Windows 本地环境无关。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "m1",
+   "category": "skip",
+   "total": 0.338,
+   "stars": 10309,
+   "created_at": "2026-10-20",
+   "language": "Kotlin",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "unknown"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [],
+   "picked": false
+  },
+  {
+   "repo": "TagPhaseArcade/tiktok-uploader",
+   "url": "https://github.com/TagPhaseArcade/tiktok-uploader",
+   "what": "基于本地会话认证的 TikTok 批量视频上传与定时发布工具，支持元数据、话题标签和断点续传。",
+   "why": "创建与更新同日、429 星，README 用外链按钮引导下载，来源可疑，建议先观望。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "d3",
+   "category": "skip",
+   "total": 0.336,
+   "stars": 429,
+   "created_at": "2026-11-05",
+   "language": "Python",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "unknown"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建与最近更新为同一天",
+    "README 用 telegra.ph 外链按钮分发下载包",
+    "自动化平台账号存在封号与合规风险"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "zortos293/Lichii",
+   "url": "https://github.com/zortos293/Lichii",
+   "what": "基于 yuzu/Eden 分支的实验性 Switch 与 Switch 2 模拟器，C++ 编写，Windows 提供 lichii.exe。",
+   "why": "刚创建一周就冲到三千多星，但仍是极早期实验品，兼容性和稳定性都不可靠。",
+   "theme": "play",
+   "theme_title": "游戏与玩物",
+   "bucket": "w1",
+   "category": "skip",
+   "total": 0.336,
+   "stars": 3384,
+   "created_at": "2026-10-31",
+   "language": "C++",
+   "runnable": {
+    "windows": true,
+    "gpu_required": true,
+    "vram_gb": 8,
+    "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建仅数天即获三千余星，与项目成熟度不匹配",
+    "README 含多币种捐赠地址，并提及用 AI 工具加速开发"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "HerdBuilderEstimate/roblox-studio-mcp",
+   "url": "https://github.com/HerdBuilderEstimate/roblox-studio-mcp",
+   "what": "把 Roblox Studio 接到 Claude/Cursor 的 MCP 服务器，可读对象树、改 Lua 脚本、跑 playtest。",
+   "why": "MCP 生态正热，但这是 Node/TS 项目且需 Roblox Studio，与你的 Python 教学线不搭。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "d3",
+   "category": "skip",
+   "total": 0.334,
+   "stars": 427,
+   "created_at": "2026-11-06",
+   "language": "Python",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "unknown"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "README 下载按钮指向 telegra.ph 外链并要求运行 ProjectFiles.exe，疑似恶意分发",
+    "描述称 Python 但正文为 Node/TypeScript，信息不一致",
+    "创建与更新同日，星数偏高"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "Zagitta/gpu-unlock",
+   "url": "https://github.com/Zagitta/gpu-unlock",
+   "what": "在 Linux 启动阶段绕过 NVIDIA 驱动，解除 GeForce 显卡 FP16/BF16/TF32 张量核心半速限制的 C 语言内核模块。",
+   "why": "近期热度很高，但仅支持 Linux，且需要内核级操作；Windows 笔记本用户无法直接使用。",
+   "theme": "runtime",
+   "theme_title": "模型与运行时",
+   "bucket": "m1",
+   "category": "skip",
+   "total": 0.321,
+   "stars": 17493,
+   "created_at": "2026-10-18",
+   "language": "C",
+   "runnable": {
+    "windows": false,
+    "gpu_required": true,
+    "vram_gb": null,
+    "install": "source"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建仅 11 天即获 1.7 万 star，增速异常",
+    "README 通篇营销话术（'half speed'、'2×'），且无 topics"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "seedds/nxnative",
+   "url": "https://github.com/seedds/nxnative",
+   "what": "把 Switch 游戏 NSP 转成可在 iPhone/iPad/Mac 原生运行的 IPA，含 NSO 重写、Horizon HLE 与 NVN→Metal 图形层。",
+   "why": "近期热度很高，但需要 macOS 26.6、Xcode 27.2 和正版游戏密钥，Windows 用户无法直接使用。",
+   "theme": "play",
+   "theme_title": "游戏与玩物",
+   "bucket": "m1",
+   "category": "skip",
+   "total": 0.318,
+   "stars": 12825,
+   "created_at": "2026-10-13",
+   "language": "Python",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "source"
+   },
+   "concepts": [
+    "文件读写",
+    "命令行参数",
+    "子进程调用",
+    "二进制数据处理"
+   ],
+   "assignment": "",
+   "hype": [
+    "创建到更新不足一个月即 1.2 万星，需警惕刷星",
+    "README 通篇强调原生运行与多款 Switch 2 游戏支持，营销色彩较重"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "deepseek-ai/dsh-superagent-prototype",
+   "url": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+   "what": "DeepSeek 开源的自主编码 Agent 原型，监听 GitHub/飞书任务，自动开分支改代码并提 PR，附 Web 面板。",
+   "why": "两万星但创建仅三天、更新两天，热度与成熟度不匹配，且需 DeepSeek Harness 与仓库权限，本地难复现。",
+   "theme": "ai_app",
+   "theme_title": "AI 应用",
+   "bucket": "w1",
+   "category": "skip",
+   "total": 0.307,
+   "stars": 20133,
+   "created_at": "2026-10-31",
+   "language": "TypeScript",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "source"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建三天即两万星，star 增速异常",
+    "无 topics、无正式发布，README 自述为研究原型"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "deepseek-ai/DeepInfer",
+   "url": "https://github.com/deepseek-ai/DeepInfer",
+   "what": "DeepSeek 官方开源的大规模推理框架，支持 V4.1-Flash 模型，含并行、优化内核与确定性采样。",
+   "why": "官方生产级推理栈开源，但仅支持 SM100 与昇腾 950，普通显卡无法运行。",
+   "theme": "runtime",
+   "theme_title": "模型与运行时",
+   "bucket": "m1",
+   "category": "skip",
+   "total": 0.307,
+   "stars": 25534,
+   "created_at": "2026-10-16",
+   "language": "Python",
+   "runnable": {
+    "windows": false,
+    "gpu_required": true,
+    "vram_gb": null,
+    "install": "source"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "star 数异常偏高（2.5 万），但仓库创建仅约两周",
+    "topics 为空，README 通篇生产级营销话术"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "worldonlyu/Google_AI_Pro_2Year_ZeroCost_Auto",
+   "url": "https://github.com/worldonlyu/Google_AI_Pro_2Year_ZeroCost_Auto",
+   "what": "用浏览器自动化批量登录 Google 账号、绑卡并叠加免费试用，把 AI Pro 权益刷到 24 个月的脚本工具。",
+   "why": "仓库创建两天就涨到近三千星，但本质是批量薅 Google 试用、涉及账号和支付卡，风险远大于学习价值。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "d3",
+   "category": "skip",
+   "total": 0.299,
+   "stars": 2818,
+   "created_at": "2026-11-04",
+   "language": "Python",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "pip"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建两天即 2815 star，增速异常",
+    "README 通篇营销话术并附卡网、博客、TG 群引流",
+    "批量账号+绑卡自动化，涉嫌违反 Google 服务条款"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "ccch1mneyyy/dsh-Go",
+   "url": "https://github.com/ccch1mneyyy/dsh-Go",
+   "what": "DeepSeek Harness 的 Android 客户端，用 Dart/Flutter 编写，可在手机本地运行，也能远程遥控电脑上的 DSH 编码代理。",
+   "why": "刚登上 Trendshift 日榜第一，star 过万，但它是 Android 应用，与你的 Windows 加 Python 教学场景不匹配。",
+   "theme": "ai_app",
+   "theme_title": "AI 应用",
+   "bucket": "m1",
+   "category": "skip",
+   "total": 0.298,
+   "stars": 12732,
+   "created_at": "2026-10-25",
+   "language": "Dart",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "unknown"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建到最近更新仅约两周即获 1.2 万 star，增速异常",
+    "README 通篇营销话术，含求 star 加速适配 iOS 的表述",
+    "Trendshift 日榜第一与超高 star 增速并存，需警惕刷星"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "mmdoctor/google-pro-helper",
+   "url": "https://github.com/mmdoctor/google-pro-helper",
+   "what": "用浏览器扩展和本地控制台批量给 Google 账号注入优惠 token，自动绑卡并叠加免费订阅，以获取 Google AI Pro 会员。",
+   "why": "仓库创建当天就获得近 700 星，属于短期热点；但本质是批量注册账号、利用优惠漏洞，存在封号和支付风险。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "d3",
+   "category": "skip",
+   "total": 0.293,
+   "stars": 703,
+   "created_at": "2026-11-05",
+   "language": "Python",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "source"
+   },
+   "concepts": [
+    "文件读写",
+    "JSON",
+    "subprocess",
+    "HTTP 请求"
+   ],
+   "assignment": "",
+   "hype": [
+    "创建当天即获近 700 星，增长异常",
+    "README 通篇营销话术，并引导批量注册账号、利用优惠漏洞",
+    "涉及支付卡与账号密码等敏感信息，存在法律与账号安全风险"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "govijr/terminal-mac",
+   "url": "https://github.com/govijr/terminal-mac",
+   "what": "在 Apple 芯片 Mac 上用虚拟化跑一个独立 macOS 虚拟机，通过终端图形协议显示画面，并供 AI agent 截图点击操作。",
+   "why": "computer-use agent 正热，它把 agent 操作隔离到虚拟 Mac，避免动真实桌面，思路值得关注。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "w1",
+   "category": "skip",
+   "total": 0.284,
+   "stars": 2086,
+   "created_at": "2026-11-03",
+   "language": "Swift",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [],
+   "picked": false
+  }
+ ]
+};
