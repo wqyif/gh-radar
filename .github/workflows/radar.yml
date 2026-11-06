@@ -28,7 +28,7 @@ jobs:
       - name: 每日存档（只抓不分析）
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python main.py --days 1 --archive-only
+        run: python main.py --archive-only
 
       - name: 每三天出简报
         env:
@@ -39,7 +39,7 @@ jobs:
         run: |
           DAY=$(date -u +%j)
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ $((10#$DAY % 3)) -eq 0 ]; then
-            python main.py --days 3
+            python main.py
           else
             echo "今天不是出稿日，只存档"
           fi

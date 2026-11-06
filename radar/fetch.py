@@ -17,15 +17,15 @@ def _search_once(q, per_query):
     resp = get(f"{API}/search/repositories", params=params)
     if resp.status_code in (403, 429):
         reset = int(resp.headers.get("X-RateLimit-Reset", 0))
-        wait = max(0, min(65, reset - int(time.time()) + 1))
-        if wait:
-            print(f"      限流，等待 {wait}s", file=sys.stderr)
-            time.sleep(wait)
-            resp = get(f"{API}/search/repositories", params=params)
+        retry_after = int(resp.headers.get("Retry-After", 0) or 0)
+        wait = max(retry_after, min(65, reset - int(time.time()) + 1), 10)
+        print(f"      限流，等待 {wait}s", file=sys.stderr)
+        time.sleep(wait)
+        resp = get(f"{API}/search/repositories", params=params)
     return resp
 
 
-def _trim(item):
+def _trim(item, bucket=""):
     return {
         "full_name": item["full_name"],
         "url": item["html_url"],
@@ -40,32 +40,24 @@ def _trim(item):
         "pushed_at": item["pushed_at"][:10],
         "stars_today": 0,
         "source": "search",
+        "bucket": bucket,
     }
 
 
-def search(since, min_stars=config.MIN_STARS, per_query=config.PER_QUERY):
-    """按 topic 和关键词各搜一遍，按仓库名去重。"""
-    queries = [f"topic:{t} created:>{since} stars:>{min_stars}" for t in config.SEARCH_TOPICS]
-    queries += [f'"{k}" in:name,description created:>{since} stars:>{min_stars}'
-                for k in config.SEARCH_KEYWORDS]
-
-    found = {}
-    for q in queries:
-        try:
-            resp = _search_once(q, per_query)
-        except Exception as exc:
-            print(f"  [跳过] {q[:40]} -> {exc}", file=sys.stderr)
-            continue
-        if resp.status_code != 200:
-            print(f"  [跳过] {q[:40]} -> HTTP {resp.status_code}", file=sys.stderr)
-            continue
-        items = resp.json().get("items", [])
-        for item in items:
-            found.setdefault(item["full_name"], _trim(item))
-        print(f"  {q[:46]:<48} +{len(items)}")
-        time.sleep(2)   # 搜索接口每分钟 10 次，慢一点更稳
-
-    return list(found.values())
+def search_bucket(since, until, min_stars, bucket_key, per_page=config.PER_QUERY):
+    """按创建时间区间搜一个时间桶。since/until 都是 YYYY-MM-DD。"""
+    q = f"created:{since}..{until} stars:>{min_stars}"
+    try:
+        resp = _search_once(q, per_page)
+    except Exception as exc:
+        print(f"  [跳过] {q} -> {exc}", file=sys.stderr)
+        return []
+    if resp.status_code != 200:
+        print(f"  [跳过] {q} -> HTTP {resp.status_code}", file=sys.stderr)
+        return []
+    items = resp.json().get("items", [])
+    print(f"  {q:<42} +{len(items)}")
+    return [_trim(item, bucket_key) for item in items]
 
 
 _ARTICLE = re.compile(r'<article class="Box-row">(.*?)</article>', re.S)
@@ -111,6 +103,7 @@ def trending():
             "pushed_at": "",
             "stars_today": _num(today.group(1)) if today else 0,
             "source": "trending",
+            "bucket": "",
         })
     print(f"  Trending 页面解析到 {len(out)} 条")
     return out

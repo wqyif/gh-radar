@@ -69,26 +69,24 @@ def evaluate(repo, analysis, delta, today=None):
     }
 
 
-def select(items):
-    """按类别配额取稿，名额没满时用高分项目回填。"""
-    bucket = {c: [] for c in config.QUOTA}
+def pick(items, quota=None, per_theme=None):
+    """桶内取稿：按总分降序，同主题有数量上限，skip 一律不进正文。"""
+    quota = config.QUOTA_PER_BUCKET if quota is None else quota
+    per_theme = config.MAX_PER_THEME_PER_BUCKET if per_theme is None else per_theme
+
+    chosen, theme_count = [], {}
     for item in sorted(items, key=lambda it: it["total"], reverse=True):
-        bucket.setdefault(item["category"], []).append(item)
+        if item["category"] == "skip":
+            continue
+        theme = item["analysis"]["theme"]
+        if theme_count.get(theme, 0) >= per_theme:
+            continue
+        chosen.append(item)
+        theme_count[theme] = theme_count.get(theme, 0) + 1
+        if len(chosen) >= quota:
+            break
 
-    chosen = {}
-    used = set()
-    for category, quota in config.QUOTA.items():
-        picked = bucket.get(category, [])[:quota]
-        chosen[category] = picked
-        used.update(id(it) for it in picked)
-
-    spare = [it for it in items if id(it) not in used and it["category"] != "skip"]
-    spare.sort(key=lambda it: it["total"], reverse=True)
-    # 只回填"值得收藏"：run_now 有硬门槛，宁可空着也不凑数
-    while len(chosen.get("save", [])) < config.QUOTA.get("save", 0) and spare and spare[0]["total"] >= 0.45:
-        chosen["save"].append(spare.pop(0))
-
-    picked_ids = {id(it) for picked in chosen.values() for it in picked}
-    leftovers = [it for it in items if id(it) not in picked_ids]
+    chosen_ids = {id(it) for it in chosen}
+    leftovers = [it for it in items if id(it) not in chosen_ids]
     leftovers.sort(key=lambda it: it["total"], reverse=True)
     return chosen, leftovers

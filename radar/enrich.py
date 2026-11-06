@@ -8,7 +8,7 @@ from radar.http import session
 
 SYSTEM = "你是资深技术情报分析员。你只输出一个 JSON 对象，不要输出任何解释或 Markdown 标题。"
 
-PROMPT_VERSION = 2
+PROMPT_VERSION = 3
 CACHE_KEY = f"{config.LLM_MODEL}@{PROMPT_VERSION}"
 
 PROMPT = """【我的身份】
@@ -32,6 +32,7 @@ README>>>
 {{
   "what": "",
   "why_now": "",
+  "theme": "play|tool|learn|visual|ai_app|runtime|infra",
   "category": "run_now|save|teaching|skip",
   "ai_layer": "runtime|app|agent_framework|model|research|other",
   "runnable": {{"windows": false, "gpu_required": false, "vram_gb": null,
@@ -40,6 +41,15 @@ README>>>
   "scores": {{"runnable": 0.0, "teaching": 0.0, "identity": 0.0}},
   "hype_flags": []
 }}
+
+主题（theme）按"这个项目最主要的属性"选一个，不是按技术栈：
+- play：游戏、模拟器、终端玩具、电子宠物这类以好玩为目的的东西
+- tool：日常开发用的工具、CLI、编辑器插件、效率脚本
+- learn：教程、课程、示例合集、从零实现的教学项目
+- visual：可视化、生成艺术、图表、动画、创意编程
+- ai_app：以模型能力为核心的最终产品（聊天、agent 应用、RAG 应用）
+- runtime：推理引擎、量化、模型加载、本地部署工具链
+- infra：数据库、部署、监控、网络这类底层设施
 
 规则：
 - 全部用中文回答。
@@ -56,7 +66,6 @@ README>>>
 CATEGORIES = {"run_now", "save", "teaching", "skip"}
 LAYERS = {"runtime", "app", "agent_framework", "model", "research", "other"}
 INSTALLS = {"pip", "docker", "installer", "source", "unknown"}
-
 # 小模型会照抄 prompt 里的示例文字，这些要当噪声丢掉
 PLACEHOLDER = {"用到的python概念", "python概念", "概念", "可以改成什么作业", "一句话说清它是什么"}
 
@@ -122,11 +131,16 @@ def normalize(raw, repo):
     if category not in CATEGORIES:
         category = "save"
 
+    theme = raw.get("theme")
+    if theme not in config.THEMES:
+        theme = "tool"
+
     install = runnable.get("install")
     vram = runnable.get("vram_gb")
     return {
         "what": _clip(_clean(raw.get("what")) or repo.get("description") or repo["full_name"], 90),
         "why_now": _clip(_clean(raw.get("why_now")), 110),
+        "theme": theme,
         "category": category,
         "ai_layer": raw.get("ai_layer") if raw.get("ai_layer") in LAYERS else "other",
         "runnable": {

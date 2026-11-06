@@ -24,40 +24,50 @@ PROFILE = """
 我自己用 Windows 笔记本，显卡一般（8G 显存），已经装了 Ollama 跑本地模型。
 每天能折腾新东西的时间不超过一小时。
 
-我关心：能不能在我这台机器上跑起来、能不能当作教学素材讲给新生听。
+我关心：能不能在我这台机器上跑起来、能不能当作教学素材讲给新生听、
+以及这东西本身够不够好玩（小游戏、终端玩具、可视化、奇怪的硬件项目都算）。
 我不关心：需要多卡集群的、纯论文复现的、企业级基础设施、需要长期运维的。
 """.strip()
 
 # 五项权重相加 = 1.0
 WEIGHTS = {
-    "heat": 0.25,       # 三天内的 star 增量
+    "heat": 0.25,       # 窗口内的 star 增量
     "runnable": 0.30,   # 能不能今晚就跑起来（权重最高）
     "teaching": 0.20,   # 能不能当例子讲给新生
-    "identity": 0.15,   # 和我的方向是否对路
+    "identity": 0.15,   # 和我的兴趣是否对路
     "trust": 0.10,      # 排除刷星和营销仓库
 }
 
-# 每期各类配额，比单纯按总分截断更能保证多样性
-QUOTA = {"run_now": 3, "save": 3, "teaching": 1}
+# 时间分桶：互斥，按"今天 - 创建时间"的年龄落桶
+BUCKETS = [
+    {"key": "d3", "min_age": 0, "max_age": 3, "title": "最近三天", "min_stars": 30},
+    {"key": "w1", "min_age": 4, "max_age": 7, "title": "这周内", "min_stars": 100},
+    {"key": "m1", "min_age": 8, "max_age": 30, "title": "这个月", "min_stars": 500},
+    {"key": "m3", "min_age": 31, "max_age": 90, "title": "近三个月", "min_stars": 2000},
+]
 
-CATEGORY_TITLES = {
-    "run_now": "今晚就能玩",
-    "save": "值得收藏",
-    "teaching": "教学素材",
-    "skip": "看看就好",
+# 主题分类：固定 7 类，由 LLM 判断项目"最重要的属性"
+THEMES = {
+    "play": "游戏与玩物",
+    "tool": "开发工具",
+    "learn": "学习教程",
+    "visual": "可视化创意",
+    "ai_app": "AI 应用",
+    "runtime": "模型与运行时",
+    "infra": "基础设施",
 }
 
-# 抓取参数
+# 每桶最多分析几个、最多出几条、同主题最多几条
+ANALYZE_PER_BUCKET = 8
+QUOTA_PER_BUCKET = 3
+MAX_PER_THEME_PER_BUCKET = 2
+
+# Trending 榜单只收这个年龄以内的项目
+MAX_AGE_DAYS = BUCKETS[-1]["max_age"]
+
+# 搜索参数
 SEARCH_TOPICS = ["llm", "ai-agents", "agents", "llm-agent", "rag", "mcp"]
-SEARCH_KEYWORDS = ["LLM", "agent"]
-MIN_STARS = 50
-PER_QUERY = 30
-
-# 每期最多分析多少个仓库（控制 LLM 成本）
-MAX_ANALYZE = 60
-
-# Trending 榜单里的老项目（react、vscode 这种）不算"新出现"，超过这个年龄就丢掉
-MAX_AGE_DAYS = 365
+PER_QUERY = 100
 
 # LLM：任何 OpenAI 兼容接口都行（DeepSeek / 通义 / 本地 Ollama）
 LLM_BASE_URL = os.getenv("LLM_BASE_URL", "https://api.deepseek.com/v1")
@@ -67,3 +77,11 @@ LLM_TIMEOUT = 120
 
 # 本机系统代理 7890 时常失效，默认直连；需要走代理时设 USE_PROXY=1
 USE_PROXY = os.getenv("USE_PROXY", "0") == "1"
+
+
+def bucket_for(age_days):
+    """按项目年龄找到所属的时间桶，找不到（太老）返回 None。"""
+    for bucket in BUCKETS:
+        if bucket["min_age"] <= age_days <= bucket["max_age"]:
+            return bucket
+    return None

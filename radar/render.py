@@ -1,4 +1,4 @@
-"""把打分结果渲染成中文 Markdown 简报。"""
+"""把打分结果渲染成中文 Markdown 简报：时间为主轴，主题为分组。"""
 
 import config
 
@@ -19,17 +19,18 @@ def _run_line(a):
     return " · ".join(bits)
 
 
-def _entry(index, item, days):
+def _entry(index, item, theme_label=""):
     repo, a = item["repo"], item["analysis"]
     delta = item["delta"]
-    lines = [f"### {index}. [{repo['full_name']}]({repo['url']})  ·  总分 {item['total']}", ""]
+    suffix = f" · {theme_label}" if theme_label else ""
+    lines = [f"#### {index}. [{repo['full_name']}]({repo['url']}){suffix}  ·  总分 {item['total']}", ""]
     lines.append(f"> {a['what']}")
     lines.append("")
     if a["why_now"]:
-        lines.append(f"- **为什么是现在**：{a['why_now']}")
+        lines.append(f"- **为什么值得看**：{a['why_now']}")
     heat = f"{_num(repo['stars'])} 星"
     if delta:
-        heat += f"（+{_num(delta)} / {days} 天）"
+        heat += f"（+{_num(delta)}）"
     elif repo.get("stars_today"):
         heat += f"（+{_num(repo['stars_today'])} 今日）"
     ratio = repo["forks"] / repo["stars"] if repo["stars"] else 0
@@ -46,29 +47,53 @@ def _entry(index, item, days):
     return lines
 
 
-def render(chosen, leftovers, days, today, scanned):
-    lines = [f"# GitHub 情报 · 近 {days} 天", ""]
-    lines.append(f"扫描 {scanned} 个候选仓库，按「能不能今晚跑起来、能不能当教学素材」筛选。")
+def render(results, today, scanned):
+    """results: [{"bucket": BUCKET, "chosen": [...], "leftovers": [...]}]"""
+    span = max((r["bucket"]["max_age"] for r in results), default=config.MAX_AGE_DAYS)
+    lines = [f"# GitHub 好玩项目 · 近 {span} 天", ""]
+    lines.append(f"扫描 {scanned} 个候选仓库，按创建时间分段，每段挑出最值得看的几个。")
     lines.append("")
 
     index = 1
-    for category in ("run_now", "save", "teaching"):
-        picked = chosen.get(category) or []
-        if not picked:
-            continue
-        lines.append(f"## {config.CATEGORY_TITLES[category]}")
-        lines.append("")
-        for item in picked:
-            lines += _entry(index, item, days)
-            index += 1
+    all_leftovers = []
+    for result in results:
+        bucket, chosen = result["bucket"], result["chosen"]
+        all_leftovers += [(bucket, it) for it in result["leftovers"]]
 
-    if leftovers:
+        lines.append(f"## {bucket['title']}")
+        lines.append("")
+        if not chosen:
+            lines.append("（这段时间没有符合的项目）")
+            lines.append("")
+            continue
+
+        grouped = {}
+        for item in chosen:
+            theme = item["analysis"]["theme"]
+            grouped.setdefault(theme, []).append(item)
+
+        # 桶里只有一个主题时不加小标题，直接内联标注；有多个主题就统一按主题分组，
+        # 顺序固定按 THEMES 定义，保证每期结构一致
+        multi = len(grouped) > 1
+        for theme in (t for t in config.THEMES if t in grouped):
+            items = grouped[theme]
+            if multi:
+                lines.append(f"### {config.THEMES[theme]}")
+                lines.append("")
+            for item in items:
+                label = "" if multi else config.THEMES[theme]
+                lines += _entry(index, item, label)
+                index += 1
+
+    all_leftovers.sort(key=lambda pair: pair[1]["total"], reverse=True)
+    if all_leftovers:
         lines.append("## 未入选")
         lines.append("")
-        for item in leftovers[:8]:
+        for bucket, item in all_leftovers[:10]:
             repo, a = item["repo"], item["analysis"]
-            reason = "被判为低价值" if item["category"] == "skip" else "同类名额已满"
-            lines.append(f"- {repo['full_name']} — {a['what'][:40]}（{reason}，{item['total']} 分）")
+            reason = "被判为低价值" if item["category"] == "skip" else "同主题名额已满"
+            lines.append(f"- {repo['full_name']}（{bucket['title']}）— {a['what'][:40]}"
+                         f"（{reason}，{item['total']} 分）")
         lines.append("")
 
     lines.append("---")
