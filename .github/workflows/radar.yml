@@ -1,0 +1,59 @@
+name: radar
+
+on:
+  schedule:
+    - cron: "37 22 * * *"   # 06:37 CST，避开整点拥堵
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: radar
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: 每日存档（只抓不分析）
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python main.py --days 1 --archive-only
+
+      - name: 每三天出简报
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+        run: |
+          DAY=$(date -u +%j)
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ $((10#$DAY % 3)) -eq 0 ]; then
+            python main.py --days 3
+          else
+            echo "今天不是出稿日，只存档"
+          fi
+
+      - name: 提交结果
+        run: |
+          mkdir -p data reports
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data reports
+          if git diff --staged --quiet; then
+            echo "没有变化"
+            exit 0
+          fi
+          git commit -m "radar: $(date -u +%F)"
+          git pull --rebase
+          git push
