@@ -68,8 +68,9 @@ SEARCH_TOPICS = ["llm", "ai-agents", "agents", "llm-agent", "rag", "mcp"]
 PER_QUERY = 100
 
 # LLM：任何 OpenAI 兼容接口都行（DeepSeek / 通义 / 本地 Ollama）
-LLM_BASE_URL = os.getenv("LLM_BASE_URL", "https://api.deepseek.com/v1")
-LLM_MODEL = os.getenv("LLM_MODEL", "deepseek-chat")
+# 用 or 而不是 getenv 默认值：Actions 里未配置的 secret 会注入成空字符串
+LLM_BASE_URL = os.getenv("LLM_BASE_URL") or "https://api.deepseek.com/v1"
+LLM_MODEL = os.getenv("LLM_MODEL") or "deepseek-chat"
 LLM_API_KEY = os.getenv("LLM_API_KEY") or os.getenv("DEEPSEEK_API_KEY") or ""
 LLM_TIMEOUT = 120
 
