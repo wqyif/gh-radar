@@ -57,3 +57,28 @@ jobs:
           git commit -m "radar: $(date -u +%F)"
           git pull --rebase
           git push
+
+  deploy:
+    needs: run
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      # run job 刚 push 过新数据，这里必须重新取分支最新提交，不能沿用触发时的 SHA
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,4 +1,4 @@
-const DATA = window.RADAR;
+let DATA = null;
 const THEME_COLORS = {
   play: "#ff8a5c",
   tool: "#8ab4ff",
@@ -151,15 +151,37 @@ function fromHash() {
 }
 
 document.addEventListener("keydown", (e) => {
-  if (e.target.matches("input, textarea")) return;
+  if (!DATA || e.target.matches("input, textarea")) return;
   const keys = ["all", ...DATA.buckets.map((b) => b.key)];
   const n = Number(e.key);
   if (e.key === "0") setBucket("all");
   else if (n >= 1 && n <= DATA.buckets.length) setBucket(keys[n]);
 });
 
-fromHash();
-buildRail();
-buildThemes();
-render();
-window.addEventListener("hashchange", () => { fromHash(); render(); });
+async function loadData() {
+  // file:// 下 fetch 会被拦，直接用内联的 data.js；网页环境优先拿最新文件
+  if (location.protocol === "file:") return window.RADAR;
+  try {
+    const resp = await fetch(`data.json?v=${Date.now()}`, { cache: "no-store" });
+    if (resp.ok) return await resp.json();
+  } catch (err) {
+    console.warn("data.json 拉取失败，回退到内联数据", err);
+  }
+  return window.RADAR;
+}
+
+async function init() {
+  DATA = await loadData();
+  if (!DATA || !DATA.items) {
+    $("empty").hidden = false;
+    $("empty").textContent = "没有读到数据，先跑一次 python main.py。";
+    return;
+  }
+  fromHash();
+  buildRail();
+  buildThemes();
+  render();
+  window.addEventListener("hashchange", () => { fromHash(); render(); });
+}
+
+init();

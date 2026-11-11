@@ -64,8 +64,29 @@ python web_export.py           # 从 SQLite 导出 web/data.json 和 data.js
 ## 自动运行
 
 `.github/workflows/radar.yml` 每天 06:37 抓一次存进 SQLite 并 commit 回仓库，
-第 3 天整除时出简报。需要在仓库 Settings → Secrets 里配置 `LLM_API_KEY`，
-可选 `LLM_BASE_URL` / `LLM_MODEL`。
+第 3 天整除时出简报、刷新 `web/` 数据，然后把 `web/` 部署到 GitHub Pages。
+
+### 上线三步
+
+1. 在 GitHub 新建 **public** 仓库 `gh-radar`（不要勾选初始化 README）
+2. 本地推送：
+
+   ```powershell
+   cd C:\Users\wangw\gh-radar
+   git remote add origin https://github.com/<你的用户名>/gh-radar.git
+   git push -u origin main
+   ```
+
+3. 仓库 Settings 里配两处：
+   - **Pages → Source** 选 `GitHub Actions`
+   - **Secrets and variables → Actions** 新建 `LLM_API_KEY`
+     （可选 `LLM_BASE_URL` / `LLM_MODEL`）
+
+之后在 Actions 页面点一次 `Run workflow`，页面地址是
+`https://<你的用户名>.github.io/gh-radar/`。
+
+注意：仓库公开意味着 `config.py` 里的身份画像和 `reports/` 全部可见。密钥在 `.env` 里，
+已被 git 忽略，不会上传。
 
 ## 已知限制
 
