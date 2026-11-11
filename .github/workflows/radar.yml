@@ -75,6 +75,8 @@ jobs:
           ref: main
 
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true   # 首次运行时自动打开 Pages，省得手动去 Settings 点
 
       - uses: actions/upload-pages-artifact@v3
         with:
