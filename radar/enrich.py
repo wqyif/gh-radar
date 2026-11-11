@@ -8,7 +8,7 @@ from radar.http import session
 
 SYSTEM = "你是资深技术情报分析员。你只输出一个 JSON 对象，不要输出任何解释或 Markdown 标题。"
 
-PROMPT_VERSION = 3
+PROMPT_VERSION = 4
 CACHE_KEY = f"{config.LLM_MODEL}@{PROMPT_VERSION}"
 
 PROMPT = """【我的身份】
