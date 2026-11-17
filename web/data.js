@@ -1,33 +1,33 @@
 window.RADAR = {
- "generated": "2026-11-14",
+ "generated": "2026-11-17",
  "buckets": [
   {
    "key": "d3",
    "title": "最近三天",
    "min_age": 0,
    "max_age": 3,
-   "count": 9
+   "count": 8
   },
   {
    "key": "w1",
    "title": "这周内",
    "min_age": 4,
    "max_age": 7,
-   "count": 10
+   "count": 16
   },
   {
    "key": "m1",
    "title": "这个月",
    "min_age": 8,
    "max_age": 30,
-   "count": 15
+   "count": 21
   },
   {
    "key": "m3",
    "title": "近三个月",
    "min_age": 31,
    "max_age": 90,
-   "count": 9
+   "count": 11
   }
  ],
  "themes": {
@@ -40,6 +40,65 @@ window.RADAR = {
   "infra": "基础设施"
  },
  "items": [
+  {
+   "repo": "hitkeeen/blender-ai-mcp-addon",
+   "url": "https://github.com/hitkeeen/blender-ai-mcp-addon",
+   "what": "Blender 插件加内置 MCP 服务器，让 AI 通过对话检查场景、建模、改材质并执行多步工作流。",
+   "why": "MCP 协议正热，Blender 加本地 Ollama 的组合门槛低，适合一小时内在笔记本上试玩。",
+   "theme": "ai_app",
+   "theme_title": "AI 应用",
+   "bucket": "w1",
+   "category": "run_now",
+   "total": 0.782,
+   "stars": 2278,
+   "created_at": "2026-11-12",
+   "language": "",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "installer"
+   },
+   "concepts": [
+    "函数",
+    "字典",
+    "类",
+    "异步",
+    "HTTP 请求"
+   ],
+   "assignment": "用 Ollama 本地模型连接插件，让 AI 在 Blender 里生成三个物体并改一次材质，记录工具调用过程。",
+   "hype": [],
+   "picked": true
+  },
+  {
+   "repo": "n4ze3m/tiny-voca",
+   "url": "https://github.com/n4ze3m/tiny-voca",
+   "what": "4.5M 参数、18MB 的双音色英文 TTS 模型，从零训练，支持 PyTorch、ONNX 和浏览器运行。",
+   "why": "模型极小，CPU 上就能跑到 70 倍实时，8G 显存笔记本毫无压力，一小时就能试听。",
+   "theme": "ai_app",
+   "theme_title": "AI 应用",
+   "bucket": "d3",
+   "category": "run_now",
+   "total": 0.768,
+   "stars": 632,
+   "created_at": "2026-11-14",
+   "language": "Python",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": 0,
+    "install": "pip"
+   },
+   "concepts": [
+    "命令行参数",
+    "模块导入",
+    "文件读写",
+    "函数调用"
+   ],
+   "assignment": "用 tiny_voca.infer.speak_text 写一个脚本，把一段英文文本按句子切分，分别用 F2 和 M2 音色合成并拼成一个 wav 文件。",
+   "hype": [],
+   "picked": true
+  },
   {
    "repo": "livliv-dev/player",
    "url": "https://github.com/livliv-dev/player",
@@ -73,8 +132,8 @@ window.RADAR = {
    "theme_title": "AI 应用",
    "bucket": "w1",
    "category": "run_now",
-   "total": 0.688,
-   "stars": 1294,
+   "total": 0.697,
+   "stars": 1898,
    "created_at": "2026-11-10",
    "language": "TypeScript",
    "runnable": {
@@ -82,6 +141,30 @@ window.RADAR = {
     "gpu_required": false,
     "vram_gb": null,
     "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [],
+   "picked": true
+  },
+  {
+   "repo": "Noniv/abyssal-garden",
+   "url": "https://github.com/Noniv/abyssal-garden",
+   "what": "单文件 97KB 的 WebGPU 浏览器水下世界，代码生成海藻林、沉船、蝠鲼与实时合成音效，可自由游动。",
+   "why": "零依赖单 HTML 文件，下载即玩，正好用一小时体验 WebGPU 生成式场景的观感。",
+   "theme": "play",
+   "theme_title": "游戏与玩物",
+   "bucket": "w1",
+   "category": "run_now",
+   "total": 0.693,
+   "stars": 1793,
+   "created_at": "2026-11-12",
+   "language": "JavaScript",
+   "runnable": {
+    "windows": true,
+    "gpu_required": true,
+    "vram_gb": null,
+    "install": "source"
    },
    "concepts": [],
    "assignment": "",
@@ -98,7 +181,7 @@ window.RADAR = {
    "bucket": "m3",
    "category": "save",
    "total": 0.677,
-   "stars": 35510,
+   "stars": 35614,
    "created_at": "2026-09-18",
    "language": "Python",
    "runnable": {
@@ -121,16 +204,72 @@ window.RADAR = {
    "picked": true
   },
   {
+   "repo": "anefzaoui/misterdownloadmanager",
+   "url": "https://github.com/anefzaoui/misterdownloadmanager",
+   "what": "纯 Rust 编写的开源下载管理器，支持多线程加速、BT/磁力、m3u8 与 yt-dlp 视频下载，带 egui 界面和浏览器扩展。",
+   "why": "star 过万但创建仅三周，更新极快；作为 IDM 免费替代品，普通 Windows 用户可直接装来用。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "m1",
+   "category": "run_now",
+   "total": 0.653,
+   "stars": 11259,
+   "created_at": "2026-10-29",
+   "language": "Rust",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建约三周即获 1.1 万 star，与项目体量不匹配",
+    "README 通篇对标 IDM 的营销话术（5× faster、free forever）"
+   ],
+   "picked": true
+  },
+  {
+   "repo": "JuneYaooo/rea-video",
+   "url": "https://github.com/JuneYaooo/rea-video",
+   "what": "用 AI agent 逐镜头拆解视频，判断是实拍、AI 生成还是代码制作，并输出 VIDEO.md 复刻方案。",
+   "why": "短视频与 AI 生成视频爆发，逆向拆解镜头成为创作者和 agent 的新需求，star 已近万。",
+   "theme": "ai_app",
+   "theme_title": "AI 应用",
+   "bucket": "m1",
+   "category": "save",
+   "total": 0.647,
+   "stars": 9784,
+   "created_at": "2026-10-29",
+   "language": "Python",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "pip"
+   },
+   "concepts": [
+    "命令行调用",
+    "JSON 解析",
+    "子进程",
+    "文件读写"
+   ],
+   "assignment": "用 Python 调用 ffmpeg 把一段短视频按镜头切分，并输出每个镜头的时长与首帧截图。",
+   "hype": [],
+   "picked": true
+  },
+  {
    "repo": "Gathin23/cleanyourtv",
    "url": "https://github.com/Gathin23/cleanyourtv",
    "what": "通过 Wi-Fi 用 ADB 卸载 Android TV 和 Google TV 的预装臃肿应用，并换成仿 Apple TV 的干净启动器，支持一键恢复。",
    "why": "近期热度极高，登上 GitHub 周榜第一，被多家科技媒体报道；它解决智能电视广告和隐私问题，操作门槛低。",
    "theme": "tool",
    "theme_title": "开发工具",
-   "bucket": "m1",
+   "bucket": "m3",
    "category": "save",
    "total": 0.645,
-   "stars": 57455,
+   "stars": 58732,
    "created_at": "2026-10-17",
    "language": "Python",
    "runnable": {
@@ -160,8 +299,8 @@ window.RADAR = {
    "theme_title": "开发工具",
    "bucket": "m3",
    "category": "save",
-   "total": 0.644,
-   "stars": 26801,
+   "total": 0.645,
+   "stars": 28164,
    "created_at": "2026-09-29",
    "language": "C#",
    "runnable": {
@@ -179,16 +318,46 @@ window.RADAR = {
    "picked": true
   },
   {
+   "repo": "haziqahmedqasmi/PeakCut",
+   "url": "https://github.com/haziqahmedqasmi/PeakCut",
+   "what": "自托管长视频与直播切片工具，自动转录、AI 选高光片段、裁成 9:16 竖屏加逐词字幕并发布。",
+   "why": "687 星新项目，支持 Ollama 本地模型，无需 API key 也能按响度切片，适合一小时折腾。",
+   "theme": "ai_app",
+   "theme_title": "AI 应用",
+   "bucket": "d3",
+   "category": "save",
+   "total": 0.643,
+   "stars": 687,
+   "created_at": "2026-11-14",
+   "language": "Python",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "pip"
+   },
+   "concepts": [
+    "异步",
+    "子进程",
+    "环境变量",
+    "HTTP 服务",
+    "JSON"
+   ],
+   "assignment": "用 Ollama 本地模型跑通一次切片，记录 AI 选段与按响度选段的差异。",
+   "hype": [],
+   "picked": true
+  },
+  {
    "repo": "DevedevT/FFmpeg-GUI-Editor-Windows",
    "url": "https://github.com/DevedevT/FFmpeg-GUI-Editor-Windows",
    "what": "Windows 上免安装的 FFmpeg 图形界面视频编辑器，支持无损裁剪、压缩、格式转换、字幕和批量处理。",
    "why": "下载 exe 和 libvlc.dll 两个文件即可使用，无需配置环境，适合快速处理视频素材。",
    "theme": "tool",
    "theme_title": "开发工具",
-   "bucket": "d3",
+   "bucket": "w1",
    "category": "run_now",
-   "total": 0.609,
-   "stars": 541,
+   "total": 0.629,
+   "stars": 1229,
    "created_at": "2026-11-12",
    "language": "Visual Basic .NET",
    "runnable": {
@@ -200,7 +369,7 @@ window.RADAR = {
    "concepts": [],
    "assignment": "",
    "hype": [],
-   "picked": true
+   "picked": false
   },
   {
    "repo": "deepseek-ai/chat-demo",
@@ -209,10 +378,10 @@ window.RADAR = {
    "why": "刚发布一天就 856 星，官方出品，无需后端，双击 index.html 即可体验。",
    "theme": "ai_app",
    "theme_title": "AI 应用",
-   "bucket": "d3",
+   "bucket": "w1",
    "category": "save",
-   "total": 0.603,
-   "stars": 856,
+   "total": 0.616,
+   "stars": 4205,
    "created_at": "2026-11-12",
    "language": "TypeScript",
    "runnable": {
@@ -224,7 +393,7 @@ window.RADAR = {
    "concepts": [],
    "assignment": "",
    "hype": [],
-   "picked": true
+   "picked": false
   },
   {
    "repo": "eternity4719/HowToLiveBetter",
@@ -236,7 +405,7 @@ window.RADAR = {
    "bucket": "m3",
    "category": "save",
    "total": 0.598,
-   "stars": 75596,
+   "stars": 76161,
    "created_at": "2026-09-07",
    "language": "HTML",
    "runnable": {
@@ -248,7 +417,7 @@ window.RADAR = {
    "concepts": [],
    "assignment": "",
    "hype": [],
-   "picked": true
+   "picked": false
   },
   {
    "repo": "DIYgod/pinky",
@@ -259,8 +428,8 @@ window.RADAR = {
    "theme_title": "AI 应用",
    "bucket": "m1",
    "category": "save",
-   "total": 0.579,
-   "stars": 2082,
+   "total": 0.582,
+   "stars": 2308,
    "created_at": "2026-11-06",
    "language": "Go",
    "runnable": {
@@ -272,7 +441,7 @@ window.RADAR = {
    "concepts": [],
    "assignment": "",
    "hype": [],
-   "picked": true
+   "picked": false
   },
   {
    "repo": "storytold/craft-anything",
@@ -284,7 +453,7 @@ window.RADAR = {
    "bucket": "m1",
    "category": "save",
    "total": 0.56,
-   "stars": 31491,
+   "stars": 34959,
    "created_at": "2026-10-31",
    "language": "Rust",
    "runnable": {
@@ -312,7 +481,7 @@ window.RADAR = {
    "bucket": "m3",
    "category": "save",
    "total": 0.537,
-   "stars": 43931,
+   "stars": 44988,
    "created_at": "2026-09-24",
    "language": "C++",
    "runnable": {
@@ -340,7 +509,7 @@ window.RADAR = {
    "bucket": "m3",
    "category": "save",
    "total": 0.527,
-   "stars": 79206,
+   "stars": 79873,
    "created_at": "2026-09-30",
    "language": "Rust",
    "runnable": {
@@ -364,10 +533,10 @@ window.RADAR = {
    "why": "381 星的小众 Blender 插件，更新仅一天，本地跑需 8G 显存以上，对一小时折腾党门槛偏高。",
    "theme": "tool",
    "theme_title": "开发工具",
-   "bucket": "d3",
+   "bucket": "w1",
    "category": "save",
-   "total": 0.511,
-   "stars": 381,
+   "total": 0.525,
+   "stars": 685,
    "created_at": "2026-11-11",
    "language": "",
    "runnable": {
@@ -386,7 +555,7 @@ window.RADAR = {
     "topics 堆砌 20 个 dream-textures 变体关键词",
     "README 下载按钮指向 releases 但安装包名与仓库名不一致"
    ],
-   "picked": true
+   "picked": false
   },
   {
    "repo": "jamesondh/chimera-vocal-synth",
@@ -397,8 +566,8 @@ window.RADAR = {
    "theme_title": "游戏与玩物",
    "bucket": "m1",
    "category": "save",
-   "total": 0.507,
-   "stars": 2286,
+   "total": 0.51,
+   "stars": 2577,
    "created_at": "2026-11-05",
    "language": "Rust",
    "runnable": {
@@ -421,8 +590,8 @@ window.RADAR = {
    "theme_title": "开发工具",
    "bucket": "m1",
    "category": "save",
-   "total": 0.506,
-   "stars": 15699,
+   "total": 0.508,
+   "stars": 17341,
    "created_at": "2026-10-29",
    "language": "JavaScript",
    "runnable": {
@@ -449,7 +618,7 @@ window.RADAR = {
    "bucket": "m3",
    "category": "save",
    "total": 0.487,
-   "stars": 36142,
+   "stars": 37698,
    "created_at": "2026-09-23",
    "language": "Go",
    "runnable": {
@@ -468,6 +637,56 @@ window.RADAR = {
    "picked": false
   },
   {
+   "repo": "apex-compute/ANR",
+   "url": "https://github.com/apex-compute/ANR",
+   "what": "Apex Compute 的神经渲染套件，含帧生成 ANR FG 的 Beta 安装包，以及录制对比 DLSS-G/FSR/XeSS 的 nr-record 工具。",
+   "why": "刚发布 Beta，源码未开放，只有安装包和录制工具，适合尝鲜但还谈不上研究。",
+   "theme": "play",
+   "theme_title": "游戏与玩物",
+   "bucket": "w1",
+   "category": "save",
+   "total": 0.471,
+   "stars": 2493,
+   "created_at": "2026-11-11",
+   "language": "C++",
+   "runnable": {
+    "windows": true,
+    "gpu_required": true,
+    "vram_gb": 8,
+    "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建次日即更新，1501 star 与无源码 Beta 状态不匹配，疑似营销造势"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "CzzzzzzJ/mdldm-maitian",
+   "url": "https://github.com/CzzzzzzJ/mdldm-maitian",
+   "what": "面向多平台博主的自媒体发布中控台，用 Chrome 插件批量填写 B站、抖音、小红书等平台，并采集数据、生成大屏和飞书通知。",
+   "why": "作者自用工具开源，492 星，Windows 有社区安装脚本，但核心依赖 macOS 常开机器和浏览器登录态。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "d3",
+   "category": "save",
+   "total": 0.47,
+   "stars": 492,
+   "created_at": "2026-11-14",
+   "language": "JavaScript",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [],
+   "picked": true
+  },
+  {
    "repo": "JenkinWoo/sheeridVerify",
    "url": "https://github.com/JenkinWoo/sheeridVerify",
    "what": "Node.js 编写的本地 Web 工作台，用任务队列和浏览器自动化走学生身份验证表单流程。",
@@ -476,8 +695,8 @@ window.RADAR = {
    "theme_title": "开发工具",
    "bucket": "m1",
    "category": "skip",
-   "total": 0.45,
-   "stars": 2667,
+   "total": 0.456,
+   "stars": 3380,
    "created_at": "2026-11-06",
    "language": "JavaScript",
    "runnable": {
@@ -503,8 +722,8 @@ window.RADAR = {
    "theme_title": "可视化创意",
    "bucket": "m3",
    "category": "skip",
-   "total": 0.436,
-   "stars": 27140,
+   "total": 0.437,
+   "stars": 27736,
    "created_at": "2026-10-08",
    "language": "JavaScript",
    "runnable": {
@@ -527,10 +746,10 @@ window.RADAR = {
    "why": "多 agent 协作聊天正热，但需 Linux 服务器和 Docker 部署，Windows 笔记本一小时难搞定。",
    "theme": "ai_app",
    "theme_title": "AI 应用",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "save",
-   "total": 0.431,
-   "stars": 1346,
+   "total": 0.434,
+   "stars": 1524,
    "created_at": "2026-11-09",
    "language": "TypeScript",
    "runnable": {
@@ -542,31 +761,61 @@ window.RADAR = {
    "concepts": [],
    "assignment": "",
    "hype": [],
-   "picked": true
+   "picked": false
   },
   {
-   "repo": "apex-compute/ANR",
-   "url": "https://github.com/apex-compute/ANR",
-   "what": "Apex Compute 的神经渲染套件，含帧生成 ANR FG 的 Beta 安装包，以及录制对比 DLSS-G/FSR/XeSS 的 nr-record 工具。",
-   "why": "刚发布 Beta，源码未开放，只有安装包和录制工具，适合尝鲜但还谈不上研究。",
-   "theme": "play",
-   "theme_title": "游戏与玩物",
+   "repo": "WindGatorRise37/Gemini-Config-Checker-",
+   "url": "https://github.com/WindGatorRise37/Gemini-Config-Checker-",
+   "what": "一个扫描代理配置的工具，用登录态浏览器实测哪些配置能进 Google AI Studio 和 Gemini，支持链式代理与反 DPI。",
+   "why": "近期 AI 服务对出口 IP 审查变严，很多人手里的代理配置失效，这类实测工具因此受关注。",
+   "theme": "tool",
+   "theme_title": "开发工具",
    "bucket": "d3",
-   "category": "save",
+   "category": "skip",
    "total": 0.404,
-   "stars": 1501,
-   "created_at": "2026-11-11",
-   "language": "C++",
+   "stars": 473,
+   "created_at": "2026-11-15",
+   "language": "Makefile",
    "runnable": {
     "windows": true,
-    "gpu_required": true,
-    "vram_gb": 8,
+    "gpu_required": false,
+    "vram_gb": null,
     "install": "installer"
    },
    "concepts": [],
    "assignment": "",
    "hype": [
-    "创建次日即更新，1501 star 与无源码 Beta 状态不匹配，疑似营销造势"
+    "仓库名与 README 中的作者名不一致（WindGatorRise37 vs MatinSenPai），疑似搬运或改名",
+    "创建与更新同日，473 star 但 topics 堆砌大量无关关键词（seo、nextjs、mcp-server）",
+    "README 主下载链接指向 Dropbox 的 rar 压缩包，而非 Release 产物",
+    "描述与 topics 严重不符，有刷关键词嫌疑"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "tangerineturtle1/NX2navi",
+   "url": "https://github.com/tangerineturtle1/NX2navi",
+   "what": "把 Switch 2 版《塞尔达传说：时之笛》静态重编译成 Windows 原生 x86-64 程序，用 Vulkan 渲染，支持高帧率、宽屏和 DLSS/FSR。",
+   "why": "项目刚开源几天就获得三千多星，已可游玩前几个场景，但需要自备游戏文件，且用 C 语言编写。",
+   "theme": "play",
+   "theme_title": "游戏与玩物",
+   "bucket": "m1",
+   "category": "skip",
+   "total": 0.394,
+   "stars": 4287,
+   "created_at": "2026-11-07",
+   "language": "C",
+   "runnable": {
+    "windows": true,
+    "gpu_required": true,
+    "vram_gb": null,
+    "install": "source"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建到更新仅4天即3074星，增速异常",
+    "无描述无topics但星数极高"
    ],
    "picked": false
   },
@@ -579,8 +828,8 @@ window.RADAR = {
    "theme_title": "开发工具",
    "bucket": "m1",
    "category": "skip",
-   "total": 0.388,
-   "stars": 11683,
+   "total": 0.39,
+   "stars": 12218,
    "created_at": "2026-10-20",
    "language": "Kotlin",
    "runnable": {
@@ -604,7 +853,7 @@ window.RADAR = {
    "bucket": "m3",
    "category": "skip",
    "total": 0.383,
-   "stars": 72934,
+   "stars": 77580,
    "created_at": "2026-09-24",
    "language": "JavaScript",
    "runnable": {
@@ -624,66 +873,16 @@ window.RADAR = {
    "picked": false
   },
   {
-   "repo": "HolyArrs/HolyArrs",
-   "url": "https://github.com/HolyArrs/HolyArrs",
-   "what": "Go 编写的自托管媒体中心，整合影视音乐下载、整理与 Jellyfin/Plex 式播放，Docker 一键部署。",
-   "why": "刚上 Show HN 榜首、更新频繁，但它是家庭影音服务器，跟本地 AI 模型没有关系。",
-   "theme": "tool",
-   "theme_title": "开发工具",
-   "bucket": "w1",
-   "category": "skip",
-   "total": 0.379,
-   "stars": 1104,
-   "created_at": "2026-11-09",
-   "language": "Go",
-   "runnable": {
-    "windows": false,
-    "gpu_required": false,
-    "vram_gb": null,
-    "install": "docker"
-   },
-   "concepts": [],
-   "assignment": "",
-   "hype": [
-    "创建到更新仅两天、star 已 700+，且 README 大量多语言与营销徽章，增长节奏偏快"
-   ],
-   "picked": false
-  },
-  {
-   "repo": "seedds/nxnative",
-   "url": "https://github.com/seedds/nxnative",
-   "what": "把 Switch 游戏包重写成可在 Apple 芯片上原生运行的 Mac 应用或未签名 IPA，用 Metal 重建图形，不是模拟器。",
-   "why": "近期热度高，但只支持 Apple 芯片和最新系统，Windows 笔记本完全跑不了。",
-   "theme": "play",
-   "theme_title": "游戏与玩物",
-   "bucket": "m3",
-   "category": "skip",
-   "total": 0.375,
-   "stars": 15338,
-   "created_at": "2026-10-13",
-   "language": "Python",
-   "runnable": {
-    "windows": false,
-    "gpu_required": false,
-    "vram_gb": null,
-    "install": "source"
-   },
-   "concepts": [],
-   "assignment": "",
-   "hype": [],
-   "picked": false
-  },
-  {
    "repo": "AIRzZ90/study-materials-fork",
    "url": "https://github.com/AIRzZ90/study-materials-fork",
    "what": "基于 Rust 与 Tauri 2 的跨平台桌面应用实践项目，前端用 React 和 TypeScript，含 HLS 播放组件。",
    "why": "仓库是转载的 fork，README 通篇在讲维护边界和免责声明，技术内容很少，不值得现在花时间。",
    "theme": "learn",
    "theme_title": "学习教程",
-   "bucket": "d3",
+   "bucket": "w1",
    "category": "skip",
-   "total": 0.372,
-   "stars": 499,
+   "total": 0.382,
+   "stars": 743,
    "created_at": "2026-11-12",
    "language": "TypeScript",
    "runnable": {
@@ -701,30 +900,87 @@ window.RADAR = {
    "picked": false
   },
   {
-   "repo": "tangerineturtle1/NX2navi",
-   "url": "https://github.com/tangerineturtle1/NX2navi",
-   "what": "把 Switch 2 版《塞尔达传说：时之笛》静态重编译成 Windows 原生 x86-64 程序，用 Vulkan 渲染，支持高帧率、宽屏和 DLSS/FSR。",
-   "why": "项目刚开源几天就获得三千多星，已可游玩前几个场景，但需要自备游戏文件，且用 C 语言编写。",
+   "repo": "HolyArrs/HolyArrs",
+   "url": "https://github.com/HolyArrs/HolyArrs",
+   "what": "Go 编写的自托管媒体中心，整合影视音乐下载、整理与 Jellyfin/Plex 式播放，Docker 一键部署。",
+   "why": "刚上 Show HN 榜首、更新频繁，但它是家庭影音服务器，跟本地 AI 模型没有关系。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "m1",
+   "category": "skip",
+   "total": 0.382,
+   "stars": 1264,
+   "created_at": "2026-11-09",
+   "language": "Go",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "docker"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建到更新仅两天、star 已 700+，且 README 大量多语言与营销徽章，增长节奏偏快"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "duwqijlk/muse-protocol",
+   "url": "https://github.com/duwqijlk/muse-protocol",
+   "what": "用纯 HTTP 复刻 muse.ai 注册与邀请码兑换流程的协议分析客户端，含批量调度与验证码轮询。",
+   "why": "项目刚建一天就有一千多星，但本质是批量注册薅邀请码，风险与合规问题明显。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "d3",
+   "category": "skip",
+   "total": 0.376,
+   "stars": 1491,
+   "created_at": "2026-11-14",
+   "language": "Python",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "pip"
+   },
+   "concepts": [
+    "requests 会话",
+    "正则表达式",
+    "JSON 解析",
+    "多线程调度",
+    "代理池"
+   ],
+   "assignment": "用 requests 复现一次 OTP 登录流程，并画出各接口的调用顺序图。",
+   "hype": [
+    "创建次日即 1491 star，增长异常",
+    "无 topics、无社区沉淀，疑似刷星",
+    "README 含代理节点与批量注册话术"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "seedds/nxnative",
+   "url": "https://github.com/seedds/nxnative",
+   "what": "把 Switch 游戏包重写成可在 Apple 芯片上原生运行的 Mac 应用或未签名 IPA，用 Metal 重建图形，不是模拟器。",
+   "why": "近期热度高，但只支持 Apple 芯片和最新系统，Windows 笔记本完全跑不了。",
    "theme": "play",
    "theme_title": "游戏与玩物",
-   "bucket": "w1",
+   "bucket": "m3",
    "category": "skip",
-   "total": 0.367,
-   "stars": 3915,
-   "created_at": "2026-11-07",
-   "language": "C",
+   "total": 0.376,
+   "stars": 15931,
+   "created_at": "2026-10-13",
+   "language": "Python",
    "runnable": {
-    "windows": true,
-    "gpu_required": true,
+    "windows": false,
+    "gpu_required": false,
     "vram_gb": null,
     "install": "source"
    },
    "concepts": [],
    "assignment": "",
-   "hype": [
-    "创建到更新仅4天即3074星，增速异常",
-    "无描述无topics但星数极高"
-   ],
+   "hype": [],
    "picked": false
   },
   {
@@ -734,10 +990,10 @@ window.RADAR = {
    "why": "官方生产级推理栈开源，但仅支持 SM100 与昇腾 950，普通显卡无法运行。",
    "theme": "runtime",
    "theme_title": "模型与运行时",
-   "bucket": "m1",
+   "bucket": "m3",
    "category": "skip",
    "total": 0.363,
-   "stars": 25974,
+   "stars": 26124,
    "created_at": "2026-10-16",
    "language": "Python",
    "runnable": {
@@ -758,10 +1014,10 @@ window.RADAR = {
    "why": "刚开源几天，491 星，演示了保存即热补丁、状态不丢的开发循环，但 Windows 未测试。",
    "theme": "tool",
    "theme_title": "开发工具",
-   "bucket": "d3",
+   "bucket": "w1",
    "category": "skip",
-   "total": 0.357,
-   "stars": 491,
+   "total": 0.361,
+   "stars": 582,
    "created_at": "2026-11-11",
    "language": "Rust",
    "runnable": {
@@ -776,57 +1032,6 @@ window.RADAR = {
    "picked": false
   },
   {
-   "repo": "faizfahmi77/ScanDot",
-   "url": "https://github.com/faizfahmi77/ScanDot",
-   "what": "实验性 Android 应用，用 ARCore 深度相机扫描并保存 3D 点云，附带交互查看器；另有工作站端 FFmpeg+COLMAP 视频重建脚本。",
-   "why": "手机端 AR 扫描门槛低、演示直观，但需要支持 ARCore Depth 的安卓机，与 Windows 笔记本无关。",
-   "theme": "visual",
-   "theme_title": "可视化创意",
-   "bucket": "d3",
-   "category": "skip",
-   "total": 0.351,
-   "stars": 388,
-   "created_at": "2026-11-13",
-   "language": "Kotlin",
-   "runnable": {
-    "windows": false,
-    "gpu_required": false,
-    "vram_gb": null,
-    "install": "source"
-   },
-   "concepts": [],
-   "assignment": "",
-   "hype": [],
-   "picked": false
-  },
-  {
-   "repo": "ccch1mneyyy/dsh-Go",
-   "url": "https://github.com/ccch1mneyyy/dsh-Go",
-   "what": "DeepSeek Harness 的 Android 客户端，用 Flutter 编写，可在手机上本地运行，也能远程遥控电脑上的 DSH。",
-   "why": "Trendshift 日榜第一，近两万星，但它是安卓 App，Windows 笔记本上跑不了。",
-   "theme": "ai_app",
-   "theme_title": "AI 应用",
-   "bucket": "m1",
-   "category": "skip",
-   "total": 0.351,
-   "stars": 21859,
-   "created_at": "2026-10-25",
-   "language": "Dart",
-   "runnable": {
-    "windows": false,
-    "gpu_required": false,
-    "vram_gb": null,
-    "install": "unknown"
-   },
-   "concepts": [],
-   "assignment": "",
-   "hype": [
-    "创建到更新仅约两周即近两万星，增速异常",
-    "README 通篇营销话术与宠物 GIF，并含求 Star 换适配的表述"
-   ],
-   "picked": false
-  },
-  {
    "repo": "deepseek-ai/dsh-superagent-prototype",
    "url": "https://github.com/deepseek-ai/dsh-superagent-prototype",
    "what": "DeepSeek 开源的主动式编码 Agent 原型，监听 GitHub/飞书任务，自动开分支干活并提 PR，带 Web 面板。",
@@ -835,8 +1040,8 @@ window.RADAR = {
    "theme_title": "AI 应用",
    "bucket": "m1",
    "category": "skip",
-   "total": 0.35,
-   "stars": 23030,
+   "total": 0.36,
+   "stars": 23535,
    "created_at": "2026-10-31",
    "language": "TypeScript",
    "runnable": {
@@ -855,6 +1060,33 @@ window.RADAR = {
    "picked": false
   },
   {
+   "repo": "ccch1mneyyy/dsh-Go",
+   "url": "https://github.com/ccch1mneyyy/dsh-Go",
+   "what": "DeepSeek Harness 的 Android 客户端，用 Flutter 编写，可在手机上本地运行，也能远程遥控电脑上的 DSH。",
+   "why": "Trendshift 日榜第一，近两万星，但它是安卓 App，Windows 笔记本上跑不了。",
+   "theme": "ai_app",
+   "theme_title": "AI 应用",
+   "bucket": "m1",
+   "category": "skip",
+   "total": 0.354,
+   "stars": 25028,
+   "created_at": "2026-10-25",
+   "language": "Dart",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "unknown"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建到更新仅约两周即近两万星，增速异常",
+    "README 通篇营销话术与宠物 GIF，并含求 Star 换适配的表述"
+   ],
+   "picked": false
+  },
+  {
    "repo": "mmdoctor/google-pro-helper",
    "url": "https://github.com/mmdoctor/google-pro-helper",
    "what": "利用浏览器扩展和本地批量控制台，向 Google 账号注入 offer token，以零元开通 Google AI Pro 两年订阅。",
@@ -863,8 +1095,8 @@ window.RADAR = {
    "theme_title": "开发工具",
    "bucket": "m1",
    "category": "skip",
-   "total": 0.344,
-   "stars": 1856,
+   "total": 0.345,
+   "stars": 1955,
    "created_at": "2026-11-05",
    "language": "Python",
    "runnable": {
@@ -891,8 +1123,8 @@ window.RADAR = {
    "theme_title": "游戏与玩物",
    "bucket": "m1",
    "category": "skip",
-   "total": 0.342,
-   "stars": 2111,
+   "total": 0.343,
+   "stars": 2224,
    "created_at": "2026-11-05",
    "language": "Shell",
    "runnable": {
@@ -917,8 +1149,8 @@ window.RADAR = {
    "theme_title": "学习教程",
    "bucket": "w1",
    "category": "skip",
-   "total": 0.338,
-   "stars": 1441,
+   "total": 0.342,
+   "stars": 1683,
    "created_at": "2026-11-10",
    "language": "Python",
    "runnable": {
@@ -966,6 +1198,35 @@ window.RADAR = {
    "picked": false
   },
   {
+   "repo": "WyrmClimberManacle/Gemini-Config-Checker-",
+   "url": "https://github.com/WyrmClimberManacle/Gemini-Config-Checker-",
+   "what": "一个桌面工具，用真实登录浏览器逐条测试代理配置能否访问 Google AI Studio 和 Gemini，支持链式代理与反 DPI。",
+   "why": "近期 AI Studio 与 Gemini 对出口 IP 审查变严，很多人手里的代理配置突然失效，需要快速筛出可用线路。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "d3",
+   "category": "skip",
+   "total": 0.326,
+   "stars": 473,
+   "created_at": "2026-11-15",
+   "language": "Makefile",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "仓库名与 README 中引用的上游项目作者不一致（WyrmClimberManacle vs MatinSenPai），疑似搬运或改名仓库",
+    "创建与最近更新同为 2026-11-15，单日 473 star，增长曲线异常",
+    "topics 堆砌 chatgpt、nextjs、mcp-server、seo-checker 等与功能无关的关键词",
+    "README 主下载链接指向 Dropbox 的 rar 压缩包而非 GitHub Releases，存在分发风险"
+   ],
+   "picked": false
+  },
+  {
    "repo": "Zagitta/gpu-unlock",
    "url": "https://github.com/Zagitta/gpu-unlock",
    "what": "在 Linux 启动阶段解除 GeForce 显卡张量核心 FP16/BF16/TF32 半速限制的内核级补丁工具。",
@@ -974,8 +1235,8 @@ window.RADAR = {
    "theme_title": "模型与运行时",
    "bucket": "m1",
    "category": "skip",
-   "total": 0.323,
-   "stars": 19257,
+   "total": 0.324,
+   "stars": 20048,
    "created_at": "2026-10-18",
    "language": "C",
    "runnable": {
@@ -1000,10 +1261,10 @@ window.RADAR = {
    "why": "刚发布一天的小项目，主打零改动迁移和更便宜的账单，但需要 Docker 和集群，与本地 Ollama 折腾无关。",
    "theme": "infra",
    "theme_title": "基础设施",
-   "bucket": "d3",
+   "bucket": "w1",
    "category": "skip",
-   "total": 0.312,
-   "stars": 441,
+   "total": 0.321,
+   "stars": 638,
    "created_at": "2026-11-12",
    "language": "TypeScript",
    "runnable": {
@@ -1026,10 +1287,10 @@ window.RADAR = {
    "why": "项目刚发布数天即获 2500+ 星，主打一键启动器和 AI 代操作，话题性强，但需自备游戏与密钥。",
    "theme": "play",
    "theme_title": "游戏与玩物",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "skip",
-   "total": 0.312,
-   "stars": 2878,
+   "total": 0.316,
+   "stars": 3386,
    "created_at": "2026-11-08",
    "language": "C#",
    "runnable": {
@@ -1056,8 +1317,8 @@ window.RADAR = {
    "theme_title": "开发工具",
    "bucket": "w1",
    "category": "skip",
-   "total": 0.308,
-   "stars": 1935,
+   "total": 0.311,
+   "stars": 2207,
    "created_at": "2026-11-10",
    "language": "Swift",
    "runnable": {
@@ -1072,16 +1333,93 @@ window.RADAR = {
    "picked": false
   },
   {
+   "repo": "faizfahmi77/ScanDot",
+   "url": "https://github.com/faizfahmi77/ScanDot",
+   "what": "实验性 Android 应用，用 ARCore 深度相机扫描并保存 3D 点云，附带交互查看器；另有工作站端 FFmpeg+COLMAP 视频重建脚本。",
+   "why": "手机端 AR 扫描门槛低、演示直观，但需要支持 ARCore Depth 的安卓机，与 Windows 笔记本无关。",
+   "theme": "visual",
+   "theme_title": "可视化创意",
+   "bucket": "w1",
+   "category": "skip",
+   "total": 0.309,
+   "stars": 542,
+   "created_at": "2026-11-13",
+   "language": "Kotlin",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "source"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [],
+   "picked": false
+  },
+  {
+   "repo": "Eynnzerr/TelemetryCleaner",
+   "url": "https://github.com/Eynnzerr/TelemetryCleaner",
+   "what": "基于 Shizuku 免 Root 检测并卸载国产安卓预装运营商遥测组件（SystemHelper、RegService 等）的 Kotlin 工具。",
+   "why": "国产 ROM 预装遥测组件被论文实测上报应用列表，这个工具让普通用户能自查并卸载，最近刚开源。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "w1",
+   "category": "skip",
+   "total": 0.299,
+   "stars": 1358,
+   "created_at": "2026-11-11",
+   "language": "Kotlin",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "unknown"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [],
+   "picked": false
+  },
+  {
+   "repo": "YellowLaborerMarket/Gemini-Config-Checker-",
+   "url": "https://github.com/YellowLaborerMarket/Gemini-Config-Checker-",
+   "what": "扫描代理配置，用已登录浏览器实测哪些能进入 Google AI Studio 和 Gemini，支持链式代理与反 DPI。",
+   "why": "国内访问 Gemini 常被拦，这工具帮你筛出真正可用的代理线路，但依赖代理生态且仅 Windows 实测。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "d3",
+   "category": "skip",
+   "total": 0.291,
+   "stars": 474,
+   "created_at": "2026-11-15",
+   "language": "Makefile",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "unknown"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建与更新时间同为 2026-11-15，仓库年龄异常",
+    "README 主下载链接指向 Dropbox 的 rar 压缩包而非 Release",
+    "topics 含大量 SEO 关键词（lim-seo、seo-checker、ai-search）与项目功能不符",
+    "名称与 README 图片链接指向不同作者（YellowLaborerMarket vs MatinSenPai），疑似搬运/刷星"
+   ],
+   "picked": false
+  },
+  {
    "repo": "huamidev/GestaltX",
    "url": "https://github.com/huamidev/GestaltX",
    "what": "iOS 27 的 MobileGestalt 编辑器，可改区域码、开 AI 能力标志、编辑系统字段并备份还原。",
    "why": "两天内涨到近六千星，靠改区域码尝试开启 Apple Intelligence，话题性强但仅限 iOS 27 越狱或侧载环境。",
    "theme": "tool",
    "theme_title": "开发工具",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "skip",
-   "total": 0.285,
-   "stars": 7346,
+   "total": 0.287,
+   "stars": 7918,
    "created_at": "2026-11-09",
    "language": "Swift",
    "runnable": {
@@ -1099,13 +1437,37 @@ window.RADAR = {
    "picked": false
   },
   {
+   "repo": "yetanotherbrowser/yab",
+   "url": "https://github.com/yetanotherbrowser/yab",
+   "what": "macOS 原生浏览器，用 Swift 编写，默认 WebKit 引擎，Apple 芯片可切 Chromium，带 iPhone 伴侣应用和 AI agent 标签页。",
+   "why": "近期更新活跃，主打双引擎和 agent 标签页，但仅限 macOS 15.4+，Windows 用户无法体验。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "d3",
+   "category": "skip",
+   "total": 0.28,
+   "stars": 604,
+   "created_at": "2026-11-14",
+   "language": "Swift",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "source"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [],
+   "picked": false
+  },
+  {
    "repo": "seizepupatackle/fl-studio",
    "url": "https://github.com/seizepupatackle/fl-studio",
    "what": "打着 Fl Studio 2026 旗号的预激活安装包，实际用 PowerShell 远程脚本下载执行，与音频软件无关。",
    "why": "典型盗版软件投毒仓库，README 诱导关闭杀毒并以管理员权限运行远程脚本，应立即远离。",
    "theme": "tool",
    "theme_title": "开发工具",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "skip",
    "total": 0.166,
    "stars": 982,
@@ -1165,7 +1527,7 @@ window.RADAR = {
    "why": "创建与更新同日、无 README、topics 堆砌 substance 关键词，典型刷星或钓鱼仓库，不值得花时间。",
    "theme": "tool",
    "theme_title": "开发工具",
-   "bucket": "d3",
+   "bucket": "w1",
    "category": "skip",
    "total": 0.158,
    "stars": 704,
