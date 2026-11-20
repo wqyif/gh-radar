@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17",
+ "generated": "2026-11-20",
  "buckets": [
   {
    "key": "d3",
@@ -13,21 +13,21 @@
    "title": "这周内",
    "min_age": 4,
    "max_age": 7,
-   "count": 16
+   "count": 14
   },
   {
    "key": "m1",
    "title": "这个月",
    "min_age": 8,
    "max_age": 30,
-   "count": 21
+   "count": 36
   },
   {
    "key": "m3",
    "title": "近三个月",
    "min_age": 31,
    "max_age": 90,
-   "count": 11
+   "count": 13
   }
  ],
  "themes": {
@@ -41,13 +41,42 @@
  },
  "items": [
   {
+   "repo": "n4ze3m/tiny-voca",
+   "url": "https://github.com/n4ze3m/tiny-voca",
+   "what": "4.5M 参数、18MB 的双音色英文 TTS 模型，从零训练，支持 PyTorch、ONNX 和浏览器运行。",
+   "why": "模型极小，CPU 上就能跑到 70 倍实时，8G 显存笔记本毫无压力，一小时就能试听。",
+   "theme": "ai_app",
+   "theme_title": "AI 应用",
+   "bucket": "w1",
+   "category": "run_now",
+   "total": 0.793,
+   "stars": 774,
+   "created_at": "2026-11-14",
+   "language": "Python",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": 0,
+    "install": "pip"
+   },
+   "concepts": [
+    "命令行参数",
+    "模块导入",
+    "文件读写",
+    "函数调用"
+   ],
+   "assignment": "用 tiny_voca.infer.speak_text 写一个脚本，把一段英文文本按句子切分，分别用 F2 和 M2 音色合成并拼成一个 wav 文件。",
+   "hype": [],
+   "picked": true
+  },
+  {
    "repo": "hitkeeen/blender-ai-mcp-addon",
    "url": "https://github.com/hitkeeen/blender-ai-mcp-addon",
    "what": "Blender 插件加内置 MCP 服务器，让 AI 通过对话检查场景、建模、改材质并执行多步工作流。",
    "why": "MCP 协议正热，Blender 加本地 Ollama 的组合门槛低，适合一小时内在笔记本上试玩。",
    "theme": "ai_app",
    "theme_title": "AI 应用",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "run_now",
    "total": 0.782,
    "stars": 2278,
@@ -67,35 +96,6 @@
     "HTTP 请求"
    ],
    "assignment": "用 Ollama 本地模型连接插件，让 AI 在 Blender 里生成三个物体并改一次材质，记录工具调用过程。",
-   "hype": [],
-   "picked": true
-  },
-  {
-   "repo": "n4ze3m/tiny-voca",
-   "url": "https://github.com/n4ze3m/tiny-voca",
-   "what": "4.5M 参数、18MB 的双音色英文 TTS 模型，从零训练，支持 PyTorch、ONNX 和浏览器运行。",
-   "why": "模型极小，CPU 上就能跑到 70 倍实时，8G 显存笔记本毫无压力，一小时就能试听。",
-   "theme": "ai_app",
-   "theme_title": "AI 应用",
-   "bucket": "d3",
-   "category": "run_now",
-   "total": 0.768,
-   "stars": 632,
-   "created_at": "2026-11-14",
-   "language": "Python",
-   "runnable": {
-    "windows": true,
-    "gpu_required": false,
-    "vram_gb": 0,
-    "install": "pip"
-   },
-   "concepts": [
-    "命令行参数",
-    "模块导入",
-    "文件读写",
-    "函数调用"
-   ],
-   "assignment": "用 tiny_voca.infer.speak_text 写一个脚本，把一段英文文本按句子切分，分别用 F2 和 M2 音色合成并拼成一个 wav 文件。",
    "hype": [],
    "picked": true
   },
@@ -130,12 +130,36 @@
    "why": "Granola 类会议笔记工具的免费开源替代，Electron 桌面端已提供 Windows 安装包，隐私卖点清晰。",
    "theme": "ai_app",
    "theme_title": "AI 应用",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "run_now",
-   "total": 0.697,
-   "stars": 1898,
+   "total": 0.705,
+   "stars": 2632,
    "created_at": "2026-11-10",
    "language": "TypeScript",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [],
+   "picked": true
+  },
+  {
+   "repo": "krisgfx9/Wireless-Device-Battery-Monitor",
+   "url": "https://github.com/krisgfx9/Wireless-Device-Battery-Monitor",
+   "what": "Windows 任务栏小工具，直接读取罗技、雷蛇、PS/Xbox 等无线外设电量，无需厂商软件。",
+   "why": "4715 星、350KB 纯 C++ 托盘程序，装完即用，正好补上你笔记本外设电量看不见的痛点。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "w1",
+   "category": "run_now",
+   "total": 0.704,
+   "stars": 4715,
+   "created_at": "2026-11-16",
+   "language": "C++",
    "runnable": {
     "windows": true,
     "gpu_required": false,
@@ -154,10 +178,10 @@
    "why": "零依赖单 HTML 文件，下载即玩，正好用一小时体验 WebGPU 生成式场景的观感。",
    "theme": "play",
    "theme_title": "游戏与玩物",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "run_now",
-   "total": 0.693,
-   "stars": 1793,
+   "total": 0.701,
+   "stars": 2511,
    "created_at": "2026-11-12",
    "language": "JavaScript",
    "runnable": {
@@ -169,7 +193,7 @@
    "concepts": [],
    "assignment": "",
    "hype": [],
-   "picked": true
+   "picked": false
   },
   {
    "repo": "NandhaKishorM/laya",
@@ -181,7 +205,7 @@
    "bucket": "m3",
    "category": "save",
    "total": 0.677,
-   "stars": 35614,
+   "stars": 35717,
    "created_at": "2026-09-18",
    "language": "Python",
    "runnable": {
@@ -204,6 +228,36 @@
    "picked": true
   },
   {
+   "repo": "haziqahmedqasmi/PeakCut",
+   "url": "https://github.com/haziqahmedqasmi/PeakCut",
+   "what": "自托管长视频与直播切片工具，自动转录、AI 选高光片段、裁成 9:16 竖屏加逐词字幕并发布。",
+   "why": "687 星新项目，支持 Ollama 本地模型，无需 API key 也能按响度切片，适合一小时折腾。",
+   "theme": "ai_app",
+   "theme_title": "AI 应用",
+   "bucket": "w1",
+   "category": "save",
+   "total": 0.659,
+   "stars": 1357,
+   "created_at": "2026-11-14",
+   "language": "Python",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "pip"
+   },
+   "concepts": [
+    "异步",
+    "子进程",
+    "环境变量",
+    "HTTP 服务",
+    "JSON"
+   ],
+   "assignment": "用 Ollama 本地模型跑通一次切片，记录 AI 选段与按响度选段的差异。",
+   "hype": [],
+   "picked": true
+  },
+  {
    "repo": "anefzaoui/misterdownloadmanager",
    "url": "https://github.com/anefzaoui/misterdownloadmanager",
    "what": "纯 Rust 编写的开源下载管理器，支持多线程加速、BT/磁力、m3u8 与 yt-dlp 视频下载，带 egui 界面和浏览器扩展。",
@@ -212,8 +266,8 @@
    "theme_title": "开发工具",
    "bucket": "m1",
    "category": "run_now",
-   "total": 0.653,
-   "stars": 11259,
+   "total": 0.658,
+   "stars": 13849,
    "created_at": "2026-10-29",
    "language": "Rust",
    "runnable": {
@@ -228,7 +282,7 @@
     "创建约三周即获 1.1 万 star，与项目体量不匹配",
     "README 通篇对标 IDM 的营销话术（5× faster、free forever）"
    ],
-   "picked": true
+   "picked": false
   },
   {
    "repo": "JuneYaooo/rea-video",
@@ -239,8 +293,8 @@
    "theme_title": "AI 应用",
    "bucket": "m1",
    "category": "save",
-   "total": 0.647,
-   "stars": 9784,
+   "total": 0.65,
+   "stars": 11109,
    "created_at": "2026-10-29",
    "language": "Python",
    "runnable": {
@@ -257,6 +311,33 @@
    ],
    "assignment": "用 Python 调用 ffmpeg 把一段短视频按镜头切分，并输出每个镜头的时长与首帧截图。",
    "hype": [],
+   "picked": false
+  },
+  {
+   "repo": "KnifeLemon/Filee",
+   "url": "https://github.com/KnifeLemon/Filee",
+   "what": "C# 编写的离线文件转换器，拖拽文件到光标处的格式圆环即可转换 263 种格式，无需上传或安装 Office。",
+   "why": "26801 star 且登上 Trendshift 周榜第一，近期热度高；但它是 C# 桌面工具，与本地 AI 折腾无关。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "m3",
+   "category": "save",
+   "total": 0.646,
+   "stars": 29124,
+   "created_at": "2026-09-29",
+   "language": "C#",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建时间 2026-09-29 到 2026-11-14 约一个半月积累 26801 star，增速异常",
+    "README 通篇营销话术与多语言徽章、Trendshift/HelloGitHub 推荐位"
+   ],
    "picked": true
   },
   {
@@ -269,7 +350,7 @@
    "bucket": "m3",
    "category": "save",
    "total": 0.645,
-   "stars": 58732,
+   "stars": 59635,
    "created_at": "2026-10-17",
    "language": "Python",
    "runnable": {
@@ -291,70 +372,13 @@
    "picked": true
   },
   {
-   "repo": "KnifeLemon/Filee",
-   "url": "https://github.com/KnifeLemon/Filee",
-   "what": "C# 编写的离线文件转换器，拖拽文件到光标处的格式圆环即可转换 263 种格式，无需上传或安装 Office。",
-   "why": "26801 star 且登上 Trendshift 周榜第一，近期热度高；但它是 C# 桌面工具，与本地 AI 折腾无关。",
-   "theme": "tool",
-   "theme_title": "开发工具",
-   "bucket": "m3",
-   "category": "save",
-   "total": 0.645,
-   "stars": 28164,
-   "created_at": "2026-09-29",
-   "language": "C#",
-   "runnable": {
-    "windows": true,
-    "gpu_required": false,
-    "vram_gb": null,
-    "install": "installer"
-   },
-   "concepts": [],
-   "assignment": "",
-   "hype": [
-    "创建时间 2026-09-29 到 2026-11-14 约一个半月积累 26801 star，增速异常",
-    "README 通篇营销话术与多语言徽章、Trendshift/HelloGitHub 推荐位"
-   ],
-   "picked": true
-  },
-  {
-   "repo": "haziqahmedqasmi/PeakCut",
-   "url": "https://github.com/haziqahmedqasmi/PeakCut",
-   "what": "自托管长视频与直播切片工具，自动转录、AI 选高光片段、裁成 9:16 竖屏加逐词字幕并发布。",
-   "why": "687 星新项目，支持 Ollama 本地模型，无需 API key 也能按响度切片，适合一小时折腾。",
-   "theme": "ai_app",
-   "theme_title": "AI 应用",
-   "bucket": "d3",
-   "category": "save",
-   "total": 0.643,
-   "stars": 687,
-   "created_at": "2026-11-14",
-   "language": "Python",
-   "runnable": {
-    "windows": true,
-    "gpu_required": false,
-    "vram_gb": null,
-    "install": "pip"
-   },
-   "concepts": [
-    "异步",
-    "子进程",
-    "环境变量",
-    "HTTP 服务",
-    "JSON"
-   ],
-   "assignment": "用 Ollama 本地模型跑通一次切片，记录 AI 选段与按响度选段的差异。",
-   "hype": [],
-   "picked": true
-  },
-  {
    "repo": "DevedevT/FFmpeg-GUI-Editor-Windows",
    "url": "https://github.com/DevedevT/FFmpeg-GUI-Editor-Windows",
    "what": "Windows 上免安装的 FFmpeg 图形界面视频编辑器，支持无损裁剪、压缩、格式转换、字幕和批量处理。",
    "why": "下载 exe 和 libvlc.dll 两个文件即可使用，无需配置环境，适合快速处理视频素材。",
    "theme": "tool",
    "theme_title": "开发工具",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "run_now",
    "total": 0.629,
    "stars": 1229,
@@ -378,10 +402,10 @@
    "why": "刚发布一天就 856 星，官方出品，无需后端，双击 index.html 即可体验。",
    "theme": "ai_app",
    "theme_title": "AI 应用",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "save",
-   "total": 0.616,
-   "stars": 4205,
+   "total": 0.621,
+   "stars": 5045,
    "created_at": "2026-11-12",
    "language": "TypeScript",
    "runnable": {
@@ -405,7 +429,7 @@
    "bucket": "m3",
    "category": "save",
    "total": 0.598,
-   "stars": 76161,
+   "stars": 76702,
    "created_at": "2026-09-07",
    "language": "HTML",
    "runnable": {
@@ -420,6 +444,34 @@
    "picked": false
   },
   {
+   "repo": "bookwjitchieni1986/blender-ai-mcp-addon",
+   "url": "https://github.com/bookwjitchieni1986/blender-ai-mcp-addon",
+   "what": "Blender 插件加内置 MCP 服务器，让 AI 通过对话检查场景、建模、改材质并执行多步任务。",
+   "why": "MCP 正成为 AI 连接外部工具的标准，这个项目把本地 Ollama 和 Blender 直接打通，适合动手试。",
+   "theme": "ai_app",
+   "theme_title": "AI 应用",
+   "bucket": "d3",
+   "category": "save",
+   "total": 0.593,
+   "stars": 701,
+   "created_at": "2026-11-19",
+   "language": "",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "installer"
+   },
+   "concepts": [
+    "MCP 协议",
+    "工具调用",
+    "bpy 脚本"
+   ],
+   "assignment": "用 Ollama 本地模型连接插件，让 AI 在 Blender 里生成一个带材质的立方体并截图验证。",
+   "hype": [],
+   "picked": true
+  },
+  {
    "repo": "DIYgod/pinky",
    "url": "https://github.com/DIYgod/pinky",
    "what": "开源桌面应用，通过 MCP 让 Claude Code 等 AI agent 远程操控真实 iPhone 或安卓手机，关键操作需用户点击批准。",
@@ -428,8 +480,8 @@
    "theme_title": "AI 应用",
    "bucket": "m1",
    "category": "save",
-   "total": 0.582,
-   "stars": 2308,
+   "total": 0.584,
+   "stars": 2550,
    "created_at": "2026-11-06",
    "language": "Go",
    "runnable": {
@@ -444,6 +496,35 @@
    "picked": false
   },
   {
+   "repo": "sybil-solutions/inference-optimisation-skill",
+   "url": "https://github.com/sybil-solutions/inference-optimisation-skill",
+   "what": "一个给 AI agent 用的技能包，按固定流程逐步调优本地 LLM 推理速度，覆盖解码、投机采样、prefill 和 KV 缓存。",
+   "why": "本地跑模型的人越来越多，但多数人只会换参数，这个技能把调优过程整理成可复用的方法论。",
+   "theme": "runtime",
+   "theme_title": "模型与运行时",
+   "bucket": "w1",
+   "category": "save",
+   "total": 0.577,
+   "stars": 1270,
+   "created_at": "2026-11-16",
+   "language": "Python",
+   "runnable": {
+    "windows": false,
+    "gpu_required": true,
+    "vram_gb": 8,
+    "install": "source"
+   },
+   "concepts": [
+    "基准测试",
+    "子进程调用",
+    "配置文件解析",
+    "JSON 日志"
+   ],
+   "assignment": "用 Ollama 跑一个 7B 模型，测出单用户 decode 速度，再按理论带宽上限算出差距百分比。",
+   "hype": [],
+   "picked": false
+  },
+  {
    "repo": "storytold/craft-anything",
    "url": "https://github.com/storytold/craft-anything",
    "what": "纯 Rust 开源引擎，用真实检查工具分析任意网站、应用或游戏，再由编码 agent 复刻出你自己的版本并对比原版迭代。",
@@ -453,7 +534,7 @@
    "bucket": "m1",
    "category": "save",
    "total": 0.56,
-   "stars": 34959,
+   "stars": 38662,
    "created_at": "2026-10-31",
    "language": "Rust",
    "runnable": {
@@ -481,7 +562,7 @@
    "bucket": "m3",
    "category": "save",
    "total": 0.537,
-   "stars": 44988,
+   "stars": 46002,
    "created_at": "2026-09-24",
    "language": "C++",
    "runnable": {
@@ -509,7 +590,7 @@
    "bucket": "m3",
    "category": "save",
    "total": 0.527,
-   "stars": 79873,
+   "stars": 80556,
    "created_at": "2026-09-30",
    "language": "Rust",
    "runnable": {
@@ -533,7 +614,7 @@
    "why": "381 星的小众 Blender 插件，更新仅一天，本地跑需 8G 显存以上，对一小时折腾党门槛偏高。",
    "theme": "tool",
    "theme_title": "开发工具",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "save",
    "total": 0.525,
    "stars": 685,
@@ -558,6 +639,64 @@
    "picked": false
   },
   {
+   "repo": "bothaggsigym1988/frameglide",
+   "url": "https://github.com/bothaggsigym1988/frameglide",
+   "what": "把主机 30fps 串流在 Windows 上用 RIFE 实时插帧到 60–120fps，并用 FSR 1 或 RTX VSR 放大画面。",
+   "why": "主机画质模式锁 30fps，用现有显卡免费补帧，无需换主机或显示器。",
+   "theme": "play",
+   "theme_title": "游戏与玩物",
+   "bucket": "d3",
+   "category": "save",
+   "total": 0.521,
+   "stars": 967,
+   "created_at": "2026-11-18",
+   "language": "",
+   "runnable": {
+    "windows": true,
+    "gpu_required": true,
+    "vram_gb": 8,
+    "install": "installer"
+   },
+   "concepts": [
+    "异步",
+    "多线程",
+    "队列"
+   ],
+   "assignment": "用 Python 读取一段 30fps 视频，调用 RIFE 模型对相邻帧插一帧，输出 60fps 视频并对比文件大小与耗时。",
+   "hype": [
+    "创建与更新同日，star 数偏高，疑似刷星",
+    "README 通篇营销话术，强调免费、无需账号"
+   ],
+   "picked": true
+  },
+  {
+   "repo": "libracoder/kiri",
+   "url": "https://github.com/libracoder/kiri",
+   "what": "Rust 写的轻量容器运行时，兼容 Docker CLI，自带本地域名和 K8s 集群，可替代 Docker Desktop。",
+   "why": "11 月新项目两周破万星，主打毫秒级启动和低内存，是 Docker Desktop 的轻量替代品。",
+   "theme": "infra",
+   "theme_title": "基础设施",
+   "bucket": "m1",
+   "category": "save",
+   "total": 0.518,
+   "stars": 11329,
+   "created_at": "2026-11-02",
+   "language": "Rust",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建仅 18 天即 11329 star，增速异常",
+    "README 通篇营销话术与性能对比数字"
+   ],
+   "picked": false
+  },
+  {
    "repo": "jamesondh/chimera-vocal-synth",
    "url": "https://github.com/jamesondh/chimera-vocal-synth",
    "what": "浏览器里的物理建模人声合成器，用 Rust 编译成 WebAssembly，模拟声道发声，可唱、说、打拍子。",
@@ -566,8 +705,8 @@
    "theme_title": "游戏与玩物",
    "bucket": "m1",
    "category": "save",
-   "total": 0.51,
-   "stars": 2577,
+   "total": 0.512,
+   "stars": 2808,
    "created_at": "2026-11-05",
    "language": "Rust",
    "runnable": {
@@ -590,8 +729,8 @@
    "theme_title": "开发工具",
    "bucket": "m1",
    "category": "save",
-   "total": 0.508,
-   "stars": 17341,
+   "total": 0.51,
+   "stars": 18732,
    "created_at": "2026-10-29",
    "language": "JavaScript",
    "runnable": {
@@ -609,6 +748,57 @@
    "picked": false
   },
   {
+   "repo": "erkamyaman/rust-anything",
+   "url": "https://github.com/erkamyaman/rust-anything",
+   "what": "把现有应用逐模块改写成 Rust，用录制原程序行为做逐步对拍验证，支持多语言调用。",
+   "why": "Rust 重写潮正热，它把'行为对拍'做成流程，Prettier 移植案例有说服力。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "w1",
+   "category": "save",
+   "total": 0.5,
+   "stars": 5364,
+   "created_at": "2026-11-16",
+   "language": "Rust",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "source"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建到更新仅3天却已有5364星，增长异常",
+    "README 通篇营销式排版与多语言徽章堆砌"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "CzzzzzzJ/mdldm-maitian",
+   "url": "https://github.com/CzzzzzzJ/mdldm-maitian",
+   "what": "面向多平台博主的自媒体发布中控台，用 Chrome 插件批量填写 B站、抖音、小红书等平台，并采集数据、生成大屏和飞书通知。",
+   "why": "作者自用工具开源，492 星，Windows 有社区安装脚本，但核心依赖 macOS 常开机器和浏览器登录态。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "w1",
+   "category": "save",
+   "total": 0.498,
+   "stars": 1624,
+   "created_at": "2026-11-14",
+   "language": "JavaScript",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [],
+   "picked": false
+  },
+  {
    "repo": "yetone/magpie",
    "url": "https://github.com/yetone/magpie",
    "what": "菜单栏应用加本地网关，把 Claude Code、Codex、Gemini CLI 等 agent 的模型配置集中管理，可一键切换模型和账号。",
@@ -618,7 +808,7 @@
    "bucket": "m3",
    "category": "save",
    "total": 0.487,
-   "stars": 37698,
+   "stars": 39148,
    "created_at": "2026-09-23",
    "language": "Go",
    "runnable": {
@@ -637,16 +827,40 @@
    "picked": false
   },
   {
+   "repo": "Lemxy/WinRust",
+   "url": "https://github.com/Lemxy/WinRust",
+   "what": "用 Rust 重写的 Windows 外壳替代品，包含任务栏、文件管理器、NTFS 搜索、任务管理器和磁盘清理，一个安装器即可完成安装。",
+   "why": "443 星的小众项目，最近刚更新；它替换系统外壳，风险高，不适合日常主力机，但适合在虚拟机里体验。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "d3",
+   "category": "save",
+   "total": 0.475,
+   "stars": 443,
+   "created_at": "2026-11-17",
+   "language": "Rust",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [],
+   "picked": true
+  },
+  {
    "repo": "apex-compute/ANR",
    "url": "https://github.com/apex-compute/ANR",
    "what": "Apex Compute 的神经渲染套件，含帧生成 ANR FG 的 Beta 安装包，以及录制对比 DLSS-G/FSR/XeSS 的 nr-record 工具。",
    "why": "刚发布 Beta，源码未开放，只有安装包和录制工具，适合尝鲜但还谈不上研究。",
    "theme": "play",
    "theme_title": "游戏与玩物",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "save",
-   "total": 0.471,
-   "stars": 2493,
+   "total": 0.473,
+   "stars": 2705,
    "created_at": "2026-11-11",
    "language": "C++",
    "runnable": {
@@ -663,30 +877,6 @@
    "picked": false
   },
   {
-   "repo": "CzzzzzzJ/mdldm-maitian",
-   "url": "https://github.com/CzzzzzzJ/mdldm-maitian",
-   "what": "面向多平台博主的自媒体发布中控台，用 Chrome 插件批量填写 B站、抖音、小红书等平台，并采集数据、生成大屏和飞书通知。",
-   "why": "作者自用工具开源，492 星，Windows 有社区安装脚本，但核心依赖 macOS 常开机器和浏览器登录态。",
-   "theme": "tool",
-   "theme_title": "开发工具",
-   "bucket": "d3",
-   "category": "save",
-   "total": 0.47,
-   "stars": 492,
-   "created_at": "2026-11-14",
-   "language": "JavaScript",
-   "runnable": {
-    "windows": true,
-    "gpu_required": false,
-    "vram_gb": null,
-    "install": "installer"
-   },
-   "concepts": [],
-   "assignment": "",
-   "hype": [],
-   "picked": true
-  },
-  {
    "repo": "JenkinWoo/sheeridVerify",
    "url": "https://github.com/JenkinWoo/sheeridVerify",
    "what": "Node.js 编写的本地 Web 工作台，用任务队列和浏览器自动化走学生身份验证表单流程。",
@@ -695,8 +885,8 @@
    "theme_title": "开发工具",
    "bucket": "m1",
    "category": "skip",
-   "total": 0.456,
-   "stars": 3380,
+   "total": 0.459,
+   "stars": 3760,
    "created_at": "2026-11-06",
    "language": "JavaScript",
    "runnable": {
@@ -714,6 +904,82 @@
    "picked": false
   },
   {
+   "repo": "sourmitocand1987/VividFrame-GPU",
+   "url": "https://github.com/sourmitocand1987/VividFrame-GPU",
+   "what": "Windows 上的实时视频增强播放器，用 D3D12 管线对本地视频、采集卡和串流画面做超分、降噪、HDR 与插帧。",
+   "why": "1017 星但创建当天就更新，C++ 项目无源码语言标注，下载即用型发布包，需先验证真实性。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "d3",
+   "category": "save",
+   "total": 0.457,
+   "stars": 1017,
+   "created_at": "2026-11-18",
+   "language": "",
+   "runnable": {
+    "windows": true,
+    "gpu_required": true,
+    "vram_gb": 8,
+    "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建与更新同日，star 数偏高",
+    "README 通篇营销对比话术",
+    "无源码语言信息，仅提供二进制发布包"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "joshpuckett/allo",
+   "url": "https://github.com/joshpuckett/allo",
+   "what": "开源可变字体 Allo，含光学尺寸、字重、圆度三个轴，附 Python 构建脚本与网页字体包。",
+   "why": "刚发布 1.0.3 版本，star 过千，适合顺手装到系统里体验可变字体轴调节。",
+   "theme": "visual",
+   "theme_title": "可视化创意",
+   "bucket": "w1",
+   "category": "save",
+   "total": 0.45,
+   "stars": 1161,
+   "created_at": "2026-11-15",
+   "language": "Python",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "source"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [],
+   "picked": false
+  },
+  {
+   "repo": "agentes-chat/agentes-chat",
+   "url": "https://github.com/agentes-chat/agentes-chat",
+   "what": "开源自托管 Slack 替代品，人和 AI agent 在同一频道协作，agent 可调用 MCP 工具、操作浏览器并需人工审批。",
+   "why": "多 agent 协作聊天正热，但需 Linux 服务器和 Docker 部署，Windows 笔记本一小时难搞定。",
+   "theme": "ai_app",
+   "theme_title": "AI 应用",
+   "bucket": "m1",
+   "category": "save",
+   "total": 0.438,
+   "stars": 1764,
+   "created_at": "2026-11-09",
+   "language": "TypeScript",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "docker"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [],
+   "picked": false
+  },
+  {
    "repo": "wheresryan22/anatomy",
    "url": "https://github.com/wheresryan22/anatomy",
    "what": "一个 Claude Code 技能，把技术概念画成可交互的等距 SVG 机械图，可选 WebGL 着色器与 3D 效果。",
@@ -723,7 +989,7 @@
    "bucket": "m3",
    "category": "skip",
    "total": 0.437,
-   "stars": 27736,
+   "stars": 28266,
    "created_at": "2026-10-08",
    "language": "JavaScript",
    "runnable": {
@@ -740,27 +1006,30 @@
    "picked": false
   },
   {
-   "repo": "agentes-chat/agentes-chat",
-   "url": "https://github.com/agentes-chat/agentes-chat",
-   "what": "开源自托管 Slack 替代品，人和 AI agent 在同一频道协作，agent 可调用 MCP 工具、操作浏览器并需人工审批。",
-   "why": "多 agent 协作聊天正热，但需 Linux 服务器和 Docker 部署，Windows 笔记本一小时难搞定。",
-   "theme": "ai_app",
-   "theme_title": "AI 应用",
+   "repo": "Minireel/HGhub",
+   "url": "https://github.com/Minireel/HGhub",
+   "what": "Rust+Tauri 2 写的跨平台视频播放器，靠导入 JavaScript 插件接入第三方内容源，自带片库与追更。",
+   "why": "万星但创建仅半个月、更新极新，插件版仍处早期，Windows 需从源码构建，且不内置任何内容源。",
+   "theme": "tool",
+   "theme_title": "开发工具",
    "bucket": "m1",
-   "category": "save",
-   "total": 0.434,
-   "stars": 1524,
-   "created_at": "2026-11-09",
-   "language": "TypeScript",
+   "category": "skip",
+   "total": 0.408,
+   "stars": 10349,
+   "created_at": "2026-11-03",
+   "language": "Rust",
    "runnable": {
-    "windows": false,
+    "windows": true,
     "gpu_required": false,
     "vram_gb": null,
-    "install": "docker"
+    "install": "source"
    },
    "concepts": [],
    "assignment": "",
-   "hype": [],
+   "hype": [
+    "创建仅约两周即破万星，与独立维护者、早期开发阶段的描述不匹配",
+    "不内置内容源、依赖第三方插件，star 增长可能来自内容获取需求而非技术价值"
+   ],
    "picked": false
   },
   {
@@ -770,10 +1039,10 @@
    "why": "近期 AI 服务对出口 IP 审查变严，很多人手里的代理配置失效，这类实测工具因此受关注。",
    "theme": "tool",
    "theme_title": "开发工具",
-   "bucket": "d3",
+   "bucket": "w1",
    "category": "skip",
    "total": 0.404,
-   "stars": 473,
+   "stars": 472,
    "created_at": "2026-11-15",
    "language": "Makefile",
    "runnable": {
@@ -793,6 +1062,32 @@
    "picked": false
   },
   {
+   "repo": "HolyArrs/HolyArrs",
+   "url": "https://github.com/HolyArrs/HolyArrs",
+   "what": "Go 编写的自托管媒体中心，整合影视音乐下载、整理与 Jellyfin/Plex 式播放，Docker 一键部署。",
+   "why": "刚上 Show HN 榜首、更新频繁，但它是家庭影音服务器，跟本地 AI 模型没有关系。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "m1",
+   "category": "skip",
+   "total": 0.397,
+   "stars": 2287,
+   "created_at": "2026-11-09",
+   "language": "Go",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "docker"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建到更新仅两天、star 已 700+，且 README 大量多语言与营销徽章，增长节奏偏快"
+   ],
+   "picked": false
+  },
+  {
    "repo": "tangerineturtle1/NX2navi",
    "url": "https://github.com/tangerineturtle1/NX2navi",
    "what": "把 Switch 2 版《塞尔达传说：时之笛》静态重编译成 Windows 原生 x86-64 程序，用 Vulkan 渲染，支持高帧率、宽屏和 DLSS/FSR。",
@@ -801,8 +1096,8 @@
    "theme_title": "游戏与玩物",
    "bucket": "m1",
    "category": "skip",
-   "total": 0.394,
-   "stars": 4287,
+   "total": 0.395,
+   "stars": 4338,
    "created_at": "2026-11-07",
    "language": "C",
    "runnable": {
@@ -826,10 +1121,10 @@
    "why": "电视广告桌面太烦，这个项目能一键换掉系统桌面，安装简单，还能讲给家人听。",
    "theme": "tool",
    "theme_title": "开发工具",
-   "bucket": "m1",
+   "bucket": "m3",
    "category": "skip",
    "total": 0.39,
-   "stars": 12218,
+   "stars": 12635,
    "created_at": "2026-10-20",
    "language": "Kotlin",
    "runnable": {
@@ -853,7 +1148,7 @@
    "bucket": "m3",
    "category": "skip",
    "total": 0.383,
-   "stars": 77580,
+   "stars": 81175,
    "created_at": "2026-09-24",
    "language": "JavaScript",
    "runnable": {
@@ -879,10 +1174,10 @@
    "why": "仓库是转载的 fork，README 通篇在讲维护边界和免责声明，技术内容很少，不值得现在花时间。",
    "theme": "learn",
    "theme_title": "学习教程",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "skip",
    "total": 0.382,
-   "stars": 743,
+   "stars": 751,
    "created_at": "2026-11-12",
    "language": "TypeScript",
    "runnable": {
@@ -900,42 +1195,16 @@
    "picked": false
   },
   {
-   "repo": "HolyArrs/HolyArrs",
-   "url": "https://github.com/HolyArrs/HolyArrs",
-   "what": "Go 编写的自托管媒体中心，整合影视音乐下载、整理与 Jellyfin/Plex 式播放，Docker 一键部署。",
-   "why": "刚上 Show HN 榜首、更新频繁，但它是家庭影音服务器，跟本地 AI 模型没有关系。",
-   "theme": "tool",
-   "theme_title": "开发工具",
-   "bucket": "m1",
-   "category": "skip",
-   "total": 0.382,
-   "stars": 1264,
-   "created_at": "2026-11-09",
-   "language": "Go",
-   "runnable": {
-    "windows": false,
-    "gpu_required": false,
-    "vram_gb": null,
-    "install": "docker"
-   },
-   "concepts": [],
-   "assignment": "",
-   "hype": [
-    "创建到更新仅两天、star 已 700+，且 README 大量多语言与营销徽章，增长节奏偏快"
-   ],
-   "picked": false
-  },
-  {
    "repo": "duwqijlk/muse-protocol",
    "url": "https://github.com/duwqijlk/muse-protocol",
    "what": "用纯 HTTP 复刻 muse.ai 注册与邀请码兑换流程的协议分析客户端，含批量调度与验证码轮询。",
    "why": "项目刚建一天就有一千多星，但本质是批量注册薅邀请码，风险与合规问题明显。",
    "theme": "tool",
    "theme_title": "开发工具",
-   "bucket": "d3",
+   "bucket": "w1",
    "category": "skip",
-   "total": 0.376,
-   "stars": 1491,
+   "total": 0.379,
+   "stars": 1659,
    "created_at": "2026-11-14",
    "language": "Python",
    "runnable": {
@@ -960,6 +1229,32 @@
    "picked": false
   },
   {
+   "repo": "0xkaka/homeport",
+   "url": "https://github.com/0xkaka/homeport",
+   "what": "一套 Clash 分流规则与一键配置页，把 Claude、Google、Stripe 等敏感站点单独指向固定住宅代理，其余流量仍走机场。",
+   "why": "近期 Claude 等站点风控趋严，机房 IP 频繁跳变易触发验证或封号，固定住宅出口成为刚需。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "d3",
+   "category": "skip",
+   "total": 0.377,
+   "stars": 445,
+   "created_at": "2026-11-17",
+   "language": "HTML",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "unknown"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建到更新仅两天即 445 star，README 内嵌住宅 IP 购买推广链接"
+   ],
+   "picked": false
+  },
+  {
    "repo": "seedds/nxnative",
    "url": "https://github.com/seedds/nxnative",
    "what": "把 Switch 游戏包重写成可在 Apple 芯片上原生运行的 Mac 应用或未签名 IPA，用 Metal 重建图形，不是模拟器。",
@@ -969,9 +1264,9 @@
    "bucket": "m3",
    "category": "skip",
    "total": 0.376,
-   "stars": 15931,
+   "stars": 16264,
    "created_at": "2026-10-13",
-   "language": "Python",
+   "language": "Objective-C",
    "runnable": {
     "windows": false,
     "gpu_required": false,
@@ -984,6 +1279,39 @@
    "picked": false
   },
   {
+   "repo": "Hut-hzf/ung220z-tool",
+   "url": "https://github.com/Hut-hzf/ung220z-tool",
+   "what": "针对九联 UNG220Z 中国移动光猫的 Python 脚本，通过 telnet.gch 开 Telnet 后解密配置库，提取 Web、PPPoE、WiFi 和 root 凭据。",
+   "why": "与 AI 无关，且依赖特定型号光猫和自家宽带环境，对没有该设备的用户没有可玩性。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "w1",
+   "category": "skip",
+   "total": 0.363,
+   "stars": 1790,
+   "created_at": "2026-11-15",
+   "language": "Python",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "source"
+   },
+   "concepts": [
+    "标准库",
+    "socket",
+    "telnetlib",
+    "argparse",
+    "正则表达式",
+    "子进程"
+   ],
+   "assignment": "用 Python 标准库实现一个 telnet 客户端，连接本地模拟服务并解析返回的 XML 配置。",
+   "hype": [
+    "创建与更新同日，1790 star 与零 topics、无社区痕迹不匹配，疑似刷星"
+   ],
+   "picked": false
+  },
+  {
    "repo": "deepseek-ai/DeepInfer",
    "url": "https://github.com/deepseek-ai/DeepInfer",
    "what": "DeepSeek 官方开源的大规模推理框架，支持 V4.1-Flash 模型，含优化内核、并行调度与投机解码。",
@@ -993,7 +1321,7 @@
    "bucket": "m3",
    "category": "skip",
    "total": 0.363,
-   "stars": 26124,
+   "stars": 26240,
    "created_at": "2026-10-16",
    "language": "Python",
    "runnable": {
@@ -1014,10 +1342,10 @@
    "why": "刚开源几天，491 星，演示了保存即热补丁、状态不丢的开发循环，但 Windows 未测试。",
    "theme": "tool",
    "theme_title": "开发工具",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "skip",
-   "total": 0.361,
-   "stars": 582,
+   "total": 0.362,
+   "stars": 594,
    "created_at": "2026-11-11",
    "language": "Rust",
    "runnable": {
@@ -1040,8 +1368,8 @@
    "theme_title": "AI 应用",
    "bucket": "m1",
    "category": "skip",
-   "total": 0.36,
-   "stars": 23535,
+   "total": 0.361,
+   "stars": 23974,
    "created_at": "2026-10-31",
    "language": "TypeScript",
    "runnable": {
@@ -1068,8 +1396,8 @@
    "theme_title": "AI 应用",
    "bucket": "m1",
    "category": "skip",
-   "total": 0.354,
-   "stars": 25028,
+   "total": 0.357,
+   "stars": 28346,
    "created_at": "2026-10-25",
    "language": "Dart",
    "runnable": {
@@ -1095,8 +1423,8 @@
    "theme_title": "开发工具",
    "bucket": "m1",
    "category": "skip",
-   "total": 0.345,
-   "stars": 1955,
+   "total": 0.346,
+   "stars": 2019,
    "created_at": "2026-11-05",
    "language": "Python",
    "runnable": {
@@ -1123,8 +1451,8 @@
    "theme_title": "游戏与玩物",
    "bucket": "m1",
    "category": "skip",
-   "total": 0.343,
-   "stars": 2224,
+   "total": 0.345,
+   "stars": 2343,
    "created_at": "2026-11-05",
    "language": "Shell",
    "runnable": {
@@ -1147,10 +1475,10 @@
    "why": "仓库刚建一天就 954 星，但需要 GPU 集群级训练，8G 显存笔记本跑不动。",
    "theme": "learn",
    "theme_title": "学习教程",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "skip",
-   "total": 0.342,
-   "stars": 1683,
+   "total": 0.344,
+   "stars": 1870,
    "created_at": "2026-11-10",
    "language": "Python",
    "runnable": {
@@ -1166,6 +1494,34 @@
    "assignment": "",
    "hype": [
     "创建次日即近千星，fork 比例偏低，疑似刷星"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "Bodila51/gtavi-claudecode",
+   "url": "https://github.com/Bodila51/gtavi-claudecode",
+   "what": "Claude Code 插件，自动抓取 GTA6 直播流，定位高光时刻并剪成 9:16 竖屏短视频，附带钩子字幕和署名。",
+   "why": "GTA6 首发日（11月19日）刚过，抢首发流量窗口，但依赖 Claude Code 和付费剪辑活动。",
+   "theme": "ai_app",
+   "theme_title": "AI 应用",
+   "bucket": "d3",
+   "category": "skip",
+   "total": 0.343,
+   "stars": 949,
+   "created_at": "2026-11-18",
+   "language": "Python",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "unknown"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建次日即949星，增长异常",
+    "通篇赚钱话术与首发日营销",
+    "依赖Claude Code付费订阅，非本地Ollama可跑"
    ],
    "picked": false
   },
@@ -1204,10 +1560,10 @@
    "why": "近期 AI Studio 与 Gemini 对出口 IP 审查变严，很多人手里的代理配置突然失效，需要快速筛出可用线路。",
    "theme": "tool",
    "theme_title": "开发工具",
-   "bucket": "d3",
+   "bucket": "w1",
    "category": "skip",
    "total": 0.326,
-   "stars": 473,
+   "stars": 472,
    "created_at": "2026-11-15",
    "language": "Makefile",
    "runnable": {
@@ -1233,10 +1589,10 @@
    "why": "近期热度高，宣称能让 RTX 20/30/40 系列 AI 吞吐翻倍，但仅限 Linux，Windows 用户无法直接使用。",
    "theme": "runtime",
    "theme_title": "模型与运行时",
-   "bucket": "m1",
+   "bucket": "m3",
    "category": "skip",
-   "total": 0.324,
-   "stars": 20048,
+   "total": 0.325,
+   "stars": 20512,
    "created_at": "2026-10-18",
    "language": "C",
    "runnable": {
@@ -1261,10 +1617,10 @@
    "why": "刚发布一天的小项目，主打零改动迁移和更便宜的账单，但需要 Docker 和集群，与本地 Ollama 折腾无关。",
    "theme": "infra",
    "theme_title": "基础设施",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "skip",
-   "total": 0.321,
-   "stars": 638,
+   "total": 0.322,
+   "stars": 680,
    "created_at": "2026-11-12",
    "language": "TypeScript",
    "runnable": {
@@ -1289,8 +1645,8 @@
    "theme_title": "游戏与玩物",
    "bucket": "m1",
    "category": "skip",
-   "total": 0.316,
-   "stars": 3386,
+   "total": 0.318,
+   "stars": 3688,
    "created_at": "2026-11-08",
    "language": "C#",
    "runnable": {
@@ -1315,10 +1671,10 @@
    "why": "iOS 27 越狱圈热门工具，1418 星且刚更新，但只面向 iPhone/iPad，与 Windows 笔记本无关。",
    "theme": "tool",
    "theme_title": "开发工具",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "skip",
-   "total": 0.311,
-   "stars": 2207,
+   "total": 0.315,
+   "stars": 2581,
    "created_at": "2026-11-10",
    "language": "Swift",
    "runnable": {
@@ -1341,8 +1697,8 @@
    "theme_title": "可视化创意",
    "bucket": "w1",
    "category": "skip",
-   "total": 0.309,
-   "stars": 542,
+   "total": 0.31,
+   "stars": 545,
    "created_at": "2026-11-13",
    "language": "Kotlin",
    "runnable": {
@@ -1363,10 +1719,10 @@
    "why": "国产 ROM 预装遥测组件被论文实测上报应用列表，这个工具让普通用户能自查并卸载，最近刚开源。",
    "theme": "tool",
    "theme_title": "开发工具",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "skip",
-   "total": 0.299,
-   "stars": 1358,
+   "total": 0.308,
+   "stars": 2003,
    "created_at": "2026-11-11",
    "language": "Kotlin",
    "runnable": {
@@ -1387,7 +1743,7 @@
    "why": "国内访问 Gemini 常被拦，这工具帮你筛出真正可用的代理线路，但依赖代理生态且仅 Windows 实测。",
    "theme": "tool",
    "theme_title": "开发工具",
-   "bucket": "d3",
+   "bucket": "w1",
    "category": "skip",
    "total": 0.291,
    "stars": 474,
@@ -1419,7 +1775,7 @@
    "bucket": "m1",
    "category": "skip",
    "total": 0.287,
-   "stars": 7918,
+   "stars": 8161,
    "created_at": "2026-11-09",
    "language": "Swift",
    "runnable": {
@@ -1437,16 +1793,48 @@
    "picked": false
   },
   {
+   "repo": "gylive/google-ultra",
+   "url": "https://github.com/gylive/google-ultra",
+   "what": "借 Google One 进程调用 BillingClient，自动查询并开通 AI Pro 5TB 免费试用订阅的脚本",
+   "why": "仓库创建两天即近 2500 星，但本质是薅 Google 订阅漏洞，随时可能失效或封号",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "d3",
+   "category": "skip",
+   "total": 0.286,
+   "stars": 2466,
+   "created_at": "2026-11-17",
+   "language": "Python",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "pip"
+   },
+   "concepts": [
+    "subprocess",
+    "命令行参数解析",
+    "字符串分割"
+   ],
+   "assignment": "",
+   "hype": [
+    "创建两天即 2466 星，增长异常",
+    "无描述无 topics，通篇围绕免费试用漏洞",
+    "涉及账号密码与银行卡明文输入，风险极高"
+   ],
+   "picked": false
+  },
+  {
    "repo": "yetanotherbrowser/yab",
    "url": "https://github.com/yetanotherbrowser/yab",
    "what": "macOS 原生浏览器，用 Swift 编写，默认 WebKit 引擎，Apple 芯片可切 Chromium，带 iPhone 伴侣应用和 AI agent 标签页。",
    "why": "近期更新活跃，主打双引擎和 agent 标签页，但仅限 macOS 15.4+，Windows 用户无法体验。",
    "theme": "tool",
    "theme_title": "开发工具",
-   "bucket": "d3",
+   "bucket": "w1",
    "category": "skip",
-   "total": 0.28,
-   "stars": 604,
+   "total": 0.284,
+   "stars": 739,
    "created_at": "2026-11-14",
    "language": "Swift",
    "runnable": {
@@ -1458,6 +1846,35 @@
    "concepts": [],
    "assignment": "",
    "hype": [],
+   "picked": false
+  },
+  {
+   "repo": "0marContreras/gta6recomp",
+   "url": "https://github.com/0marContreras/gta6recomp",
+   "what": "声称是《GTA VI》PC 版的运行时着色器重编译与性能优化框架，实际是伪造的安装包。",
+   "why": "GTA VI 尚未发售，这个仓库创建于 2026 年，内容与事实不符，疑似钓鱼或恶意软件。",
+   "theme": "play",
+   "theme_title": "游戏与玩物",
+   "bucket": "d3",
+   "category": "skip",
+   "total": 0.187,
+   "stars": 670,
+   "created_at": "2026-11-18",
+   "language": "",
+   "runnable": {
+    "windows": false,
+    "gpu_required": true,
+    "vram_gb": null,
+    "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "游戏尚未发售却声称是 PC 移植",
+    "要求运行 Setup.exe 但无源码",
+    "README 通篇营销话术与虚构跑分",
+    "创建当天即获 670 star"
+   ],
    "picked": false
   },
   {
@@ -1497,7 +1914,7 @@
    "why": "典型供应链投毒样本：README 重复诱导关闭杀毒软件并执行 irm | Invoke-Expression，应立即远离。",
    "theme": "tool",
    "theme_title": "开发工具",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "skip",
    "total": 0.161,
    "stars": 784,
@@ -1527,7 +1944,7 @@
    "why": "创建与更新同日、无 README、topics 堆砌 substance 关键词，典型刷星或钓鱼仓库，不值得花时间。",
    "theme": "tool",
    "theme_title": "开发工具",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "skip",
    "total": 0.158,
    "stars": 704,
