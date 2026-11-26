@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23",
+ "generated": "2026-11-26",
  "buckets": [
   {
    "key": "d3",
@@ -13,21 +13,21 @@
    "title": "这周内",
    "min_age": 4,
    "max_age": 7,
-   "count": 15
+   "count": 14
   },
   {
    "key": "m1",
    "title": "这个月",
    "min_age": 8,
    "max_age": 30,
-   "count": 47
+   "count": 60
   },
   {
    "key": "m3",
    "title": "近三个月",
    "min_age": 31,
    "max_age": 90,
-   "count": 13
+   "count": 14
   }
  ],
  "themes": {
@@ -40,6 +40,60 @@
   "infra": "基础设施"
  },
  "items": [
+  {
+   "repo": "janestreet/agent_skills",
+   "url": "https://github.com/janestreet/agent_skills",
+   "what": "Jane Street 开源的 AI agent 技能合集，目前只有一个苏格拉底式家教技能，用 SKILL.md 提示词实现。",
+   "why": "大厂内部 agent 技能首次外流，纯提示词零依赖，正好配你本地的 Ollama 模型玩教学。",
+   "theme": "learn",
+   "theme_title": "学习教程",
+   "bucket": "m1",
+   "category": "run_now",
+   "total": 0.826,
+   "stars": 11844,
+   "created_at": "2026-11-03",
+   "language": "",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "unknown"
+   },
+   "concepts": [],
+   "assignment": "把 socratic-tutor 的 SKILL.md 粘进 Ollama 的 system prompt，让它用苏格拉底法教你一个你正在学的课程主题，并记录它提问的节奏。",
+   "hype": [],
+   "picked": true
+  },
+  {
+   "repo": "danielwh2/sprite-stacking",
+   "url": "https://github.com/danielwh2/sprite-stacking",
+   "what": "把四视图像素画雕刻成体素切片，生成可旋转的伪3D精灵，附带HTML查看器和导出工具。",
+   "why": "Agent skill 形态正流行，配合 Claude Code 等工具，一小时就能做出能转的像素小物件。",
+   "theme": "visual",
+   "theme_title": "可视化创意",
+   "bucket": "w1",
+   "category": "run_now",
+   "total": 0.803,
+   "stars": 938,
+   "created_at": "2026-11-20",
+   "language": "HTML",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "pip"
+   },
+   "concepts": [
+    "列表",
+    "字典",
+    "NumPy 数组",
+    "Pillow 图像处理",
+    "命令行参数"
+   ],
+   "assignment": "用四张自绘像素视图跑通 views_to_slices.py，调整 --slices 与 --round，对比切片数与圆角雕刻对旋转效果的影响。",
+   "hype": [],
+   "picked": true
+  },
   {
    "repo": "n4ze3m/tiny-voca",
    "url": "https://github.com/n4ze3m/tiny-voca",
@@ -66,36 +120,6 @@
     "函数调用"
    ],
    "assignment": "用 tiny_voca.infer.speak_text 写一个脚本，把一段英文文本按句子切分，分别用 F2 和 M2 音色合成并拼成一个 wav 文件。",
-   "hype": [],
-   "picked": true
-  },
-  {
-   "repo": "danielwh2/sprite-stacking",
-   "url": "https://github.com/danielwh2/sprite-stacking",
-   "what": "把四视图像素画雕刻成体素切片，生成可旋转的伪3D精灵，附带HTML查看器和导出工具。",
-   "why": "Agent skill 形态正流行，配合 Claude Code 等工具，一小时就能做出能转的像素小物件。",
-   "theme": "visual",
-   "theme_title": "可视化创意",
-   "bucket": "d3",
-   "category": "run_now",
-   "total": 0.787,
-   "stars": 481,
-   "created_at": "2026-11-20",
-   "language": "HTML",
-   "runnable": {
-    "windows": true,
-    "gpu_required": false,
-    "vram_gb": null,
-    "install": "pip"
-   },
-   "concepts": [
-    "列表",
-    "字典",
-    "NumPy 数组",
-    "Pillow 图像处理",
-    "命令行参数"
-   ],
-   "assignment": "用四张自绘像素视图跑通 views_to_slices.py，调整 --slices 与 --round，对比切片数与圆角雕刻对旋转效果的影响。",
    "hype": [],
    "picked": true
   },
@@ -138,8 +162,8 @@
    "theme_title": "AI 应用",
    "bucket": "w1",
    "category": "run_now",
-   "total": 0.73,
-   "stars": 2103,
+   "total": 0.76,
+   "stars": 2634,
    "created_at": "2026-11-19",
    "language": "Python",
    "runnable": {
@@ -171,8 +195,8 @@
    "theme_title": "游戏与玩物",
    "bucket": "m1",
    "category": "run_now",
-   "total": 0.729,
-   "stars": 1485,
+   "total": 0.731,
+   "stars": 1632,
    "created_at": "2026-11-04",
    "language": "TypeScript",
    "runnable": {
@@ -184,31 +208,7 @@
    "concepts": [],
    "assignment": "",
    "hype": [],
-   "picked": true
-  },
-  {
-   "repo": "krisgfx9/Wireless-Device-Battery-Monitor",
-   "url": "https://github.com/krisgfx9/Wireless-Device-Battery-Monitor",
-   "what": "Windows 任务栏小工具，直接读取罗技、雷蛇、PS/Xbox 等无线外设电量，无需厂商软件。",
-   "why": "4715 星、350KB 纯 C++ 托盘程序，装完即用，正好补上你笔记本外设电量看不见的痛点。",
-   "theme": "tool",
-   "theme_title": "开发工具",
-   "bucket": "w1",
-   "category": "run_now",
-   "total": 0.709,
-   "stars": 5834,
-   "created_at": "2026-11-16",
-   "language": "C++",
-   "runnable": {
-    "windows": true,
-    "gpu_required": false,
-    "vram_gb": null,
-    "install": "installer"
-   },
-   "concepts": [],
-   "assignment": "",
-   "hype": [],
-   "picked": true
+   "picked": false
   },
   {
    "repo": "FrigadeHQ/yogurt",
@@ -219,10 +219,34 @@
    "theme_title": "AI 应用",
    "bucket": "m1",
    "category": "run_now",
-   "total": 0.708,
-   "stars": 2987,
+   "total": 0.712,
+   "stars": 3560,
    "created_at": "2026-11-10",
    "language": "TypeScript",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [],
+   "picked": false
+  },
+  {
+   "repo": "krisgfx9/Wireless-Device-Battery-Monitor",
+   "url": "https://github.com/krisgfx9/Wireless-Device-Battery-Monitor",
+   "what": "Windows 任务栏小工具，直接读取罗技、雷蛇、PS/Xbox 等无线外设电量，无需厂商软件。",
+   "why": "4715 星、350KB 纯 C++ 托盘程序，装完即用，正好补上你笔记本外设电量看不见的痛点。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "m1",
+   "category": "run_now",
+   "total": 0.709,
+   "stars": 5834,
+   "created_at": "2026-11-16",
+   "language": "C++",
    "runnable": {
     "windows": true,
     "gpu_required": false,
@@ -243,8 +267,8 @@
    "theme_title": "游戏与玩物",
    "bucket": "m1",
    "category": "run_now",
-   "total": 0.704,
-   "stars": 2795,
+   "total": 0.706,
+   "stars": 2990,
    "created_at": "2026-11-12",
    "language": "JavaScript",
    "runnable": {
@@ -267,8 +291,8 @@
    "theme_title": "AI 应用",
    "bucket": "m1",
    "category": "save",
-   "total": 0.677,
-   "stars": 12285,
+   "total": 0.679,
+   "stars": 13424,
    "created_at": "2026-10-29",
    "language": "Python",
    "runnable": {
@@ -297,7 +321,7 @@
    "bucket": "m3",
    "category": "save",
    "total": 0.677,
-   "stars": 35837,
+   "stars": 35968,
    "created_at": "2026-09-18",
    "language": "Python",
    "runnable": {
@@ -320,30 +344,6 @@
    "picked": true
   },
   {
-   "repo": "siliconjungle/shapeshift-labs-ink-studio",
-   "url": "https://github.com/siliconjungle/shapeshift-labs-ink-studio",
-   "what": "JavaScript 工具包，用 SDF 雕刻像素风高斯泼溅模型，支持动画、物理与程序化场景，可 CLI 渲染出图。",
-   "why": "纯 JS 无运行时依赖，Node 18 即可跑，CPU 渲染不吃显存，适合一小时试玩生成像素 3D 图。",
-   "theme": "visual",
-   "theme_title": "可视化创意",
-   "bucket": "w1",
-   "category": "run_now",
-   "total": 0.667,
-   "stars": 1034,
-   "created_at": "2026-11-16",
-   "language": "JavaScript",
-   "runnable": {
-    "windows": true,
-    "gpu_required": false,
-    "vram_gb": null,
-    "install": "source"
-   },
-   "concepts": [],
-   "assignment": "",
-   "hype": [],
-   "picked": true
-  },
-  {
    "repo": "haziqahmedqasmi/PeakCut",
    "url": "https://github.com/haziqahmedqasmi/PeakCut",
    "what": "自托管长视频与直播切片工具，自动转录、AI 选高光片段、裁成 9:16 竖屏加逐词字幕并发布。",
@@ -352,8 +352,8 @@
    "theme_title": "AI 应用",
    "bucket": "m1",
    "category": "save",
-   "total": 0.665,
-   "stars": 1763,
+   "total": 0.668,
+   "stars": 1944,
    "created_at": "2026-11-14",
    "language": "Python",
    "runnable": {
@@ -374,6 +374,30 @@
    "picked": false
   },
   {
+   "repo": "siliconjungle/shapeshift-labs-ink-studio",
+   "url": "https://github.com/siliconjungle/shapeshift-labs-ink-studio",
+   "what": "JavaScript 工具包，用 SDF 雕刻像素风高斯泼溅模型，支持动画、物理与程序化场景，可 CLI 渲染出图。",
+   "why": "纯 JS 无运行时依赖，Node 18 即可跑，CPU 渲染不吃显存，适合一小时试玩生成像素 3D 图。",
+   "theme": "visual",
+   "theme_title": "可视化创意",
+   "bucket": "m1",
+   "category": "run_now",
+   "total": 0.667,
+   "stars": 1034,
+   "created_at": "2026-11-16",
+   "language": "JavaScript",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "source"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [],
+   "picked": false
+  },
+  {
    "repo": "anefzaoui/misterdownloadmanager",
    "url": "https://github.com/anefzaoui/misterdownloadmanager",
    "what": "纯 Rust 编写的开源下载管理器，支持多线程加速、BT/磁力、m3u8 与 yt-dlp 视频下载，带 egui 界面和浏览器扩展。",
@@ -382,8 +406,8 @@
    "theme_title": "开发工具",
    "bucket": "m1",
    "category": "run_now",
-   "total": 0.662,
-   "stars": 16687,
+   "total": 0.664,
+   "stars": 18231,
    "created_at": "2026-10-29",
    "language": "Rust",
    "runnable": {
@@ -401,6 +425,34 @@
    "picked": false
   },
   {
+   "repo": "bookwjitchieni1986/blender-ai-mcp-addon",
+   "url": "https://github.com/bookwjitchieni1986/blender-ai-mcp-addon",
+   "what": "Blender 插件加内置 MCP 服务器，让 AI 通过对话检查场景、建模、改材质并执行多步任务。",
+   "why": "MCP 正成为 AI 连接外部工具的标准，这个项目把本地 Ollama 和 Blender 直接打通，适合动手试。",
+   "theme": "ai_app",
+   "theme_title": "AI 应用",
+   "bucket": "w1",
+   "category": "save",
+   "total": 0.651,
+   "stars": 2750,
+   "created_at": "2026-11-19",
+   "language": "",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "installer"
+   },
+   "concepts": [
+    "MCP 协议",
+    "工具调用",
+    "bpy 脚本"
+   ],
+   "assignment": "用 Ollama 本地模型连接插件，让 AI 在 Blender 里生成一个带材质的立方体并截图验证。",
+   "hype": [],
+   "picked": true
+  },
+  {
    "repo": "deepseek-ai/chat-demo",
    "url": "https://github.com/deepseek-ai/chat-demo",
    "what": "DeepSeek 官方静态聊天前端，浏览器直连 API，支持多会话、分支、附件、语音与 Mermaid 渲染。",
@@ -409,8 +461,8 @@
    "theme_title": "AI 应用",
    "bucket": "m1",
    "category": "save",
-   "total": 0.647,
-   "stars": 5296,
+   "total": 0.648,
+   "stars": 5462,
    "created_at": "2026-11-12",
    "language": "TypeScript",
    "runnable": {
@@ -433,8 +485,8 @@
    "theme_title": "开发工具",
    "bucket": "m3",
    "category": "save",
-   "total": 0.646,
-   "stars": 29994,
+   "total": 0.647,
+   "stars": 31293,
    "created_at": "2026-09-29",
    "language": "C#",
    "runnable": {
@@ -461,7 +513,7 @@
    "bucket": "m3",
    "category": "save",
    "total": 0.645,
-   "stars": 60391,
+   "stars": 61036,
    "created_at": "2026-10-17",
    "language": "Python",
    "runnable": {
@@ -507,44 +559,16 @@
    "picked": false
   },
   {
-   "repo": "bookwjitchieni1986/blender-ai-mcp-addon",
-   "url": "https://github.com/bookwjitchieni1986/blender-ai-mcp-addon",
-   "what": "Blender 插件加内置 MCP 服务器，让 AI 通过对话检查场景、建模、改材质并执行多步任务。",
-   "why": "MCP 正成为 AI 连接外部工具的标准，这个项目把本地 Ollama 和 Blender 直接打通，适合动手试。",
-   "theme": "ai_app",
-   "theme_title": "AI 应用",
-   "bucket": "w1",
-   "category": "save",
-   "total": 0.626,
-   "stars": 2750,
-   "created_at": "2026-11-19",
-   "language": "",
-   "runnable": {
-    "windows": true,
-    "gpu_required": false,
-    "vram_gb": null,
-    "install": "installer"
-   },
-   "concepts": [
-    "MCP 协议",
-    "工具调用",
-    "bpy 脚本"
-   ],
-   "assignment": "用 Ollama 本地模型连接插件，让 AI 在 Blender 里生成一个带材质的立方体并截图验证。",
-   "hype": [],
-   "picked": false
-  },
-  {
    "repo": "EL4CTEO/fast-anything",
    "url": "https://github.com/EL4CTEO/fast-anything",
    "what": "用 AI 编码代理定位 Python/Node/Ruby 等应用中最慢的少数函数，自动移植成 Rust 并回放真实调用验证等价后热替换。",
    "why": "它把「重写整个项目」缩小成「只重写 5% 热点」，并用录制调用做等价性证明，是当下 agent 工具链里少见的可验证闭环。",
    "theme": "tool",
    "theme_title": "开发工具",
-   "bucket": "d3",
+   "bucket": "w1",
    "category": "save",
-   "total": 0.611,
-   "stars": 2029,
+   "total": 0.628,
+   "stars": 4033,
    "created_at": "2026-11-21",
    "language": "Rust",
    "runnable": {
@@ -564,6 +588,62 @@
     "创建两天即 2029 star，增长曲线异常",
     "README 含 Trendshift 徽章与演示 GIF，营销包装较重"
    ],
+   "picked": false
+  },
+  {
+   "repo": "zero5122/offline-file-converter-windows",
+   "url": "https://github.com/zero5122/offline-file-converter-windows",
+   "what": "Windows 离线文件转换桌面应用，用 PySide6 做界面，支持 PDF、文档、图片、音视频批量转换。",
+   "why": "隐私焦虑下离线转换有真实需求，但仓库创建与更新同日、star 过千，需警惕刷星。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "d3",
+   "category": "save",
+   "total": 0.611,
+   "stars": 1061,
+   "created_at": "2026-11-23",
+   "language": "Python",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "installer"
+   },
+   "concepts": [
+    "类",
+    "多线程",
+    "文件读写",
+    "GUI 事件循环"
+   ],
+   "assignment": "用 PySide6 写一个批量图片格式转换小工具，支持拖拽选文件并显示进度条。",
+   "hype": [
+    "创建与最近更新同为 2026-11-23，star 1061 与仓库年龄不匹配",
+    "README 通篇营销话术，功能描述含糊未列具体格式"
+   ],
+   "picked": true
+  },
+  {
+   "repo": "Umbra9179/clipboard-history-manager-windows",
+   "url": "https://github.com/Umbra9179/clipboard-history-manager-windows",
+   "what": "Windows 剪贴板历史管理器，支持搜索、图片预览、标签、编辑和备份，基于 WinUI 的 C# 桌面应用。",
+   "why": "与 AI 无关，但作为日常效率工具能立刻改善复制粘贴体验，装完即用。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "d3",
+   "category": "run_now",
+   "total": 0.61,
+   "stars": 1262,
+   "created_at": "2026-11-23",
+   "language": "C#",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [],
    "picked": true
   },
   {
@@ -576,7 +656,7 @@
    "bucket": "m3",
    "category": "save",
    "total": 0.598,
-   "stars": 77122,
+   "stars": 77602,
    "created_at": "2026-09-07",
    "language": "HTML",
    "runnable": {
@@ -597,10 +677,10 @@
    "why": "本地跑模型的人越来越多，但多数人只会换参数，这个技能把调优过程整理成可复用的方法论。",
    "theme": "runtime",
    "theme_title": "模型与运行时",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "save",
-   "total": 0.588,
-   "stars": 1968,
+   "total": 0.596,
+   "stars": 2717,
    "created_at": "2026-11-16",
    "language": "Python",
    "runnable": {
@@ -628,8 +708,8 @@
    "theme_title": "AI 应用",
    "bucket": "m1",
    "category": "save",
-   "total": 0.585,
-   "stars": 2679,
+   "total": 0.586,
+   "stars": 2785,
    "created_at": "2026-11-06",
    "language": "Go",
    "runnable": {
@@ -650,7 +730,7 @@
    "why": "作者是 MIT Media Lab 研究者，探索 60FPS 交互式 LLM 的新交互范式，社区已有 VSCode 插件等衍生。",
    "theme": "ai_app",
    "theme_title": "AI 应用",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "save",
    "total": 0.578,
    "stars": 1048,
@@ -677,7 +757,7 @@
    "bucket": "m1",
    "category": "save",
    "total": 0.56,
-   "stars": 41317,
+   "stars": 43622,
    "created_at": "2026-10-31",
    "language": "Rust",
    "runnable": {
@@ -696,6 +776,33 @@
    "picked": false
   },
   {
+   "repo": "storytold/photocraft",
+   "url": "https://github.com/storytold/photocraft",
+   "what": "用纯 Rust 从零重写的开源 Photoshop 替代品，支持图层、蒙版、调整图层、文字、矢量、笔刷和真实 PSD 文件。",
+   "why": "早期 alpha 阶段，78640 星热度很高，但和你的 Ollama 本地模型路线无关，更像一个可以讲给别人听的 Rust 桌面应用案例。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "m3",
+   "category": "save",
+   "total": 0.542,
+   "stars": 81534,
+   "created_at": "2026-09-30",
+   "language": "Rust",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建仅约六周即获 7.8 万星，增速异常",
+    "README 通篇品牌与社区营销话术"
+   ],
+   "picked": false
+  },
+  {
    "repo": "Niko1221/Strata",
    "url": "https://github.com/Niko1221/Strata",
    "what": "C++ 编写的本地推理引擎，一键安装，在消费级硬件上跑 Qwen3.8-Flash-Next 等大模型，提供本地 OpenAI/Anthropic 兼容 API 并支持图像输入。",
@@ -705,7 +812,7 @@
    "bucket": "m3",
    "category": "save",
    "total": 0.537,
-   "stars": 47069,
+   "stars": 48214,
    "created_at": "2026-09-24",
    "language": "C++",
    "runnable": {
@@ -720,33 +827,6 @@
     "创建仅约 7 周即达 4.3 万星，增速异常",
     "README 通篇营销话术与赞助链接",
     "无 topics 标签，社区信息稀薄"
-   ],
-   "picked": false
-  },
-  {
-   "repo": "storytold/photocraft",
-   "url": "https://github.com/storytold/photocraft",
-   "what": "用纯 Rust 从零重写的开源 Photoshop 替代品，支持图层、蒙版、调整图层、文字、矢量、笔刷和真实 PSD 文件。",
-   "why": "早期 alpha 阶段，78640 星热度很高，但和你的 Ollama 本地模型路线无关，更像一个可以讲给别人听的 Rust 桌面应用案例。",
-   "theme": "tool",
-   "theme_title": "开发工具",
-   "bucket": "m3",
-   "category": "save",
-   "total": 0.527,
-   "stars": 81060,
-   "created_at": "2026-09-30",
-   "language": "Rust",
-   "runnable": {
-    "windows": true,
-    "gpu_required": false,
-    "vram_gb": null,
-    "install": "installer"
-   },
-   "concepts": [],
-   "assignment": "",
-   "hype": [
-    "创建仅约六周即获 7.8 万星，增速异常",
-    "README 通篇品牌与社区营销话术"
    ],
    "picked": false
   },
@@ -782,13 +862,40 @@
    "picked": false
   },
   {
+   "repo": "libracoder/kiri",
+   "url": "https://github.com/libracoder/kiri",
+   "what": "Rust 写的轻量容器运行时，兼容 Docker CLI，自带本地域名和 K8s 集群，可替代 Docker Desktop。",
+   "why": "11 月新项目两周破万星，主打毫秒级启动和低内存，是 Docker Desktop 的轻量替代品。",
+   "theme": "infra",
+   "theme_title": "基础设施",
+   "bucket": "m1",
+   "category": "save",
+   "total": 0.522,
+   "stars": 13476,
+   "created_at": "2026-11-02",
+   "language": "Rust",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建仅 18 天即 11329 star，增速异常",
+    "README 通篇营销话术与性能对比数字"
+   ],
+   "picked": false
+  },
+  {
    "repo": "bothaggsigym1988/frameglide",
    "url": "https://github.com/bothaggsigym1988/frameglide",
    "what": "把主机 30fps 串流在 Windows 上用 RIFE 实时插帧到 60–120fps，并用 FSR 1 或 RTX VSR 放大画面。",
    "why": "主机画质模式锁 30fps，用现有显卡免费补帧，无需换主机或显示器。",
    "theme": "play",
    "theme_title": "游戏与玩物",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "save",
    "total": 0.521,
    "stars": 967,
@@ -813,33 +920,6 @@
    "picked": false
   },
   {
-   "repo": "libracoder/kiri",
-   "url": "https://github.com/libracoder/kiri",
-   "what": "Rust 写的轻量容器运行时，兼容 Docker CLI，自带本地域名和 K8s 集群，可替代 Docker Desktop。",
-   "why": "11 月新项目两周破万星，主打毫秒级启动和低内存，是 Docker Desktop 的轻量替代品。",
-   "theme": "infra",
-   "theme_title": "基础设施",
-   "bucket": "m1",
-   "category": "save",
-   "total": 0.52,
-   "stars": 12380,
-   "created_at": "2026-11-02",
-   "language": "Rust",
-   "runnable": {
-    "windows": true,
-    "gpu_required": false,
-    "vram_gb": null,
-    "install": "installer"
-   },
-   "concepts": [],
-   "assignment": "",
-   "hype": [
-    "创建仅 18 天即 11329 star，增速异常",
-    "README 通篇营销话术与性能对比数字"
-   ],
-   "picked": false
-  },
-  {
    "repo": "jamesondh/chimera-vocal-synth",
    "url": "https://github.com/jamesondh/chimera-vocal-synth",
    "what": "浏览器里的物理建模人声合成器，用 Rust 编译成 WebAssembly，模拟声道发声，可唱、说、打拍子。",
@@ -848,8 +928,8 @@
    "theme_title": "游戏与玩物",
    "bucket": "m1",
    "category": "save",
-   "total": 0.513,
-   "stars": 2970,
+   "total": 0.515,
+   "stars": 3212,
    "created_at": "2026-11-05",
    "language": "Rust",
    "runnable": {
@@ -857,6 +937,30 @@
     "gpu_required": false,
     "vram_gb": null,
     "install": "source"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [],
+   "picked": false
+  },
+  {
+   "repo": "Lemxy/WinRust",
+   "url": "https://github.com/Lemxy/WinRust",
+   "what": "用 Rust 重写的 Windows 外壳替代品，包含任务栏、文件管理器、NTFS 搜索、任务管理器和磁盘清理，一个安装器即可完成安装。",
+   "why": "443 星的小众项目，最近刚更新；它替换系统外壳，风险高，不适合日常主力机，但适合在虚拟机里体验。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "m1",
+   "category": "save",
+   "total": 0.515,
+   "stars": 1577,
+   "created_at": "2026-11-17",
+   "language": "Rust",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "installer"
    },
    "concepts": [],
    "assignment": "",
@@ -872,8 +976,8 @@
    "theme_title": "开发工具",
    "bucket": "m1",
    "category": "save",
-   "total": 0.512,
-   "stars": 20334,
+   "total": 0.514,
+   "stars": 21787,
    "created_at": "2026-10-29",
    "language": "JavaScript",
    "runnable": {
@@ -891,40 +995,16 @@
    "picked": false
   },
   {
-   "repo": "Lemxy/WinRust",
-   "url": "https://github.com/Lemxy/WinRust",
-   "what": "用 Rust 重写的 Windows 外壳替代品，包含任务栏、文件管理器、NTFS 搜索、任务管理器和磁盘清理，一个安装器即可完成安装。",
-   "why": "443 星的小众项目，最近刚更新；它替换系统外壳，风险高，不适合日常主力机，但适合在虚拟机里体验。",
-   "theme": "tool",
-   "theme_title": "开发工具",
-   "bucket": "w1",
-   "category": "save",
-   "total": 0.51,
-   "stars": 1252,
-   "created_at": "2026-11-17",
-   "language": "Rust",
-   "runnable": {
-    "windows": true,
-    "gpu_required": false,
-    "vram_gb": null,
-    "install": "installer"
-   },
-   "concepts": [],
-   "assignment": "",
-   "hype": [],
-   "picked": false
-  },
-  {
    "repo": "erkamyaman/rust-anything",
    "url": "https://github.com/erkamyaman/rust-anything",
    "what": "把现有应用逐模块改写成 Rust，用录制原程序行为做逐步对拍验证，支持多语言调用。",
    "why": "Rust 重写潮正热，它把'行为对拍'做成流程，Prettier 移植案例有说服力。",
    "theme": "tool",
    "theme_title": "开发工具",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "save",
-   "total": 0.51,
-   "stars": 8063,
+   "total": 0.514,
+   "stars": 9670,
    "created_at": "2026-11-16",
    "language": "Rust",
    "runnable": {
@@ -950,8 +1030,8 @@
    "theme_title": "开发工具",
    "bucket": "m1",
    "category": "save",
-   "total": 0.502,
-   "stars": 1875,
+   "total": 0.505,
+   "stars": 2126,
    "created_at": "2026-11-14",
    "language": "JavaScript",
    "runnable": {
@@ -975,7 +1055,7 @@
    "bucket": "m3",
    "category": "save",
    "total": 0.487,
-   "stars": 40104,
+   "stars": 41600,
    "created_at": "2026-09-23",
    "language": "Go",
    "runnable": {
@@ -1000,7 +1080,7 @@
    "why": "1017 星但创建当天就更新，C++ 项目无源码语言标注，下载即用型发布包，需先验证真实性。",
    "theme": "tool",
    "theme_title": "开发工具",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "save",
    "total": 0.482,
    "stars": 1017,
@@ -1030,8 +1110,8 @@
    "theme_title": "游戏与玩物",
    "bucket": "m1",
    "category": "save",
-   "total": 0.475,
-   "stars": 2910,
+   "total": 0.476,
+   "stars": 3041,
    "created_at": "2026-11-11",
    "language": "C++",
    "runnable": {
@@ -1054,7 +1134,7 @@
    "why": "agent skills 生态刚起步，这类提示词与工作流合集正被 Claude Code、Codex 用户快速采用。",
    "theme": "ai_app",
    "theme_title": "AI 应用",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "save",
    "total": 0.474,
    "stars": 796,
@@ -1072,6 +1152,33 @@
    "picked": false
   },
   {
+   "repo": "Indigo-0167/universal-game-mod-manager",
+   "url": "https://github.com/Indigo-0167/universal-game-mod-manager",
+   "what": "面向 Windows 的开源游戏 Mod 管理器，用 Rust 和 Tauri 编写，能自动发现 Steam、GOG、Epic 等平台的游戏，",
+   "why": "它和 AI 无关，但如果你玩游戏，就能一键安装 Mod；不过它刚创建，发布包和实际可用性都还没验证。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "d3",
+   "category": "save",
+   "total": 0.465,
+   "stars": 1298,
+   "created_at": "2026-11-23",
+   "language": "Rust",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "仓库创建与最近更新为同一天，star 数已达 1298，增长异常",
+    "README 强调免费开源，但发布包与功能成熟度尚未验证"
+   ],
+   "picked": false
+  },
+  {
    "repo": "JenkinWoo/sheeridVerify",
    "url": "https://github.com/JenkinWoo/sheeridVerify",
    "what": "Node.js 编写的本地 Web 工作台，用任务队列和浏览器自动化走学生身份验证表单流程。",
@@ -1080,8 +1187,8 @@
    "theme_title": "开发工具",
    "bucket": "m1",
    "category": "skip",
-   "total": 0.461,
-   "stars": 4170,
+   "total": 0.463,
+   "stars": 4468,
    "created_at": "2026-11-06",
    "language": "JavaScript",
    "runnable": {
@@ -1107,8 +1214,8 @@
    "theme_title": "可视化创意",
    "bucket": "m1",
    "category": "save",
-   "total": 0.454,
-   "stars": 1369,
+   "total": 0.458,
+   "stars": 1590,
    "created_at": "2026-11-15",
    "language": "Python",
    "runnable": {
@@ -1131,8 +1238,8 @@
    "theme_title": "AI 应用",
    "bucket": "m1",
    "category": "save",
-   "total": 0.44,
-   "stars": 1956,
+   "total": 0.442,
+   "stars": 2055,
    "created_at": "2026-11-09",
    "language": "TypeScript",
    "runnable": {
@@ -1156,7 +1263,7 @@
    "bucket": "m3",
    "category": "skip",
    "total": 0.438,
-   "stars": 28738,
+   "stars": 29240,
    "created_at": "2026-10-08",
    "language": "JavaScript",
    "runnable": {
@@ -1173,6 +1280,33 @@
    "picked": false
   },
   {
+   "repo": "solv4626/steam-achievement-manager-windows",
+   "url": "https://github.com/solv4626/steam-achievement-manager-windows",
+   "what": "Windows 桌面版 Steam 成就管理器，可解锁/重置成就、修改游戏统计数据，Rust 编写带 GUI。",
+   "why": "与 AI 无关，但作为游戏工具对 Steam 玩家有直接吸引力，且当天创建即破千星需留意。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "d3",
+   "category": "skip",
+   "total": 0.431,
+   "stars": 1058,
+   "created_at": "2026-11-23",
+   "language": "Rust",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建与更新同日且 star 破千，疑似刷星",
+    "README 通篇营销话术，含下载 exe 引导"
+   ],
+   "picked": false
+  },
+  {
    "repo": "Minireel/HGhub",
    "url": "https://github.com/Minireel/HGhub",
    "what": "Rust+Tauri 2 写的跨平台视频播放器，靠导入 JavaScript 插件接入第三方内容源，自带片库与追更。",
@@ -1181,8 +1315,8 @@
    "theme_title": "开发工具",
    "bucket": "m1",
    "category": "skip",
-   "total": 0.411,
-   "stars": 11548,
+   "total": 0.412,
+   "stars": 11943,
    "created_at": "2026-11-03",
    "language": "Rust",
    "runnable": {
@@ -1196,6 +1330,32 @@
    "hype": [
     "创建仅约两周即破万星，与独立维护者、早期开发阶段的描述不匹配",
     "不内置内容源、依赖第三方插件，star 增长可能来自内容获取需求而非技术价值"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "HolyArrs/HolyArrs",
+   "url": "https://github.com/HolyArrs/HolyArrs",
+   "what": "Go 编写的自托管媒体中心，整合影视音乐下载、整理与 Jellyfin/Plex 式播放，Docker 一键部署。",
+   "why": "刚上 Show HN 榜首、更新频繁，但它是家庭影音服务器，跟本地 AI 模型没有关系。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "m1",
+   "category": "skip",
+   "total": 0.403,
+   "stars": 2936,
+   "created_at": "2026-11-09",
+   "language": "Go",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "docker"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建到更新仅两天、star 已 700+，且 README 大量多语言与营销徽章，增长节奏偏快"
    ],
    "picked": false
   },
@@ -1229,28 +1389,28 @@
    "picked": false
   },
   {
-   "repo": "HolyArrs/HolyArrs",
-   "url": "https://github.com/HolyArrs/HolyArrs",
-   "what": "Go 编写的自托管媒体中心，整合影视音乐下载、整理与 Jellyfin/Plex 式播放，Docker 一键部署。",
-   "why": "刚上 Show HN 榜首、更新频繁，但它是家庭影音服务器，跟本地 AI 模型没有关系。",
-   "theme": "tool",
-   "theme_title": "开发工具",
-   "bucket": "m1",
+   "repo": "R0Y00/Xbox2Windows",
+   "url": "https://github.com/R0Y00/Xbox2Windows",
+   "what": "研究把 Xbox Series X|S 的 x64 机器码和 gfx1013 着色器静态重编译到 Windows x64 与 DXIL，公开测试自建输入，无需游戏本体。",
+   "why": "GTA VI 相关话题热度高，但项目仅验证了少量着色器和自建测试程序，完整游戏启动尚未验证。",
+   "theme": "learn",
+   "theme_title": "学习教程",
+   "bucket": "w1",
    "category": "skip",
-   "total": 0.401,
-   "stars": 2757,
-   "created_at": "2026-11-09",
-   "language": "Go",
+   "total": 0.398,
+   "stars": 1960,
+   "created_at": "2026-11-20",
+   "language": "Python",
    "runnable": {
-    "windows": false,
-    "gpu_required": false,
+    "windows": true,
+    "gpu_required": true,
     "vram_gb": null,
-    "install": "docker"
+    "install": "source"
    },
    "concepts": [],
    "assignment": "",
    "hype": [
-    "创建到更新仅两天、star 已 700+，且 README 大量多语言与营销徽章，增长节奏偏快"
+    "创建到更新仅3天即1328星，与项目实际完成度不符，疑似蹭GTA VI热度刷星"
    ],
    "picked": false
   },
@@ -1264,7 +1424,7 @@
    "bucket": "m1",
    "category": "skip",
    "total": 0.395,
-   "stars": 4344,
+   "stars": 4365,
    "created_at": "2026-11-07",
    "language": "C",
    "runnable": {
@@ -1290,8 +1450,8 @@
    "theme_title": "开发工具",
    "bucket": "m3",
    "category": "skip",
-   "total": 0.391,
-   "stars": 12994,
+   "total": 0.392,
+   "stars": 13320,
    "created_at": "2026-10-20",
    "language": "Kotlin",
    "runnable": {
@@ -1306,18 +1466,18 @@
    "picked": false
   },
   {
-   "repo": "R0Y00/Xbox2Windows",
-   "url": "https://github.com/R0Y00/Xbox2Windows",
-   "what": "研究把 Xbox Series X|S 的 x64 机器码和 gfx1013 着色器静态重编译到 Windows x64 与 DXIL，公开测试自建输入，无需游戏本体。",
-   "why": "GTA VI 相关话题热度高，但项目仅验证了少量着色器和自建测试程序，完整游戏启动尚未验证。",
-   "theme": "learn",
-   "theme_title": "学习教程",
-   "bucket": "d3",
+   "repo": "xcl-dev/xcl",
+   "url": "https://github.com/xcl-dev/xcl",
+   "what": "用 Rust 写的 Xbox Series X|S 兼容层，在 Windows 上原生运行已购主机游戏，把 RDNA2 着色器重编译为 DXIL。",
+   "why": "近期热度很高，已有几款游戏可玩，但需要自备已解包的游戏文件，门槛不低。",
+   "theme": "play",
+   "theme_title": "游戏与玩物",
+   "bucket": "w1",
    "category": "skip",
-   "total": 0.389,
-   "stars": 1328,
+   "total": 0.388,
+   "stars": 8348,
    "created_at": "2026-11-20",
-   "language": "Python",
+   "language": "Rust",
    "runnable": {
     "windows": true,
     "gpu_required": true,
@@ -1327,7 +1487,40 @@
    "concepts": [],
    "assignment": "",
    "hype": [
-    "创建到更新仅3天即1328星，与项目实际完成度不符，疑似蹭GTA VI热度刷星"
+    "创建到更新仅6天即8348星，增速异常"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "Hut-hzf/ung220z-tool",
+   "url": "https://github.com/Hut-hzf/ung220z-tool",
+   "what": "针对九联 UNG220Z 中国移动光猫的 Python 脚本，通过 telnet.gch 开 Telnet 后解密配置库，提取 Web、PPPoE、WiFi 和 root 凭据。",
+   "why": "与 AI 无关，且依赖特定型号光猫和自家宽带环境，对没有该设备的用户没有可玩性。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "m1",
+   "category": "skip",
+   "total": 0.388,
+   "stars": 4956,
+   "created_at": "2026-11-15",
+   "language": "Python",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "source"
+   },
+   "concepts": [
+    "标准库",
+    "socket",
+    "telnetlib",
+    "argparse",
+    "正则表达式",
+    "子进程"
+   ],
+   "assignment": "用 Python 标准库实现一个 telnet 客户端，连接本地模拟服务并解析返回的 XML 配置。",
+   "hype": [
+    "创建与更新同日，1790 star 与零 topics、无社区痕迹不匹配，疑似刷星"
    ],
    "picked": false
   },
@@ -1341,7 +1534,7 @@
    "bucket": "m3",
    "category": "skip",
    "total": 0.383,
-   "stars": 84096,
+   "stars": 87313,
    "created_at": "2026-09-24",
    "language": "JavaScript",
    "runnable": {
@@ -1396,8 +1589,8 @@
    "theme_title": "开发工具",
    "bucket": "m1",
    "category": "skip",
-   "total": 0.38,
-   "stars": 1752,
+   "total": 0.381,
+   "stars": 1825,
    "created_at": "2026-11-14",
    "language": "Python",
    "runnable": {
@@ -1431,7 +1624,7 @@
    "bucket": "m3",
    "category": "skip",
    "total": 0.377,
-   "stars": 16514,
+   "stars": 16748,
    "created_at": "2026-10-13",
    "language": "Objective-C",
    "runnable": {
@@ -1446,49 +1639,16 @@
    "picked": false
   },
   {
-   "repo": "Hut-hzf/ung220z-tool",
-   "url": "https://github.com/Hut-hzf/ung220z-tool",
-   "what": "针对九联 UNG220Z 中国移动光猫的 Python 脚本，通过 telnet.gch 开 Telnet 后解密配置库，提取 Web、PPPoE、WiFi 和 root 凭据。",
-   "why": "与 AI 无关，且依赖特定型号光猫和自家宽带环境，对没有该设备的用户没有可玩性。",
-   "theme": "tool",
-   "theme_title": "开发工具",
-   "bucket": "m1",
-   "category": "skip",
-   "total": 0.37,
-   "stars": 2390,
-   "created_at": "2026-11-15",
-   "language": "Python",
-   "runnable": {
-    "windows": false,
-    "gpu_required": false,
-    "vram_gb": null,
-    "install": "source"
-   },
-   "concepts": [
-    "标准库",
-    "socket",
-    "telnetlib",
-    "argparse",
-    "正则表达式",
-    "子进程"
-   ],
-   "assignment": "用 Python 标准库实现一个 telnet 客户端，连接本地模拟服务并解析返回的 XML 配置。",
-   "hype": [
-    "创建与更新同日，1790 star 与零 topics、无社区痕迹不匹配，疑似刷星"
-   ],
-   "picked": false
-  },
-  {
    "repo": "0xkaka/homeport",
    "url": "https://github.com/0xkaka/homeport",
    "what": "一套 Clash 分流规则与一键配置页，把 Claude、Google、Stripe 等敏感站点单独指向固定住宅代理，其余流量仍走机场。",
    "why": "近期 Claude 等站点风控趋严，机房 IP 频繁跳变易触发验证或封号，固定住宅出口成为刚需。",
    "theme": "tool",
    "theme_title": "开发工具",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "skip",
-   "total": 0.365,
-   "stars": 623,
+   "total": 0.366,
+   "stars": 641,
    "created_at": "2026-11-17",
    "language": "HTML",
    "runnable": {
@@ -1514,7 +1674,7 @@
    "bucket": "m3",
    "category": "skip",
    "total": 0.363,
-   "stars": 26324,
+   "stars": 26381,
    "created_at": "2026-10-16",
    "language": "Python",
    "runnable": {
@@ -1562,7 +1722,7 @@
    "bucket": "m1",
    "category": "skip",
    "total": 0.361,
-   "stars": 24251,
+   "stars": 24602,
    "created_at": "2026-10-31",
    "language": "TypeScript",
    "runnable": {
@@ -1577,6 +1737,33 @@
     "创建三天即 2.2 万星，star 增速异常",
     "无 topics、无正式发布，README 自称研究原型",
     "依赖内部 Harness 与飞书等外部服务，普通用户难以复现"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "ccch1mneyyy/dsh-Go",
+   "url": "https://github.com/ccch1mneyyy/dsh-Go",
+   "what": "DeepSeek Harness 的 Android 客户端，用 Flutter 编写，可在手机上本地运行，也能远程遥控电脑上的 DSH。",
+   "why": "Trendshift 日榜第一，近两万星，但它是安卓 App，Windows 笔记本上跑不了。",
+   "theme": "ai_app",
+   "theme_title": "AI 应用",
+   "bucket": "m3",
+   "category": "skip",
+   "total": 0.36,
+   "stars": 32117,
+   "created_at": "2026-10-25",
+   "language": "Dart",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "unknown"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建到更新仅约两周即近两万星，增速异常",
+    "README 通篇营销话术与宠物 GIF，并含求 Star 换适配的表述"
    ],
    "picked": false
   },
@@ -1609,58 +1796,27 @@
    "picked": false
   },
   {
-   "repo": "ccch1mneyyy/dsh-Go",
-   "url": "https://github.com/ccch1mneyyy/dsh-Go",
-   "what": "DeepSeek Harness 的 Android 客户端，用 Flutter 编写，可在手机上本地运行，也能远程遥控电脑上的 DSH。",
-   "why": "Trendshift 日榜第一，近两万星，但它是安卓 App，Windows 笔记本上跑不了。",
-   "theme": "ai_app",
-   "theme_title": "AI 应用",
-   "bucket": "m1",
+   "repo": "leanprover-community/riemann-hypothesis",
+   "url": "https://github.com/leanprover-community/riemann-hypothesis",
+   "what": "Lean 社区维护的黎曼猜想形式化证明仓库，含独立 Comparator 校验脚本与缓存构建流程。",
+   "why": "2026 年新出现的黎曼猜想形式化证明，社区正在清理代码、提升可读性与构建性能。",
+   "theme": "learn",
+   "theme_title": "学习教程",
+   "bucket": "w1",
    "category": "skip",
-   "total": 0.359,
-   "stars": 30254,
-   "created_at": "2026-10-25",
-   "language": "Dart",
+   "total": 0.348,
+   "stars": 1294,
+   "created_at": "2026-11-20",
+   "language": "Lean",
    "runnable": {
     "windows": false,
-    "gpu_required": false,
-    "vram_gb": null,
-    "install": "unknown"
-   },
-   "concepts": [],
-   "assignment": "",
-   "hype": [
-    "创建到更新仅约两周即近两万星，增速异常",
-    "README 通篇营销话术与宠物 GIF，并含求 Star 换适配的表述"
-   ],
-   "picked": false
-  },
-  {
-   "repo": "mmdoctor/google-pro-helper",
-   "url": "https://github.com/mmdoctor/google-pro-helper",
-   "what": "利用浏览器扩展和本地批量控制台，向 Google 账号注入 offer token，以零元开通 Google AI Pro 两年订阅。",
-   "why": "仓库创建当天就获得 1701 star，README 明确说明这是批量注册账号来薅取订阅，账号随时可能被封禁。",
-   "theme": "tool",
-   "theme_title": "开发工具",
-   "bucket": "m1",
-   "category": "skip",
-   "total": 0.346,
-   "stars": 2049,
-   "created_at": "2026-11-05",
-   "language": "Python",
-   "runnable": {
-    "windows": true,
     "gpu_required": false,
     "vram_gb": null,
     "install": "source"
    },
    "concepts": [],
    "assignment": "",
-   "hype": [
-    "创建当天即 1701 star，增长异常",
-    "README 通篇是薅羊毛教程和营销话术",
-    "涉及批量注册账号、注入 token、绑定支付卡等灰色操作"
-   ],
+   "hype": [],
    "picked": false
   },
   {
@@ -1672,8 +1828,8 @@
    "theme_title": "学习教程",
    "bucket": "m1",
    "category": "skip",
-   "total": 0.345,
-   "stars": 1951,
+   "total": 0.347,
+   "stars": 2053,
    "created_at": "2026-11-10",
    "language": "Python",
    "runnable": {
@@ -1693,6 +1849,34 @@
    "picked": false
   },
   {
+   "repo": "mmdoctor/google-pro-helper",
+   "url": "https://github.com/mmdoctor/google-pro-helper",
+   "what": "利用浏览器扩展和本地批量控制台，向 Google 账号注入 offer token，以零元开通 Google AI Pro 两年订阅。",
+   "why": "仓库创建当天就获得 1701 star，README 明确说明这是批量注册账号来薅取订阅，账号随时可能被封禁。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "m1",
+   "category": "skip",
+   "total": 0.347,
+   "stars": 2084,
+   "created_at": "2026-11-05",
+   "language": "Python",
+   "runnable": {
+    "windows": true,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "source"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建当天即 1701 star，增长异常",
+    "README 通篇是薅羊毛教程和营销话术",
+    "涉及批量注册账号、注入 token、绑定支付卡等灰色操作"
+   ],
+   "picked": false
+  },
+  {
    "repo": "IainKay/ram-altman",
    "url": "https://github.com/IainKay/ram-altman",
    "what": "一个 bash 脚本，每天把本机闲置内存量写成邮件发给 OpenAI CEO，讽刺他关于 DRAM 分配的言论。",
@@ -1702,7 +1886,7 @@
    "bucket": "m1",
    "category": "skip",
    "total": 0.345,
-   "stars": 2374,
+   "stars": 2405,
    "created_at": "2026-11-05",
    "language": "Shell",
    "runnable": {
@@ -1725,7 +1909,7 @@
    "why": "GTA6 首发日（11月19日）刚过，抢首发流量窗口，但依赖 Claude Code 和付费剪辑活动。",
    "theme": "ai_app",
    "theme_title": "AI 应用",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "skip",
    "total": 0.343,
    "stars": 949,
@@ -1753,7 +1937,7 @@
    "why": "仓库创建两天即近 2500 星，但本质是薅 Google 订阅漏洞，随时可能失效或封号",
    "theme": "tool",
    "theme_title": "开发工具",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "skip",
    "total": 0.342,
    "stars": 2602,
@@ -1776,6 +1960,30 @@
     "无描述无 topics，通篇围绕免费试用漏洞",
     "涉及账号密码与银行卡明文输入，风险极高"
    ],
+   "picked": false
+  },
+  {
+   "repo": "fxceless/victory-fork",
+   "url": "https://github.com/fxceless/victory-fork",
+   "what": "Xbox Series 游戏在 Windows 上运行的兼容层分支，用 Rust 重写加载器、D3D12 后端与着色器重编译，需自备游戏文件。",
+   "why": "刚更新到可玩状态，但 8G 显存笔记本跑不动，且每半小时显卡掉线，暂时只能围观。",
+   "theme": "play",
+   "theme_title": "游戏与玩物",
+   "bucket": "d3",
+   "category": "skip",
+   "total": 0.327,
+   "stars": 3117,
+   "created_at": "2026-11-24",
+   "language": "Rust",
+   "runnable": {
+    "windows": true,
+    "gpu_required": true,
+    "vram_gb": 12,
+    "install": "source"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [],
    "picked": false
   },
   {
@@ -1817,7 +2025,7 @@
    "bucket": "m3",
    "category": "skip",
    "total": 0.325,
-   "stars": 20798,
+   "stars": 21072,
    "created_at": "2026-10-18",
    "language": "C",
    "runnable": {
@@ -1832,6 +2040,33 @@
     "仅支持 Linux 却面向 GeForce 消费级用户宣传",
     "创建到最近更新仅 11 天即获 1.8 万 star，增速异常",
     "标题用“半速”“翻倍”等强营销措辞"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "Marvisak/VIctory",
+   "url": "https://github.com/Marvisak/VIctory",
+   "what": "用 Rust 写的 GTA VI PC 兼容层，在 Windows 上直接运行主机版游戏代码，目前世界场景约 1 帧每秒。",
+   "why": "刚创建两天就有一万两千多星，但项目还完全不能玩，属于话题性大于实用性的实验。",
+   "theme": "play",
+   "theme_title": "游戏与玩物",
+   "bucket": "d3",
+   "category": "skip",
+   "total": 0.323,
+   "stars": 12695,
+   "created_at": "2026-11-23",
+   "language": "Rust",
+   "runnable": {
+    "windows": true,
+    "gpu_required": true,
+    "vram_gb": 12,
+    "install": "source"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建两天即获一万两千多星，与项目实际可用度严重不符",
+    "README 自述约 1 帧每秒、尚不可玩，却已高热度传播"
    ],
    "picked": false
   },
@@ -1862,30 +2097,6 @@
    "picked": false
   },
   {
-   "repo": "leanprover-community/riemann-hypothesis",
-   "url": "https://github.com/leanprover-community/riemann-hypothesis",
-   "what": "Lean 社区维护的黎曼猜想形式化证明仓库，含独立 Comparator 校验脚本与缓存构建流程。",
-   "why": "2026 年新出现的黎曼猜想形式化证明，社区正在清理代码、提升可读性与构建性能。",
-   "theme": "learn",
-   "theme_title": "学习教程",
-   "bucket": "d3",
-   "category": "skip",
-   "total": 0.321,
-   "stars": 640,
-   "created_at": "2026-11-20",
-   "language": "Lean",
-   "runnable": {
-    "windows": false,
-    "gpu_required": false,
-    "vram_gb": null,
-    "install": "source"
-   },
-   "concepts": [],
-   "assignment": "",
-   "hype": [],
-   "picked": false
-  },
-  {
    "repo": "jhaizhou-ops/S2Arm",
    "url": "https://github.com/jhaizhou-ops/S2Arm",
    "what": "把 Switch 游戏代码静态重编译为 ARM64 原生程序，图形直连 Metal，在 iPhone/iPad/Mac 上运行，非模拟器。",
@@ -1894,8 +2105,8 @@
    "theme_title": "游戏与玩物",
    "bucket": "m1",
    "category": "skip",
-   "total": 0.319,
-   "stars": 3820,
+   "total": 0.32,
+   "stars": 3938,
    "created_at": "2026-11-08",
    "language": "C#",
    "runnable": {
@@ -1914,6 +2125,30 @@
    "picked": false
   },
   {
+   "repo": "Eynnzerr/TelemetryCleaner",
+   "url": "https://github.com/Eynnzerr/TelemetryCleaner",
+   "what": "基于 Shizuku 免 Root 检测并卸载国产安卓预装运营商遥测组件（SystemHelper、RegService 等）的 Kotlin 工具。",
+   "why": "国产 ROM 预装遥测组件被论文实测上报应用列表，这个工具让普通用户能自查并卸载，最近刚开源。",
+   "theme": "tool",
+   "theme_title": "开发工具",
+   "bucket": "m1",
+   "category": "skip",
+   "total": 0.319,
+   "stars": 3086,
+   "created_at": "2026-11-11",
+   "language": "Kotlin",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "unknown"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [],
+   "picked": false
+  },
+  {
    "repo": "Kianuni/Erosion-CN",
    "url": "https://github.com/Kianuni/Erosion-CN",
    "what": "基于 worse_query 的 iOS/iPadOS MobileGestalt 配置研究工具箱，简体中文加固版，可改系统隐藏开关并防白苹果。",
@@ -1922,8 +2157,8 @@
    "theme_title": "开发工具",
    "bucket": "m1",
    "category": "skip",
-   "total": 0.316,
-   "stars": 2714,
+   "total": 0.317,
+   "stars": 2847,
    "created_at": "2026-11-10",
    "language": "Swift",
    "runnable": {
@@ -1938,27 +2173,30 @@
    "picked": false
   },
   {
-   "repo": "Eynnzerr/TelemetryCleaner",
-   "url": "https://github.com/Eynnzerr/TelemetryCleaner",
-   "what": "基于 Shizuku 免 Root 检测并卸载国产安卓预装运营商遥测组件（SystemHelper、RegService 等）的 Kotlin 工具。",
-   "why": "国产 ROM 预装遥测组件被论文实测上报应用列表，这个工具让普通用户能自查并卸载，最近刚开源。",
+   "repo": "huamidev/GestaltX",
+   "url": "https://github.com/huamidev/GestaltX",
+   "what": "iOS 27 的 MobileGestalt 编辑器，可改区域码、开 AI 能力标志、编辑系统字段并备份还原。",
+   "why": "两天内涨到近六千星，靠改区域码尝试开启 Apple Intelligence，话题性强但仅限 iOS 27 越狱或侧载环境。",
    "theme": "tool",
    "theme_title": "开发工具",
    "bucket": "m1",
    "category": "skip",
-   "total": 0.316,
-   "stars": 2714,
-   "created_at": "2026-11-11",
-   "language": "Kotlin",
+   "total": 0.312,
+   "stars": 8161,
+   "created_at": "2026-11-09",
+   "language": "Swift",
    "runnable": {
     "windows": false,
     "gpu_required": false,
     "vram_gb": null,
-    "install": "unknown"
+    "install": "source"
    },
    "concepts": [],
    "assignment": "",
-   "hype": [],
+   "hype": [
+    "创建两天即近六千星，增速异常",
+    "无 topics 但热度极高，疑似刷星"
+   ],
    "picked": false
   },
   {
@@ -1983,6 +2221,60 @@
    "concepts": [],
    "assignment": "",
    "hype": [],
+   "picked": false
+  },
+  {
+   "repo": "omonkeyz/xbox-emulator",
+   "url": "https://github.com/omonkeyz/xbox-emulator",
+   "what": "Rust 写的 Xbox Series X|S 模拟器运行时，用已解密的游戏转储在 PC 上跑主机游戏，目前只到 Fortnite 启动进大厅。",
+   "why": "1350 星但创建仅两天、更新两天，进度表显示 3D 场景、输入、音频、玩法全未达成，更像进度记录而非可用模拟器。",
+   "theme": "play",
+   "theme_title": "游戏与玩物",
+   "bucket": "w1",
+   "category": "skip",
+   "total": 0.309,
+   "stars": 1849,
+   "created_at": "2026-11-21",
+   "language": "Rust",
+   "runnable": {
+    "windows": false,
+    "gpu_required": true,
+    "vram_gb": null,
+    "install": "source"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建两天即 1350 星，与项目实际完成度严重不符",
+    "README 用大量徽章和进度图营造完成感，但核心功能均未达成"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "4lwayz/portwatch-vi",
+   "url": "https://github.com/4lwayz/portwatch-vi",
+   "what": "静态追踪站，汇总社区把 GTA VI 泄露版重编译或模拟到 PC 的进展，按进度条和排行榜打分，每 3 小时自动抓取更新。",
+   "why": "GTA VI 热度极高，但项目本身只是数据看板，没有可玩内容，对本地显卡和 Ollama 毫无用处。",
+   "theme": "play",
+   "theme_title": "游戏与玩物",
+   "bucket": "w1",
+   "category": "skip",
+   "total": 0.295,
+   "stars": 4366,
+   "created_at": "2026-11-21",
+   "language": "JavaScript",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "unknown"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建到更新仅 5 天即 4366 star，增速异常",
+    "无 topics，内容为蹭 GTA VI 热点的静态页面"
+   ],
    "picked": false
   },
   {
@@ -2015,18 +2307,18 @@
    "picked": false
   },
   {
-   "repo": "huamidev/GestaltX",
-   "url": "https://github.com/huamidev/GestaltX",
-   "what": "iOS 27 的 MobileGestalt 编辑器，可改区域码、开 AI 能力标志、编辑系统字段并备份还原。",
-   "why": "两天内涨到近六千星，靠改区域码尝试开启 Apple Intelligence，话题性强但仅限 iOS 27 越狱或侧载环境。",
-   "theme": "tool",
-   "theme_title": "开发工具",
-   "bucket": "m1",
+   "repo": "AFK-surf/xnulinux",
+   "url": "https://github.com/AFK-surf/xnulinux",
+   "what": "把苹果开源的 XNU 内核编译成 Linux 可加载模块，在 arm64 Linux 上原生运行 macOS 用户态程序。",
+   "why": "3992 星但创建仅 6 天，热度异常；且只支持 arm64，Windows x86 笔记本完全无法运行。",
+   "theme": "runtime",
+   "theme_title": "模型与运行时",
+   "bucket": "w1",
    "category": "skip",
-   "total": 0.287,
-   "stars": 8161,
-   "created_at": "2026-11-09",
-   "language": "Swift",
+   "total": 0.288,
+   "stars": 3992,
+   "created_at": "2026-11-20",
+   "language": "C",
    "runnable": {
     "windows": false,
     "gpu_required": false,
@@ -2036,8 +2328,35 @@
    "concepts": [],
    "assignment": "",
    "hype": [
-    "创建两天即近六千星，增速异常",
-    "无 topics 但热度极高，疑似刷星"
+    "创建 6 天即近 4000 星，增速异常",
+    "README 宣称在 stock Ubuntu 内核上 insmod 即可跑 macOS 桌面，技术声明远超常规可行性"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "os6/nospeaker",
+   "url": "https://github.com/os6/nospeaker",
+   "what": "用 macOS 私有框架驱动 MacBook 触控板震动马达，把语音合成变成能听见的触控板声音。",
+   "why": "刚发布两天就冲到 1900 星，靠的是触控板发声这个反直觉的玩法，演示视频传播很快。",
+   "theme": "play",
+   "theme_title": "游戏与玩物",
+   "bucket": "w1",
+   "category": "skip",
+   "total": 0.285,
+   "stars": 1900,
+   "created_at": "2026-11-22",
+   "language": "Swift",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "installer"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建两天即 1900 星，增长曲线异常",
+    "README 通篇 ASCII 艺术与营销式排版，curl 管道安装"
    ],
    "picked": false
   },
@@ -2066,20 +2385,20 @@
    "picked": false
   },
   {
-   "repo": "omonkeyz/xbox-emulator",
-   "url": "https://github.com/omonkeyz/xbox-emulator",
-   "what": "Rust 写的 Xbox Series X|S 模拟器运行时，用已解密的游戏转储在 PC 上跑主机游戏，目前只到 Fortnite 启动进大厅。",
-   "why": "1350 星但创建仅两天、更新两天，进度表显示 3D 场景、输入、音频、玩法全未达成，更像进度记录而非可用模拟器。",
+   "repo": "Belobug/VIctory-Belobug-AMD",
+   "url": "https://github.com/Belobug/VIctory-Belobug-AMD",
+   "what": "Xbox Series 游戏在 Windows 上原生运行的兼容层分支，专攻 AMD RDNA3 显卡的帧率优化。",
+   "why": "仅单机测试、需自备游戏文件、8G 显存远不够，且项目刚创建一天，尚不成熟。",
    "theme": "play",
    "theme_title": "游戏与玩物",
    "bucket": "d3",
    "category": "skip",
-   "total": 0.276,
-   "stars": 1350,
-   "created_at": "2026-11-21",
+   "total": 0.282,
+   "stars": 1671,
+   "created_at": "2026-11-25",
    "language": "Rust",
    "runnable": {
-    "windows": false,
+    "windows": true,
     "gpu_required": true,
     "vram_gb": null,
     "install": "source"
@@ -2087,8 +2406,7 @@
    "concepts": [],
    "assignment": "",
    "hype": [
-    "创建两天即 1350 星，与项目实际完成度严重不符",
-    "README 用大量徽章和进度图营造完成感，但核心功能均未达成"
+    "创建仅一天即 1671 star，与单机测试、无 README 描述的状态不符"
    ],
    "picked": false
   },
@@ -2099,7 +2417,7 @@
    "why": "15855 星但创建仅三天、游戏未启动，热度与完成度严重不符，需警惕刷星。",
    "theme": "play",
    "theme_title": "游戏与玩物",
-   "bucket": "d3",
+   "bucket": "w1",
    "category": "skip",
    "total": 0.273,
    "stars": 15855,
@@ -2121,13 +2439,68 @@
    "picked": false
   },
   {
+   "repo": "ubiquitarianism/leonida",
+   "url": "https://github.com/ubiquitarianism/leonida",
+   "what": "把 Xbox 版 GTA VI 静态重编译到 Windows 运行的开源项目，目前只能启动到加载界面，尚不可玩。",
+   "why": "刚接手的续作仓库，两天内涨到两千多星，但项目仍处早期，且需要自备正版游戏文件。",
+   "theme": "play",
+   "theme_title": "游戏与玩物",
+   "bucket": "d3",
+   "category": "skip",
+   "total": 0.272,
+   "stars": 2360,
+   "created_at": "2026-11-23",
+   "language": "Python",
+   "runnable": {
+    "windows": true,
+    "gpu_required": true,
+    "vram_gb": null,
+    "install": "source"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "创建仅3天即2360星，与项目实际可玩性严重不符",
+    "README通篇强调GTA VI移植，但明确说明尚无可玩内容"
+   ],
+   "picked": false
+  },
+  {
+   "repo": "CocoSgt/riemann-hypothesis-lean",
+   "url": "https://github.com/CocoSgt/riemann-hypothesis-lean",
+   "what": "数学家 Levent Alpöge 与 Claude 合作声称证明黎曼猜想及 GRH，并给出约 17.4M 行 Lean 形式化代码的镜像仓库。",
+   "why": "2026-11-20 刚发布，尚无独立编译验证，是当下数学与 AI 交叉领域最热的话题之一。",
+   "theme": "learn",
+   "theme_title": "学习教程",
+   "bucket": "w1",
+   "category": "skip",
+   "total": 0.237,
+   "stars": 576,
+   "created_at": "2026-11-20",
+   "language": "Lean",
+   "runnable": {
+    "windows": false,
+    "gpu_required": false,
+    "vram_gb": null,
+    "install": "source"
+   },
+   "concepts": [],
+   "assignment": "",
+   "hype": [
+    "声称证明黎曼猜想但无独立验证",
+    "单日创建即获 517 star",
+    "175187 个 Lean 文件、17.4M 行代码体量异常"
+   ],
+   "picked": false
+  },
+  {
    "repo": "realdody/americas-recomp",
    "url": "https://github.com/realdody/americas-recomp",
    "what": "一个名为 americas-recomp 的仓库，无描述无 README，语言未知，疑似游戏重制或逆向工程类项目。",
    "why": "信息严重不足，无法判断内容与可用性，且创建两天即 520 star，需警惕刷星。",
    "theme": "play",
    "theme_title": "游戏与玩物",
-   "bucket": "d3",
+   "bucket": "w1",
    "category": "skip",
    "total": 0.236,
    "stars": 520,
@@ -2148,41 +2521,13 @@
    "picked": false
   },
   {
-   "repo": "CocoSgt/riemann-hypothesis-lean",
-   "url": "https://github.com/CocoSgt/riemann-hypothesis-lean",
-   "what": "数学家 Levent Alpöge 与 Claude 合作声称证明黎曼猜想及 GRH，并给出约 17.4M 行 Lean 形式化代码的镜像仓库。",
-   "why": "2026-11-20 刚发布，尚无独立编译验证，是当下数学与 AI 交叉领域最热的话题之一。",
-   "theme": "learn",
-   "theme_title": "学习教程",
-   "bucket": "d3",
-   "category": "skip",
-   "total": 0.234,
-   "stars": 517,
-   "created_at": "2026-11-20",
-   "language": "Lean",
-   "runnable": {
-    "windows": false,
-    "gpu_required": false,
-    "vram_gb": null,
-    "install": "source"
-   },
-   "concepts": [],
-   "assignment": "",
-   "hype": [
-    "声称证明黎曼猜想但无独立验证",
-    "单日创建即获 517 star",
-    "175187 个 Lean 文件、17.4M 行代码体量异常"
-   ],
-   "picked": false
-  },
-  {
    "repo": "0marContreras/gta6recomp",
    "url": "https://github.com/0marContreras/gta6recomp",
    "what": "声称是《GTA VI》PC 版的运行时着色器重编译与性能优化框架，实际是伪造的安装包。",
    "why": "GTA VI 尚未发售，这个仓库创建于 2026 年，内容与事实不符，疑似钓鱼或恶意软件。",
    "theme": "play",
    "theme_title": "游戏与玩物",
-   "bucket": "w1",
+   "bucket": "m1",
    "category": "skip",
    "total": 0.187,
    "stars": 670,
